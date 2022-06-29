@@ -12,7 +12,7 @@ This is project built by a group of reactjs beginners who gathered themselves as
 - [if need be make use of react icon liberary -> for icons (it will make sense, so we know we can get all the icons we need in one liberary)](https://react-icons.github.io/react-icons/)
 - [React Toastify -> for Alert zNotification](https://www.npmjs.com/package/react-toastify)
 
--more....
+-more.....
 
 
 ## Deployment
