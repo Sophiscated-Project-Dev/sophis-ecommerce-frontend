@@ -1,6 +1,7 @@
 import Footer from "./autharea/components/Footer";
 
-const Layout = (props) => {
+const Layout = props => {
+
   return (
     <div>
       {/* -------------------Header---------------- */}
