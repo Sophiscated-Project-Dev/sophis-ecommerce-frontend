@@ -1,0 +1,82 @@
+footer {
+  background-color: #030710;
+  color: #cdcdcf !important;
+  padding: 1.25rem 2rem !important;
+}
+@media all and (min-width: 62rem) {
+  footer {
+    padding: 2.5rem 4rem !important;
+  }
+}
+
+/* Subscribe */
+h3 {
+  font: 600 1.5rem Montserrat, sans-serif;
+}
+
+h3 > span {
+  color: #2a6fea;
+}
+
+#subscribe > :nth-child(2) > p {
+  font: 500 0.875rem Open Sans, sans-serif;
+}
+
+#subscribe > :nth-child(2) > div input::placeholder {
+  color: #686A70;
+  font: 400 0.65rem Open Sans, sans-serif;
+  letter-spacing: .05em;
+}
+
+#subscribe > :nth-child(2) span:last-child {
+  background-color: #2a6fea !important;
+}
+
+#subscribe > :last-child > p {
+  font: 600 0.75rem Montserrat, sans-serif;
+}
+
+/* Quick Links */
+#quickLinks {
+  padding: 10px 20px;
+}
+
+#quickLinks h2,
+#socials h2 {
+  color: #e6e6e7;
+  font: 600 1rem Montserrat, sans-serif;
+  margin-bottom: 1rem;
+}
+
+#quickLinks > div > :not(:first-child) {
+  color: #cdcdcf !important;
+  font: 500 0.75rem Montserrat, sans-serif;
+}
+
+/* Socials */
+#socials > :first-child > div {
+  width: 10rem;
+}
+.socialIcons {
+  color: #b2b2b2;
+  height: 1.25rem;
+  width: 1.25rem;
+}
+@media all and (min-width: 62rem) {
+  #socials > :last-child {
+    padding-left: 35%;
+  }
+  #socials > :last-child > div {
+    padding-left: 3%;
+    width: 15rem;
+  }
+}
+
+footer > :last-child {
+  font: 400 0.625rem Open Sans, sans-serif;
+  letter-spacing: 0.05em;
+}
+
+footer > :last-child span {
+  color: #cdcdcf;
+}
