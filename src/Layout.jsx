@@ -2,10 +2,11 @@ import React from "react";
 
 const Layout = props => {
   return (
-    <div>
-      Header{props.children}
-      Footer
-    </div>
+    <main>
+      {/* -------------------Header---------------- */}
+      {props.children}
+      {/* -------------------Footer---------------- */}
+    </main>
   );
 };
 
