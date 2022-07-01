@@ -4,8 +4,8 @@ This is project built by a group of reactjs beginners who gathered themselves as
 
 ## Features
 
-
 ## Tools
+
 - [we'll make use of Reduxjs/Toolkit -> for state management](https://redux-toolkit.js.org/introduction/getting-started)
 - [we'll make use of react-router-dom version 6 -> for routing/navigation](https://reactrouter.com/docs/en/v6/getting-started/installation)
 - [we'll make use of AXIOS -> axios for data fetching](https://axios-http.com/docs/intro)
@@ -13,7 +13,6 @@ This is project built by a group of reactjs beginners who gathered themselves as
 - [React Toastify -> for Alert Notification](https://www.npmjs.com/package/react-toastify)
 
 -more....
-
 
 ## Deployment
 
