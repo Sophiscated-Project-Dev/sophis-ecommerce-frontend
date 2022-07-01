@@ -1,17 +1,19 @@
 import React, { useState } from "react";
-import LOGO from "../../../../assets/images/logo1.png";
-import SOPHIS from "../../../../assets/images/SophisMart.png";
-import LOCATE from "../../../../assets/images/Locate.png";
-import "./NavBar.css";
+import LOGO from "../../assets/images/logo1.png";
+import SOPHIS from "../../assets/images/SophisMart.png";
+import LOCATE from "../../assets/images/Locate.png";
 
 import { FaSearch, FaHeart, FaShoppingCart, FaUser } from "react-icons/fa";
-import { Col, Container, Row, Navbar, Nav, NavDropdown } from "react-bootstrap";
+import { Col, Container, Navbar, Nav, NavDropdown } from "react-bootstrap";
 
-export const NavBar = () => {
+import { FaAngleDown } from "react-icons/fa";
+import "../styles/Header.css";
+
+const Header = () => {
   const [showMain, setShowMain] = useState(false);
 
   return (
-    <>
+    <div className="header">
       <Navbar expand="lg">
         <Container>
           <Col>
@@ -150,97 +152,8 @@ export const NavBar = () => {
           </Nav.Item>
         </Nav>
       </div>
-
-      {/*  */}
-    </>
+    </div>
   );
 };
 
-//
-//
-//
-//
-//
-{
-  /* 
-      <Container>
-        <Row>
-          <div className="navBar-content">
-
-              <div className="navBar-logo">
-                <div className="navBar-img-container">
-                  <div className="navBar-logo1">
-                    <img src={LOGO} alt="logo1" />
-                  </div>
-                  <div className="navBar-sophis">
-                    <img src={SOPHIS} alt="SOPHIS LOGO" />
-                  </div>
-                  <div className="navBar-locate">
-                    <img src={LOCATE} alt="" />
-                    <p>Enugu</p>
-                  </div>
-                </div>
-              </div>
-  
-            <Col>
-              <div className="navBar-search">
-                <div className="navBar-search-content">
-                  <div className="navBar-search-icon">
-                    <FaSearch className="search-icon" />
-                  </div>
-                  <div className="navBar-search-input">
-                    <input
-                      type="text"
-                      placeholder="search something"
-                      className="search-input"
-                    />
-                  </div>
-                  <div className="navBar-search-btn">
-                    <button className="search-btn">Search</button>
-                  </div>
-                </div>
-              </div>
-            </Col>
-            <Col>
-              <div className="navBar-account-icons">
-                <div className="navBar-user-icon">
-                  <FaUser className="user-icon" />
-                  <p>Account</p>
-                </div>
-                <div className="navBar-signIn">
-                  <p>Hi Sign In </p>
-                  <p>Or</p>
-                  <p>Register</p>
-                </div>
-                <div className="navbar-wishlis-icon">
-                  <FaHeart className="heart-icon" />
-                  <p>Wishlist</p>
-                </div>
-                <div className="navBar-cart-icon">
-                  <FaShoppingCart className="cart" />
-                  <p>Cart</p>
-                </div>
-              </div>
-            </Col>
-          </div>
-        </Row>
-      </Container>
-    </div> */
-}
-
-{
-  /* btn toggle */
-}
-
-//  <button
-//  aria-controls="basic-navbar-nav"
-//  type="button"
-//  aria-label="Toggle navigation"
-//  class="navbar-toggler"
-// >
-//  <span class="navbar-toggler-icon"></span>
-// </button>
-
-{
-  /* btn toggle */
-}
+export default Header;

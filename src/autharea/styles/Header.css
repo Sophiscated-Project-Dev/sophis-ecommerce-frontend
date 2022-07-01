@@ -1,5 +1,13 @@
+.header {
+  height: 144px;
+  width: 100vw;
+  margin-bottom: 2.1rem;
+  position: sticky;
+  z-index: 100;
+}
+
 .navBar-content {
-  width: 1440px;
+  /* width: 1500px; */
   margin: 0 auto;
   display: flex;
   justify-content: center;
@@ -246,12 +254,19 @@
 
 /* Media Query */
 @media only screen and (max-width: 992px) {
+  .header {
+    margin-bottom: 0.5rem;
+  }
+
   .col-four {
     width: 400px;
   }
 
   .navbar {
-    border-bottom: 1px solid gray;
+    background: #ffffff;
+    position: sticky;
+    /* border-bottom: 1px solid gray; */
+    z-index: 100;
   }
 
   .top-bar {
@@ -296,5 +311,9 @@
 
   #showmain {
     display: block;
+    position: sticky;
+    z-index: 100;
+    background: #558cee;
+    color: #ffffff;
   }
 }
