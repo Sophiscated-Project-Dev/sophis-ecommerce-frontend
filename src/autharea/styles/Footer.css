@@ -10,11 +10,11 @@ footer {
 }
 
 /* Subscribe */
-h3 {
+h3.footerHeader {
   font: 600 1.5rem Montserrat, sans-serif;
 }
 
-h3 > span {
+h3.footerHeader > span {
   color: #2a6fea;
 }
 
