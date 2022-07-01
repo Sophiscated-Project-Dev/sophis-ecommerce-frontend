@@ -22,7 +22,7 @@ const Footer = () => {
     <footer className="container-fluid">
       {/* Subscribe */}
       <div className="row" id="subscribe">
-        <h3 className="col-12 col-md text-white mb-5">
+        <h3 className="footerHeader col-12 col-md text-white mb-5">
           Sophis<span>Mart</span>
         </h3>
 
