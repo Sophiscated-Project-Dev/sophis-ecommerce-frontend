@@ -1,22 +1,27 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import "./index.css";
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./autharea/pages/Home";
 import Login from "./noautharea/pages/Login";
 import reportWebVitals from "./reportWebVitals";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Layout from "./Layout";
-const root = ReactDOM.createRoot(document.getElementById("root"));
+// Bootstrap CSS
+import "bootstrap/dist/css/bootstrap.min.css";
+// Bootstrap Bundle JS
+import "bootstrap/dist/js/bootstrap.bundle.min";
+import './index.css';
+import Layout from './Layout';
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Layout>
-      <BrowserRouter>
+    <Router>
+      <Layout>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
         </Routes>
-      </BrowserRouter>
-    </Layout>
+      </Layout>
+    </Router>
   </React.StrictMode>
 );
 

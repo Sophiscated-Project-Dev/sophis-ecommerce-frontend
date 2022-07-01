@@ -1,14 +1,15 @@
-import React from "react";
+import Footer from "./autharea/components/Footer";
 
 const Layout = props => {
+
   return (
     <div>
       {/* -------------------Header---------------- */}
       Header{props.children}
       {/* -------------------Footer---------------- */}
-      Footer
+      <Footer />
     </div>
   );
-};
+}
 
 export default Layout;
