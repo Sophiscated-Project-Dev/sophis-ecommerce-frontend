@@ -16,7 +16,7 @@ const Register = () => {
             <input
               type="text"
               className="form-control mb-3"
-              placeholder="enter your first name"
+              placeholder="Enter your first name"
             />
           </div>
 
@@ -25,7 +25,7 @@ const Register = () => {
             <input
               type="text"
               className="form-control mb-3"
-              placeholder="enter your last name"
+              placeholder="Enter your last name"
             />
           </div>
         </div>
@@ -45,7 +45,7 @@ const Register = () => {
             <input
               type="text"
               className="form-control mb-3"
-              placeholder="enter your phone number"
+              placeholder="Enter your phone number"
             />
           </div>
         </div>
@@ -56,7 +56,7 @@ const Register = () => {
             <input
               type="text"
               className="form-control mb-3"
-              placeholder="enter password"
+              placeholder="Enter password"
             />
           </div>
 
@@ -65,7 +65,7 @@ const Register = () => {
             <input
               type="text"
               className="form-control mb-3"
-              placeholder="re-enter password"
+              placeholder="Re-enter password"
             />
           </div>
         </div>
