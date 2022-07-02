@@ -60,14 +60,14 @@
 /* SEARCH */
 
 .navBar-search-content {
-  width: 90%;
+  width: 95%;
   height: 3rem;
   background: #e6e6e7;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 0.7rem;
-  margin-left: 1rem;
+  margin-bottom: 0.2rem;
+  margin-left: 0.4rem;
 }
 
 .navBar-search-icon {
@@ -149,12 +149,7 @@
 .navBar-user-icon {
   width: 32px;
   height: 32px;
-
-  /* not yet */
-  /* display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; */
+  margin: 0 1rem;
 }
 
 .navBar-user-icon .user-icon {
@@ -245,7 +240,7 @@
 
 .header-main .dropdown-toggle::after {
   color: white;
-  font-size: 1.5rem;
+  /* font-size: 1.5rem; */
   font-weight: 500;
   /* margin-top: -23rem; */
 }
@@ -315,5 +310,13 @@
     z-index: 100;
     background: #558cee;
     color: #ffffff;
+  }
+
+  .navbar-wishlis-icon {
+    margin-left: 2rem;
+  }
+
+  .navBar-cart-icon {
+    margin-left: 3rem;
   }
 }

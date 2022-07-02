@@ -65,12 +65,12 @@ const Header = () => {
                   <FaUser className="user-icon" />
                   <p>Account</p>
                 </div>
-                <NavDropdown title="" id="basic-nav-dropdown">
+                {/* <NavDropdown title="" id="basic-nav-dropdown">
                   <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                   <NavDropdown.Item href="#action/3.2">
                     Another action
                   </NavDropdown.Item>
-                </NavDropdown>
+                </NavDropdown> */}
                 <Nav.Link href="#home">
                   <div className="navBar-signIn">
                     <p>Hi Sign In </p>
