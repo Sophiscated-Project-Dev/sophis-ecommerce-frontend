@@ -1,0 +1,66 @@
+.register {
+  background-color: #f4f8fe;
+}
+
+h2.registerHeader {
+  color: #2a6fea;
+  font: 600 2rem Montserrat, sans-serif;
+}
+
+.registerInputGroups > label {
+  color: #030710;
+  font: 400 1rem Open Sans, sans-serif;
+}
+
+.registerInputGroups > input {
+  border: 1px solid #cdcdcf;
+  border-radius: 5px;
+  padding: 1rem 1.5rem;
+}
+
+.registerInputGroups > input::placeholder {
+  color: #828282;
+  font: 400 0.65rem Open Sans, sans-serif;
+  letter-spacing: 0.05em;
+}
+
+.registerBtn,
+.registerFacebook,
+.registerGoogle {
+  background-color: #2a6fea;
+  font: 600 1rem Montserrat, sans-serif;
+  height: 3.5rem;
+}
+
+p.registerAlternative {
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid #cdcdcf;
+  line-height: 0.1em;
+  margin: 2rem 0;
+}
+
+p.registerAlternative span {
+  background: #fff;
+  color: #030710;
+  padding: 0 20px;
+}
+
+.registerFacebook {
+  background-color: #4267b2;
+}
+
+.registerGoogle {
+  background-color: #ea4335;
+}
+
+.registerPolicy, .registerLogin{
+  color: #030710;
+  font: 500 .75rem Open Sans, sans-serif;
+  line-height: 1rem;
+}
+
+.registerPolicy  span *, .registerLogin span *{
+  color: #2a6fea;
+  ;
+}
