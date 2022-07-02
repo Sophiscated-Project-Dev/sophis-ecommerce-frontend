@@ -101,10 +101,10 @@
 
 /* MEDIA QUERIES */
 
-@media(max-width: 1100px) {
+@media screen and (max-width: 1100px) {
 
     .hero-text {
-        margin: auto 0 auto -6vh;
+        margin: auto 0 auto -9vh;
     }
 
     .hero-text h3 {
@@ -155,7 +155,11 @@
 
 }
 
-@media(max-width:969px) {
+@media screen and (max-width:969px) {
+    .hero {
+        padding: 2vh 7vh 0 7vh;
+    }
+
     .hero-text {
         margin-left: -7vh;
     }
@@ -189,21 +193,22 @@
     }
 }
 
-@media(max-width: 816px) {
-    .hero-text {
-        margin-left: -7vh;
+@media screen and (max-width: 816px) {
+    .hero {
+        padding: 2vh 5vh 0 5vh;
     }
 
-    .hero-text h3 {
-        font-size: 5.8vh;
+    .hero-text {
+        margin-left: -4.5vh;
     }
+
+
 
     .hero-p1 {
         font-size: 2.5vh;
         width: 20vh;
         height: 4.5vh;
-        margin-top: -11vh;
-        /* margin-bottom: 5vh; */
+        margin-top: -10vh;
     }
 
     .hero-btn {
@@ -211,7 +216,7 @@
         height: 6vh;
         font-size: 2.5vh;
         margin-top: 6vh;
-        margin-bottom: 4vh;
+        margin-bottom: 6.5vh;
     }
 
     .carousel-indicators {
@@ -226,9 +231,23 @@
     }
 }
 
-@media(max-width: 690px) {
+@media screen and (max-width: 710px) {
     .hero-text {
         margin-left: -7vh;
+    }
+
+    .hero-btn {
+        margin-bottom: 4vh;
+    }
+}
+
+@media screen and (max-width: 690px) {
+    .hero {
+        padding: 2vh 5vh 0 5vh;
+    }
+
+    .hero-text {
+        margin-left: -5vh;
     }
 
     .hero-text h3 {
@@ -247,8 +266,8 @@
         width: 18vh;
         height: 6vh;
         font-size: 2.2vh;
-        margin-top: 4vh;
-        margin-bottom: 1vh;
+        margin-top: 5vh;
+        margin-bottom: 5vh;
     }
 
     .carousel-indicators {
@@ -256,14 +275,18 @@
     }
 }
 
-@media(max-width: 615px) {
+@media screen and (max-width: 615px) {
+    .hero {
+        padding: 2vh 5vh 0 5vh;
+    }
+
     .hero-text {
         margin-left: -7vh;
     }
 
     .hero-text h3 {
         font-size: 4vh;
-        width: 250px;
+        width: 200px;
     }
 
     .hero-p1 {
@@ -276,8 +299,8 @@
         width: 16vh;
         height: 5vh;
         font-size: 2vh;
-        margin-top: 4vh;
-        margin-bottom: 1vh;
+        margin-top: 5vh;
+        margin-bottom: 3vh;
     }
 
     .carousel-indicators {
@@ -305,7 +328,11 @@
     }
 }
 
-@media(max-width: 540px) {
+@media screen and (max-width: 540px) {
+    .hero {
+        padding: 2vh 5vh 0 5vh;
+    }
+
     .hero-text {
         margin-left: -5.5vh;
     }
@@ -328,12 +355,16 @@
         height: 5vh;
         font-size: 1.8vh;
         margin-top: 3vh;
-        margin-bottom: -1vh;
+        margin-bottom: 2.5vh;
     }
 
 }
 
-@media(max-width: 473px) {
+@media screen and (max-width: 473px) {
+    .hero {
+        padding: 2vh 5vh 0 5vh;
+    }
+
     .hero-text {
         margin-left: -4.2vh;
     }
@@ -346,7 +377,7 @@
     .hero-p1 {
         font-size: 1.5vh;
         width: 11.5vh;
-        margin-top: -17.5vh;
+        margin-top: -17vh;
         line-height: 2.9vh;
         height: 3vh;
         padding: 0 .7vh;
@@ -356,13 +387,13 @@
         width: 11vh;
         height: 4.2vh;
         font-size: 1.5vh;
-        margin-top: 2vh;
-        margin-bottom: -1vh;
+        margin-top: 3vh;
+        margin-bottom: 1vh;
     }
 
     .carousel-control-next,
     .carousel-control-prev {
-        margin: auto 1vh !important;
+        margin: auto 2.5vh !important;
         width: 2.5vh !important;
         height: 2.5vh !important;
     }
@@ -385,35 +416,132 @@
     }
 }
 
-@media(max-width: 425px) {
+@media screen and (max-width: 425px) {
+    .hero {
+        padding: 2vh 5vh 0 5vh;
+    }
+
+
+
     .hero-text h3 {
-        font-size: 2vh;
-        width: 100px;
+        font-size: 2.5vh;
+        width: 120px;
     }
 
     .hero-p1 {
         font-size: 1.4vh;
         width: 11vh;
-        margin-top: -19.5vh;
+        margin-top: -18vh;
         line-height: 2.2vh;
         height: 2.2vh;
     }
 
     .hero-btn {
         width: 11vh;
-        height: 2.5vh;
+        height: 3vh;
         font-size: 1.4vh;
         line-height: 1.5vh;
         padding-left: 0;
         padding-right: 0;
         margin-top: 3vh;
+        margin-bottom: 1vh;
+    }
+
+    .carousel-control-next,
+    .carousel-control-prev {
+        margin: auto 2vh !important;
+        width: 2vh !important;
+        height: 2vh !important;
+    }
+}
+
+@media screen and (max-width: 369px) {
+
+
+    .hero-text {
+        margin: auto 0 auto -3vh;
+    }
+
+    .hero-btn {
+        margin-top: 2vh;
         margin-bottom: -1vh;
     }
 
     .carousel-control-next,
     .carousel-control-prev {
-        margin: auto 1vh !important;
-        width: 2vh !important;
-        height: 2vh !important;
+        margin: auto 1.5vh !important;
+    }
+}
+
+@media screen and (max-width: 325px) {
+
+    .hero {
+        padding: 2vh 3vh 0 3vh;
+    }
+
+}
+
+@media screen and (max-width: 285px) {
+    .hero-text {
+        margin-left: -2vh;
+    }
+
+    .hero-text h3 {
+        font-size: 2vh;
+        width: 100px;
+    }
+
+    .hero-p1 {
+        margin-top: -19.5vh;
+        font-size: 1.3vh;
+        width: 10vh;
+    }
+
+    .hero-btn {
+        margin-top: 2vh;
+        margin-bottom: -3vh;
+        width: 10vh;
+    }
+
+    .carousel-indicators [data-bs-target] {
+        width: .8vh !important;
+        height: .8vh !important;
+        border: 2px solid #AAC5F7 !important;
+    }
+
+    .carousel-indicators .active {
+        width: 1vh !important;
+        height: 1vh !important;
+        border: 1px solid #AAC5F7 !important;
+    }
+}
+
+@media screen and (max-width:260px) {
+    .hero {
+        padding: 2vh 2vh 0 2vh;
+    }
+
+    .hero-text {
+        margin-left: -1.2vh;
+    }
+
+    .hero-btn,
+    .hero-text h3 {
+        font-size: 50%;
+    }
+
+    .hero-text h3 {
+        width: 70px;
+    }
+
+    .hero-p1 {
+        margin-top: -20.5vh;
+    }
+
+    .carousel-control-next,
+    .carousel-control-prev {
+        margin: auto 1.5vh !important;
+        width: 1.8vh !important;
+        height: 1.8vh !important;
     }
 }
