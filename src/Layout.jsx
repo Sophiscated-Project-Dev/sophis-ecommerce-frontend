@@ -1,7 +1,8 @@
 import Footer from "./autharea/components/Footer";
 import Header from "./autharea/components/Header";
+import Login from "./noautharea/pages/Login";
 
-const Layout = props => {
+const Layout = (props) => {
   return (
     <div>
       <Header />
