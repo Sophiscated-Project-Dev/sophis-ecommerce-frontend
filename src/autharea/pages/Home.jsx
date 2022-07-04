@@ -1,11 +1,15 @@
 import React from "react";
+import RecomProds from "../components/RecomProds";
 
 const Home = () => {
   return (
     <div>
       <div>{/* -------------------Carousel---------------- */}</div>
 
-      <div>{/* -------------------Recommended---------------- */}</div>
+      <div>
+        {/* -------------------Recommended---------------- */}
+        <RecomProds />
+      </div>
 
       <div>{/* -------------------Flash Sales---------------- */}</div>
 
