@@ -36,6 +36,7 @@ const Header = () => {
           </Col>
 
           <Navbar.Toggle
+            className=""
             aria-controls="basic-navbar-nav"
             onClick={() => setShowMain((prev) => !prev)}
           />
