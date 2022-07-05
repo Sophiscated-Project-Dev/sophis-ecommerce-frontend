@@ -130,7 +130,7 @@
 
      .review-comment {
          font-size: 14px;
-         margin: auto 20vh 30px 20vh;
+         margin: auto 10vh 30px 10vh;
      }
 
      .review-client {
@@ -156,7 +156,7 @@
 
      .review-comment {
          font-size: 13.5px;
-         margin: auto 15vh 30px 15vh;
+         margin: auto 8vh 30px 8vh;
      }
 
      .CCN,
@@ -173,7 +173,7 @@
 
  @media screen and (max-width: 700px) {
      .review-comment {
-         margin: auto 7vh 30px 7vh;
+         margin: auto 4vh 30px 4vh;
      }
 
      .CCN,
@@ -188,10 +188,17 @@
  }
 
  /* PHONE */
+ @media screen and (max-width:524px) {
+     .review-comment {
+         margin: auto -3vh 30px -3vh;
+     }
+ }
+
  @media screen and (max-width: 465px) {
 
      .review-title {
          font-size: 28px;
+         white-space: nowrap;
      }
 
      .review-comment {
@@ -199,7 +206,7 @@
          line-height: 28px;
          text-align: center;
          letter-spacing: 0.04em;
-         margin: auto 0vh 30px 0vh;
+         margin: auto -3vh 30px -3vh;
      }
 
      .CCN,
@@ -219,7 +226,12 @@
 
  @media screen and (max-width: 333px) {
      .review-title {
-         font-size: 24px;
+         font-size: 20px;
          margin-bottom: 10px;
+         white-space: nowrap;
+     }
+
+     .review-comment {
+         margin: auto -5vh 30px -5vh;
      }
  }

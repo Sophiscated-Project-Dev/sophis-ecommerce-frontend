@@ -50,7 +50,7 @@ const Review = () => {
         <div class="carousel-inner">
           {/* CONTENT START*/}
           <div class="carousel-item active tete">
-            <div class="carousel-caption d-none d-md-block">
+            <div class="carousel-caption ">
               <h2 className="review-title">Clients Review</h2>
               <p className="review-comment">
                 This is so far the best website for my online shopping. They
@@ -83,7 +83,7 @@ const Review = () => {
             </div>
           </div>
           <div class="carousel-item tete">
-            <div class="carousel-caption d-none d-md-block">
+            <div class="carousel-caption ">
               <h2 className="review-title">Clients Review</h2>
               <p className="review-comment">
                 This is so far the best website for my online shopping. They
@@ -116,7 +116,7 @@ const Review = () => {
             </div>
           </div>
           <div class="carousel-item tete">
-            <div class="carousel-caption d-none d-md-block">
+            <div class="carousel-caption ">
               <h2 className="review-title">Clients Review</h2>
               <p className="review-comment">
                 This is so far the best website for my online shopping. They
@@ -149,7 +149,7 @@ const Review = () => {
             </div>
           </div>
           <div class="carousel-item tete">
-            <div class="carousel-caption d-none d-md-block">
+            <div class="carousel-caption ">
               <h2 className="review-title">Clients Review</h2>
               <p className="review-comment">
                 This is so far the best website for my online shopping. They
@@ -182,7 +182,7 @@ const Review = () => {
             </div>
           </div>
           <div class="carousel-item tete">
-            <div class="carousel-caption d-none d-md-block">
+            <div class="carousel-caption ">
               <h2 className="review-title">Clients Review</h2>
               <p className="review-comment">
                 This is so far the best website for my online shopping. They
