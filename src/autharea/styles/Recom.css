@@ -1,15 +1,14 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-  }
     body {
-        background: #F4F8FE;
+        background-color: #F4F8FE;
         max-width: 1440px;
         margin: 0 auto;
         color: #030710;
     }
     a {
         text-decoration: none;
+    }
+    .btn {
+        cursor: pointer;
     }
     .recom-header {
         display: flex;
@@ -25,6 +24,9 @@
         font-weight: 600;
         line-height: 32px;
         color: #030710;
+    }
+    .recom-header .see-all {
+        color: #2A6FEA;
     }
     .recom-section {
         box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.05);
