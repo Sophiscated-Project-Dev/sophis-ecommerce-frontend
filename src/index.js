@@ -1,16 +1,16 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./autharea/pages/Home";
-import Login from "./noautharea/pages/Login";
-import reportWebVitals from "./reportWebVitals";
 // Bootstrap CSS
 import "bootstrap/dist/css/bootstrap.min.css";
 // Bootstrap Bundle JS
 import "bootstrap/dist/js/bootstrap.bundle.min";
-import "./index.css";
-import Layout from "./Layout";
-import Register from "./noautharea/pages/Register";
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./autharea/pages/Home";
+import Login from "./noautharea/pages/Login";
+import reportWebVitals from "./reportWebVitals";
+import './index.css';
+import Layout from './Layout';
+import Register from './noautharea/pages/Register';
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
