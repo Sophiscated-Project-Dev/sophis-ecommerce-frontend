@@ -1,10 +1,10 @@
 import React from "react";
-import { Button, Dropdown } from "react-bootstrap";
+import { Dropdown } from "react-bootstrap";
 import { LaptopComs } from "./LaptopComs";
 import "../styles/LaptopComs.css";
 
 import { FaSortAmountDown, FaFilter } from "react-icons/fa";
-import { AiFillStar } from "react-icons/ai";
+// import { AiFillStar } from "react-icons/ai";
 
 import Laptop1 from "../../assets/laptop/laptop1.png";
 import Laptop2 from "../../assets/laptop/laptop2.png";
@@ -149,7 +149,7 @@ export const LaptopListComs = () => {
         </div>
       </div>
       <div className="laptop-card d-flex justify-content-center align-items-center py-5 bg-white">
-        <div className="laptop-coard-row d-flex">
+        <div className="laptop-card-row d-flex">
           {laptopLists.map((item, index) => {
             return <LaptopComs {...item} />;
           })}

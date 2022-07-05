@@ -113,9 +113,11 @@
 .laptop-card {
   width: 80vw;
   margin: 0 auto;
+
+  box-shadow: 1px 1px 10px rgb(0 0 0 / 5%);
 }
 
-.laptop-coard-row {
+.laptop-card-row {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
