@@ -1,5 +1,7 @@
 import React from "react";
 import RecomProds from "../components/RecomProds";
+import NewArrivals from "../components/NewArrivals";
+
 const Home = () => {
   return (
     <div>
@@ -9,7 +11,7 @@ const Home = () => {
 
       <div>{/* -------------------Flash Sales---------------- */}</div>
 
-      <div>{/* -------------------New Arrivals---------------- */}</div>
+      <NewArrivals/>
 
       <div>{/* -------------------Top Ranked---------------- */}</div>
 
