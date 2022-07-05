@@ -1,7 +1,7 @@
 import React from "react";
 import "bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "../../styles/Review.css";
+import "../styles/Review.css";
 
 const Review = () => {
   return (
