@@ -52,7 +52,7 @@
 
  .review-rating {
      margin-top: 8px;
-     margin-bottom: 60px;
+     margin-bottom: 120px;
      font-size: 16px;
      font-weight: 600;
      font-family: 'Montserrat';
@@ -91,6 +91,7 @@
      background: #D4E2FB;
      opacity: 1;
      margin-right: 2vh;
+     margin-bottom: 100px;
  }
 
  .CI .active {
@@ -98,11 +99,8 @@
  }
 
 
-
-
-
-
  /* MEDIA QUERY */
+ /* TABLET */
  @media screen and (max-width: 1100px) {
      .review-title {
          margin-bottom: 30px;
@@ -189,6 +187,7 @@
      }
  }
 
+ /* PHONE */
  @media screen and (max-width: 465px) {
 
      .review-title {
