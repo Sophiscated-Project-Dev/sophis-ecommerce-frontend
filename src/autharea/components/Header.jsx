@@ -6,7 +6,7 @@ import LOCATE from "../../assets/images/Locate.png";
 import { FaSearch, FaHeart, FaShoppingCart, FaUser } from "react-icons/fa";
 import { Col, Container, Navbar, Nav, NavDropdown } from "react-bootstrap";
 
-import { FaAngleDown } from "react-icons/fa";
+// import { FaAngleDown } from "react-icons/fa";
 import "../styles/Header.css";
 import { NavLink, Link } from "react-router-dom";
 
@@ -22,10 +22,14 @@ const Header = () => {
               <div className="navBar-logo">
                 <div className="navBar-img-container d-flex">
                   <div className="navBar-logo1">
-                    <img src={LOGO} alt="logo1" />
+                    <Link to="/">
+                      <img src={LOGO} alt="logo1" />
+                    </Link>
                   </div>
                   <div className="navBar-sophis">
-                    <img src={SOPHIS} alt="SOPHIS LOGO" />
+                    <Link to="/">
+                      <img src={SOPHIS} alt="SOPHIS LOGO" />
+                    </Link>
                   </div>
                   <div className="navBar-locate">
                     <img src={LOCATE} alt="" />
@@ -67,20 +71,24 @@ const Header = () => {
                   <FaUser className="user-icon" />
                   <p>Account</p>
                 </div>
-                {/* <NavDropdown title="" id="basic-nav-dropdown">
-                  <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                  <NavDropdown.Item href="#action/3.2">
-                    Another action
-                  </NavDropdown.Item>
-                </NavDropdown> */}
                 <Nav.Link href="#home">
                   <div className="navBar-signIn">
-                    <p>
-                      <Link to="/login">Hi Sign In </Link>
+                    <p
+                      onClick={() => {
+                        window.location.href = "login";
+                      }}
+                    >
+                      Hi Sign In
+                      {/* <Link to="login"> </Link> */}
                     </p>
                     <p>Or</p>
-                    <p>
-                      <Link to="/register">Register</Link>
+                    <p
+                      onClick={() => {
+                        window.location.href = "register";
+                      }}
+                    >
+                      Register
+                      {/* <Link to="register"></Link> */}
                     </p>
                   </div>
                 </Nav.Link>

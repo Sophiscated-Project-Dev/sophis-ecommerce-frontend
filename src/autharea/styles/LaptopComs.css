@@ -1,0 +1,269 @@
+/* BEGIN TOP */
+
+.laptop-comps-top {
+  width: 80vw;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 2rem;
+}
+
+.laptop-comps-top h4 {
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 40px;
+  color: #000000;
+}
+
+.laptop-comps-other {
+  display: flex;
+}
+
+.filter-laptops {
+  margin-right: 1rem;
+  border: 1px solid #aac5f7;
+  /* padding: 0.4rem; */
+  border: 1px solid #aac5f7;
+  padding: 0.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fiter-latop-icon {
+  color: #aac5f7;
+  font-size: 1rem;
+}
+
+.filter-laptop-dropdown {
+}
+
+.filter-laptop-dropdown.show > .filer-laptop-toggle:focus,
+.filter-laptop-dropdown.show > .filer-laptop-toggle:active {
+  color: #000;
+  box-shadow: none;
+  border: none;
+}
+
+.filer-laptop-toggle {
+  background: transparent !important;
+  border: none;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: #000000;
+  /* margin-left: 0.1rem; */
+}
+
+.filer-laptop-toggle:hover {
+  outline: none;
+  border: none;
+  color: #000000;
+  box-shadow: none;
+}
+/* end */
+
+.sort-laptops {
+  border: 1px solid #aac5f7;
+  padding: 0.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sort-laptops-icon {
+  color: #aac5f7;
+  font-size: 1rem;
+}
+
+.sort-laptop-dropdown {
+  font-size: 1rem;
+}
+
+.sort-laptop-dropdown.show > .sort-laptop-toggle:focus,
+.sort-laptop-dropdown.show > .sort-laptop-toggle:active {
+  color: #000;
+  box-shadow: none;
+  border: none;
+}
+
+.sort-laptop-toggle {
+  background: transparent !important;
+  border: none;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: #000000;
+  /* margin-left: 0.1rem; */
+}
+
+.sort-laptop-toggle:hover {
+  outline: none;
+  border: none;
+  color: #000000;
+  box-shadow: none;
+}
+
+/* END TOP */
+.Laptop-comps {
+  background: #f4f8fe;
+}
+
+.laptop-card {
+  width: 80vw;
+  margin: 0 auto;
+
+  box-shadow: 1px 1px 10px rgb(0 0 0 / 5%);
+}
+
+.laptop-card-row {
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.laptop-card-item {
+}
+
+/*  */
+
+.laptop-card-img {
+  /* height: 80%; */
+  margin-top: 1rem;
+  width: 90% !important;
+  margin: 1rem auto;
+}
+
+.laptop-card-head {
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 15px;
+  letter-spacing: 0.03em;
+  padding-bottom: 0.4rem;
+  margin-top: -10px;
+}
+
+.laptop-cart-text {
+  width: 171px;
+  height: 32px;
+  left: 21px;
+  top: 267px;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: #828282;
+  font-stretch: 100;
+}
+
+.card-icon-love {
+  cursor: pointer;
+}
+
+.laptop-card-price-cont {
+  display: flex;
+  align-items: center;
+}
+
+.laptop-card-old-price {
+  text-decoration: line-through;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  color: #353131;
+  /* font-stretch: 100; */
+}
+
+.laptop-card-new-price {
+  padding-left: 0.5rem;
+  font-weight: 700;
+}
+
+.laptop-card-vendor1 {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  /* identical to box height, or 133% */
+
+  /* sophis/grey3 */
+
+  color: #828282;
+  font-stretch: 100;
+}
+
+.laptop-card-vendor2 {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  /* identical to box height, or 133% */
+
+  /* sophis/grey1 */
+
+  color: #353940;
+}
+
+.laptop-card-star-cont {
+  display: flex;
+  /* align-items: center; */
+}
+
+.laptop-card-star {
+  color: #f6ca2e;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.laptop-card-star-count {
+  font-weight: 500;
+  font-size: 13px;
+  /* line-height: 12px; */
+  color: #030710;
+  padding-right: 0.5rem;
+  padding-left: 0.4rem;
+  border-right: 1px solid gray;
+}
+
+.laptop-card-review-count {
+  display: flex;
+  padding-left: 0.5rem;
+}
+
+.laptop-card-review-count p {
+  font-stretch: 100;
+  font-size: 15px;
+  line-height: 16px;
+  color: #828282;
+
+  padding-right: 5px;
+}
+
+.laptop-card-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 16px;
+  gap: 34px;
+  width: 15rem;
+  height: 52px;
+  /*  */
+  margin: 0 auto;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 32px;
+  color: #ffffff;
+}
+
+/* Media Query */
+
+@media only screen and (max-width: 600px) {
+  .laptop-comps-top {
+    flex-direction: column;
+  }
+  .laptop-comps-top h4 {
+    margin-bottom: 1.5rem;
+  }
+}

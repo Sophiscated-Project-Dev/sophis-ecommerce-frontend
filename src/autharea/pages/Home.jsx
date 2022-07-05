@@ -1,15 +1,18 @@
 import React from "react";
+import RecomProds from "../components/RecomProds";
+import NewArrivals from "../components/NewArrivals";
+import "../styles/Home.css";
 
 const Home = () => {
   return (
-    <div>
+    <div className="home">
       <div>{/* -------------------Carousel---------------- */}</div>
 
-      <div>{/* -------------------Recommended---------------- */}</div>
+      <RecomProds />
 
       <div>{/* -------------------Flash Sales---------------- */}</div>
 
-      <div>{/* -------------------New Arrivals---------------- */}</div>
+      <NewArrivals />
 
       <div>{/* -------------------Top Ranked---------------- */}</div>
 

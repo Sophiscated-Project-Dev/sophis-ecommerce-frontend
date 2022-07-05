@@ -1,7 +1,7 @@
 .header {
   height: 144px;
   width: 100vw;
-  margin-bottom: 2.1rem;
+  /* margin-bottom: 2.1rem; */
   position: sticky;
   z-index: 151;
 }

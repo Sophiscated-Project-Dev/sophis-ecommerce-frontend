@@ -1,6 +1,9 @@
 a {
   text-decoration: none;
 }
+.btn {
+  cursor: pointer;
+}
 .recom-header {
   display: flex;
   gap: 40px;
@@ -16,13 +19,19 @@ a {
   line-height: 32px;
   color: #030710;
 }
+.recom-header .see-all {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #2a6fea;
+}
 .recom-section {
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.05);
   margin: 50px 0;
 }
 .recom-prods {
   margin: 0;
-  padding: 30px 0;
+  padding: 30px 0 0px 0;
   background-color: #ffffff;
   gap: 10px;
   justify-content: center;
@@ -45,7 +54,7 @@ a {
 }
 .product {
   display: flex;
-  gap: 2px;
+  gap: 5px;
   align-items: center;
 }
 .prod-info {
@@ -72,7 +81,7 @@ a {
   align-items: center;
 }
 .prod-stat {
-  gap: 5px;
+  gap: 10px;
 }
 .y-line {
   border-left: 2px solid #828282;
@@ -91,6 +100,6 @@ a {
     font-size: 24px;
   }
   .recom-prods {
-    padding: 30px 10px;
+    padding: 30px 10px 25px 10px;
   }
 }
