@@ -10,7 +10,7 @@ const RecomProds = () => {
     return (
         <div className="container">
             <div className="recom-section">
-                <SectionHeader/>
+                <SectionHeader title={'Recommended'}/>
                 <div className="row recom-prods">
                     {
                         recomProdsElements
