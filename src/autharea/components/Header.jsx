@@ -8,6 +8,7 @@ import { Col, Container, Navbar, Nav, NavDropdown } from "react-bootstrap";
 
 import { FaAngleDown } from "react-icons/fa";
 import "../styles/Header.css";
+import { NavLink, Link } from "react-router-dom";
 
 const Header = () => {
   const [showMain, setShowMain] = useState(false);
@@ -36,6 +37,7 @@ const Header = () => {
           </Col>
 
           <Navbar.Toggle
+            className=""
             aria-controls="basic-navbar-nav"
             onClick={() => setShowMain((prev) => !prev)}
           />
@@ -73,9 +75,13 @@ const Header = () => {
                 </NavDropdown> */}
                 <Nav.Link href="#home">
                   <div className="navBar-signIn">
-                    <p>Hi Sign In </p>
+                    <p>
+                      <Link to="/login">Hi Sign In </Link>
+                    </p>
                     <p>Or</p>
-                    <p>Register</p>
+                    <p>
+                      <Link to="/register">Register</Link>
+                    </p>
                   </div>
                 </Nav.Link>
                 <Nav.Link href="#link">
