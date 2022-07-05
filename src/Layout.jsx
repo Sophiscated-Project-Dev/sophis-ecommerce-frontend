@@ -7,7 +7,6 @@ const Layout = props => {
     <div>
       <Header />
       {/* -------------------Header---------------- */}
-      <RecomProds/>
       {props.children}
       {/* -------------------Footer---------------- */}
       <Footer />
