@@ -12,6 +12,7 @@ import { NavLink, Link } from "react-router-dom";
 
 const Header = () => {
   const [showMain, setShowMain] = useState(false);
+  // const [showMain2, setShowMain2] = useState(false);
 
   return (
     <div className="header">
@@ -22,12 +23,22 @@ const Header = () => {
               <div className="navBar-logo">
                 <div className="navBar-img-container d-flex">
                   <div className="navBar-logo1">
-                    <Link to="/">
+                    <Link
+                      to="/"
+                      onClick={() => {
+                        setShowMain(false);
+                      }}
+                    >
                       <img src={LOGO} alt="logo1" />
                     </Link>
                   </div>
                   <div className="navBar-sophis">
-                    <Link to="/">
+                    <Link
+                      to="/"
+                      onClick={() => {
+                        setShowMain(false);
+                      }}
+                    >
                       <img src={SOPHIS} alt="SOPHIS LOGO" />
                     </Link>
                   </div>
@@ -41,11 +52,18 @@ const Header = () => {
           </Col>
 
           <Navbar.Toggle
-            className=""
+            // className={showMain ? "navbar-toggler-icon" : ""}
             aria-controls="basic-navbar-nav"
-            onClick={() => setShowMain((prev) => !prev)}
+            onClick={() => {
+              setShowMain((prev) => !prev);
+            }}
           />
-          <Navbar.Collapse id="basic-navbar-nav">
+          <div
+            className="collapse1 navbar-collapse1"
+            // className={`navbar-collapse collapse `}
+            // id="basic-navbar-nav"
+            id={showMain ? "showNav" : ""}
+          >
             <Col xs={12} sm={12} md={7}>
               <Nav className="navBar-search">
                 <div className="navBar-search-content">
@@ -75,20 +93,21 @@ const Header = () => {
                   <div className="navBar-signIn">
                     <p
                       onClick={() => {
-                        window.location.href = "login";
+                        setShowMain(false);
                       }}
                     >
-                      Hi Sign In
-                      {/* <Link to="login"> </Link> */}
+                      <Link to="login">Sign In </Link>
                     </p>
                     <p>Or</p>
-                    <p
-                      onClick={() => {
-                        window.location.href = "register";
-                      }}
-                    >
-                      Register
-                      {/* <Link to="register"></Link> */}
+                    <p>
+                      <Link
+                        to="register"
+                        onClick={() => {
+                          setShowMain(false);
+                        }}
+                      >
+                        Register
+                      </Link>
                     </p>
                   </div>
                 </Nav.Link>
@@ -106,7 +125,7 @@ const Header = () => {
                 </Nav.Link>
               </Nav>
             </Col>
-          </Navbar.Collapse>
+          </div>
         </Container>
       </Navbar>
       {/*  */}
