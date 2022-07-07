@@ -9,16 +9,16 @@ const Hero = () => {
     <div className="hero">
       <div
         id="carouselExampleIndicators"
-        class="carousel slide carousel-fade"
+        className="carousel slide carousel-fade"
         data-bs-ride="carousel"
       >
-        <div class="carousel-indicators CI-C">
+        <div className="carousel-indicators CI-C">
           {/* INDICATORS START*/}
           <button
             type="button"
             data-bs-target="#carouselExampleIndicators"
             data-bs-slide-to="0"
-            class="active"
+            className="active"
             aria-current="true"
             aria-label="Slide 1"
           ></button>
@@ -62,59 +62,59 @@ const Hero = () => {
         </div>
         <div className="carousel-inner">
           {/* CONTENT START*/}
-          <div class="carousel-item active hght ">
+          <div className="carousel-item active hght ">
             {" "}
             <img className="d-block  gg" src={HeroImg} alt="First slide" />
-            <div class="carousel-caption  hero-text">
+            <div className="carousel-caption  hero-text">
               <h3>Best Gadgets Deal</h3>
               <p className="hero-p1">Up to 70% Off! </p>
               <button className="hero-btn">Shop Now </button>
             </div>
           </div>
-          <div class="carousel-item  hght">
+          <div className="carousel-item  hght">
             <img className="d-block gg" src={HeroImg} alt="First slide" />
-            <div class="carousel-caption  hero-text">
+            <div className="carousel-caption  hero-text">
               <h3>Best Gadgets Deal</h3>
               <p className="hero-p1">Up to 70% Off! </p>
               <button className="hero-btn">Shop Now </button>
             </div>
           </div>
-          <div class="carousel-item  hght">
+          <div className="carousel-item  hght">
             <img className="d-block gg" src={HeroImg} alt="First slide" />
-            <div class="carousel-caption  hero-text">
+            <div className="carousel-caption  hero-text">
               <h3>Best Gadgets Deal</h3>
               <p className="hero-p1">Up to 70% Off! </p>
               <button className="hero-btn">Shop Now </button>
             </div>
           </div>
-          <div class="carousel-item  hght">
+          <div className="carousel-item  hght">
             <img className="d-block gg" src={HeroImg} alt="First slide" />
-            <div class="carousel-caption  hero-text">
+            <div className="carousel-caption  hero-text">
               <h3>Best Gadgets Deal</h3>
               <p className="hero-p1">Up to 70% Off! </p>
               <button className="hero-btn">Shop Now </button>
             </div>
           </div>
-          <div class="carousel-item  hght">
+          <div className="carousel-item  hght">
             <img className="d-block gg" src={HeroImg} alt="First slide" />
-            <div class="carousel-caption  hero-text">
+            <div className="carousel-caption  hero-text">
               <h3>Best Gadgets Deal</h3>
               <p className="hero-p1">Up to 70% Off! </p>
               <button className="hero-btn">Shop Now </button>
             </div>
           </div>
-          <div class="carousel-item  hght">
+          <div className="carousel-item  hght">
             <img className="d-block gg" src={HeroImg} alt="First slide" />
-            <div class="carousel-caption  hero-text">
+            <div className="carousel-caption  hero-text">
               <h3>Best Gadgets Deal</h3>
               <p className="hero-p1">Up to 70% Off! </p>
               <button className="hero-btn">Shop Now </button>
             </div>
           </div>
-          <div class="carousel-item  hght">
+          <div className="carousel-item  hght">
             {" "}
             <img className="d-block gg" src={HeroImg} alt="First slide" />
-            <div class="carousel-caption  hero-text">
+            <div className="carousel-caption  hero-text">
               <h3>Best Gadgets Deal</h3>
               <p className="hero-p1">Up to 70% Off! </p>
               <button className="hero-btn">Shop Now </button>
@@ -124,28 +124,28 @@ const Hero = () => {
         </div>
         {/* CONTROL START */}
         <button
-          class="carousel-control-prev CCP-C"
+          className="carousel-control-prev CCP-C"
           type="button"
           data-bs-target="#carouselExampleIndicators"
           data-bs-slide="prev"
         >
           <span
-            class="carousel-control-prev-icon CCPI-C"
+            className="carousel-control-prev-icon CCPI-C"
             aria-hidden="true"
           ></span>
-          <span class="visually-hidden">Previous</span>
+          <span className="visually-hidden">Previous</span>
         </button>
         <button
-          class="carousel-control-next CCN-C"
+          className="carousel-control-next CCN-C"
           type="button"
           data-bs-target="#carouselExampleIndicators"
           data-bs-slide="next"
         >
           <span
-            class="carousel-control-next-icon CCNI-C"
+            className="carousel-control-next-icon CCNI-C"
             aria-hidden="true"
           ></span>
-          <span class="visually-hidden">Next</span>
+          <span className="visually-hidden">Next</span>
         </button>
         {/* CONTROL STOP */}
       </div>
