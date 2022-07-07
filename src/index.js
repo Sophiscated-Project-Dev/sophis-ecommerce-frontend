@@ -11,6 +11,7 @@ import reportWebVitals from "./reportWebVitals";
 import "./index.css";
 import Layout from "./Layout";
 import Register from "./noautharea/pages/Register";
+import Checkout from "./autharea/pages/Checkout";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -21,6 +22,7 @@ root.render(
           <Route path="/" exact element={<Home />} />
           <Route path="login" element={<Login />} />
           <Route path="register" element={<Register />} />
+          <Route path="checkout" element={<Checkout/>}/>
         </Routes>
       </Layout>
     </Router>
