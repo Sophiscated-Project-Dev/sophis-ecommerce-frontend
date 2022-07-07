@@ -11,7 +11,7 @@ import reportWebVitals from "./reportWebVitals";
 import "./index.css";
 import Layout from "./Layout";
 import Register from "./noautharea/pages/Register";
-
+import OrderSuccess from "./noautharea/pages/orderSuccess";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
@@ -21,6 +21,7 @@ root.render(
           <Route path="/" exact element={<Home />} />
           <Route path="login" element={<Login />} />
           <Route path="register" element={<Register />} />
+          <Route path="/successful" element={<OrderSuccess />} />
         </Routes>
       </Layout>
     </Router>
