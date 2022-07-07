@@ -7,50 +7,50 @@ const Review = () => {
   return (
     <div className="reviews">
       <div
-        id="carouselExampleIndicators"
-        class="carousel slide"
+        id="carouselExampleIndicators-2"
+        className="carousel slide"
         data-bs-ride="carousel"
       >
-        <div class="carousel-indicators CI">
+        <div className="carousel-indicators CI">
           {/* INDICATORS START*/}
           <button
             type="button"
-            data-bs-target="#carouselExampleIndicators"
+            data-bs-target="#carouselExampleIndicators-2"
             data-bs-slide-to="0"
-            class="active"
+            className="active"
             aria-current="true"
             aria-label="Slide 1"
           ></button>
           <button
             type="button"
-            data-bs-target="#carouselExampleIndicators"
+            data-bs-target="#carouselExampleIndicators-2"
             data-bs-slide-to="1"
             aria-label="Slide 2"
           ></button>
           <button
             type="button"
-            data-bs-target="#carouselExampleIndicators"
+            data-bs-target="#carouselExampleIndicators-2"
             data-bs-slide-to="2"
             aria-label="Slide 3"
           ></button>
           <button
             type="button"
-            data-bs-target="#carouselExampleIndicators"
+            data-bs-target="#carouselExampleIndicators-2"
             data-bs-slide-to="3"
             aria-label="Slide 4"
           ></button>
           <button
             type="button"
-            data-bs-target="#carouselExampleIndicators"
+            data-bs-target="#carouselExampleIndicators-2"
             data-bs-slide-to="4"
             aria-label="Slide 5"
           ></button>
           {/* INDICATORS STOP */}
         </div>
-        <div class="carousel-inner">
+        <div className="carousel-inner">
           {/* CONTENT START*/}
-          <div class="carousel-item active tete">
-            <div class="carousel-caption ">
+          <div className="carousel-item active tete">
+            <div className="carousel-caption ">
               <h2 className="review-title">Clients Review</h2>
               <p className="review-comment">
                 This is so far the best website for my online shopping. They
@@ -82,8 +82,8 @@ const Review = () => {
               </p>
             </div>
           </div>
-          <div class="carousel-item tete">
-            <div class="carousel-caption ">
+          <div className="carousel-item tete">
+            <div className="carousel-caption ">
               <h2 className="review-title">Clients Review</h2>
               <p className="review-comment">
                 This is so far the best website for my online shopping. They
@@ -115,8 +115,8 @@ const Review = () => {
               </p>
             </div>
           </div>
-          <div class="carousel-item tete">
-            <div class="carousel-caption ">
+          <div className="carousel-item tete">
+            <div className="carousel-caption ">
               <h2 className="review-title">Clients Review</h2>
               <p className="review-comment">
                 This is so far the best website for my online shopping. They
@@ -148,8 +148,8 @@ const Review = () => {
               </p>
             </div>
           </div>
-          <div class="carousel-item tete">
-            <div class="carousel-caption ">
+          <div className="carousel-item tete">
+            <div className="carousel-caption ">
               <h2 className="review-title">Clients Review</h2>
               <p className="review-comment">
                 This is so far the best website for my online shopping. They
@@ -181,8 +181,8 @@ const Review = () => {
               </p>
             </div>
           </div>
-          <div class="carousel-item tete">
-            <div class="carousel-caption ">
+          <div className="carousel-item tete">
+            <div className="carousel-caption ">
               <h2 className="review-title">Clients Review</h2>
               <p className="review-comment">
                 This is so far the best website for my online shopping. They
@@ -218,28 +218,28 @@ const Review = () => {
         </div>
         {/* CONTROL START */}
         <button
-          class="carousel-control-prev CCP"
+          className="carousel-control-prev CCP"
           type="button"
-          data-bs-target="#carouselExampleIndicators"
+          data-bs-target="#carouselExampleIndicators-2"
           data-bs-slide="prev"
         >
           <span
-            class="carousel-control-prev-icon CCPI"
+            className="carousel-control-prev-icon CCPI"
             aria-hidden="true"
           ></span>
-          <span class="visually-hidden">Previous</span>
+          <span className="visually-hidden">Previous</span>
         </button>
         <button
-          class="carousel-control-next CCN"
+          className="carousel-control-next CCN"
           type="button"
-          data-bs-target="#carouselExampleIndicators"
+          data-bs-target="#carouselExampleIndicators-2"
           data-bs-slide="next"
         >
           <span
-            class="carousel-control-next-icon CCNI"
+            className="carousel-control-next-icon CCNI"
             aria-hidden="true"
           ></span>
-          <span class="visually-hidden">Next</span>
+          <span className="visually-hidden">Next</span>
         </button>
         {/* CONTROL STOP */}
       </div>
