@@ -12,7 +12,6 @@ import "./index.css";
 import Layout from "./Layout";
 import Register from "./noautharea/pages/Register";
 import OrderSuccess from "./noautharea/pages/orderSuccess";
-
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
