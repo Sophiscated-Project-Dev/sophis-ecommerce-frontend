@@ -52,7 +52,6 @@ const Header = () => {
           </Col>
 
           <Navbar.Toggle
-            // className={showMain ? "navbar-toggler-icon" : ""}
             aria-controls="basic-navbar-nav"
             onClick={() => {
               setShowMain((prev) => !prev);
@@ -60,7 +59,6 @@ const Header = () => {
           />
           <div
             className="collapse1 navbar-collapse1"
-            // className={`navbar-collapse collapse `}
             // id="basic-navbar-nav"
             id={showMain ? "showNav" : ""}
           >
@@ -96,7 +94,7 @@ const Header = () => {
                         setShowMain(false);
                       }}
                     >
-                      <Link to="login">Sign In </Link>
+                      <Link to="login">Sign In</Link>
                     </p>
                     <p>Or</p>
                     <p>
@@ -119,8 +117,10 @@ const Header = () => {
                 </Nav.Link>
                 <Nav.Link href="#link">
                   <div className="navBar-cart-icon">
-                    <FaShoppingCart className="cart" />
-                    <p>Cart</p>
+                    <Link to="cart">
+                      <FaShoppingCart className="cart" />
+                      <p>Cart</p>
+                    </Link>
                   </div>
                 </Nav.Link>
               </Nav>
