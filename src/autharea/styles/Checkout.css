@@ -145,6 +145,7 @@ label.same-as {
 }
 .payment-methods {
     row-gap: 20px;
+    column-gap: 5px;
     flex-wrap: wrap;
     align-items: flex-start;
     padding-left: 35px;
