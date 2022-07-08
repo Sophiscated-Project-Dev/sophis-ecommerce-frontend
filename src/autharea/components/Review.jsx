@@ -7,7 +7,7 @@ const Review = () => {
   return (
     <div className="reviews">
       <div
-        id="carouselExampleIndicators"
+        id="carouselExampleIndicators-2"
         className="carousel slide"
         data-bs-ride="carousel"
       >
@@ -15,7 +15,7 @@ const Review = () => {
           {/* INDICATORS START*/}
           <button
             type="button"
-            data-bs-target="#carouselExampleIndicators"
+            data-bs-target="#carouselExampleIndicators-2"
             data-bs-slide-to="0"
             className="active"
             aria-current="true"
@@ -23,25 +23,25 @@ const Review = () => {
           ></button>
           <button
             type="button"
-            data-bs-target="#carouselExampleIndicators"
+            data-bs-target="#carouselExampleIndicators-2"
             data-bs-slide-to="1"
             aria-label="Slide 2"
           ></button>
           <button
             type="button"
-            data-bs-target="#carouselExampleIndicators"
+            data-bs-target="#carouselExampleIndicators-2"
             data-bs-slide-to="2"
             aria-label="Slide 3"
           ></button>
           <button
             type="button"
-            data-bs-target="#carouselExampleIndicators"
+            data-bs-target="#carouselExampleIndicators-2"
             data-bs-slide-to="3"
             aria-label="Slide 4"
           ></button>
           <button
             type="button"
-            data-bs-target="#carouselExampleIndicators"
+            data-bs-target="#carouselExampleIndicators-2"
             data-bs-slide-to="4"
             aria-label="Slide 5"
           ></button>
@@ -220,7 +220,7 @@ const Review = () => {
         <button
           className="carousel-control-prev CCP"
           type="button"
-          data-bs-target="#carouselExampleIndicators"
+          data-bs-target="#carouselExampleIndicators-2"
           data-bs-slide="prev"
         >
           <span
@@ -232,7 +232,7 @@ const Review = () => {
         <button
           className="carousel-control-next CCN"
           type="button"
-          data-bs-target="#carouselExampleIndicators"
+          data-bs-target="#carouselExampleIndicators-2"
           data-bs-slide="next"
         >
           <span

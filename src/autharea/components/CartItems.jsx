@@ -3,7 +3,7 @@ import { Card, Button } from "react-bootstrap";
 import CartLaptop from "../../assets/cart-img/cartlaptop.png";
 
 export const CartItems = ({
-  index,
+  id,
   productName,
   vendor,
   img,
@@ -12,7 +12,7 @@ export const CartItems = ({
   discount,
 }) => {
   return (
-    <div key={index} className="cart-card-body-item mb-4 pt-2">
+    <div key={id} className="cart-card-body-item mb-4 pt-2">
       {/* <div> */}
       <div className="cart-img-spec ">
         <img src={img} alt="" className="cart-img" />

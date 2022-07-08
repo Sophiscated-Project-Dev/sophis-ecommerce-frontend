@@ -11,7 +11,12 @@ import reportWebVitals from "./reportWebVitals";
 import "./index.css";
 import Layout from "./Layout";
 import Register from "./noautharea/pages/Register";
+
 import CartComps from "./autharea/components/CartComps";
+
+import Checkout from "./autharea/pages/Checkout";
+
+import OrderSuccess from "./noautharea/pages/orderSuccess";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -22,7 +27,12 @@ root.render(
           <Route path="/" exact element={<Home />} />
           <Route path="login" element={<Login />} />
           <Route path="register" element={<Register />} />
+
           <Route path="cart" element={<CartComps />} />
+
+          <Route path="checkout" element={<Checkout />} />
+
+          <Route path="/successful" element={<OrderSuccess />} />
         </Routes>
       </Layout>
     </Router>
