@@ -1,10 +1,6 @@
  .hero {
      padding: 2vh 18vh;
      width: 100%;
-     /* background-image: url(../../assets/images/hero-image.png); */
-     /* background-repeat: no-repeat;
-     background-position: 18vh 2vh;
-     background-size: 170vh; */
  }
 
  .gg {
@@ -20,7 +16,6 @@
      position: relative;
  }
 
- .hght {}
 
  .hero-text {
      position: relative;
@@ -101,9 +96,6 @@
  }
 
  .CI-C [data-bs-target] {
-     /* width: 2.5vh;
-     height: 2.5vh; */
-
      width: 12px;
      height: 12px;
      border-radius: 50%;
@@ -115,8 +107,6 @@
  }
 
  .CI-C .active {
-     /* width: 4vh !important;
-     height: 4vh !important; */
      width: 17px;
      height: 17px;
      background-color: rgba(42, 111, 234, 1) !important;
@@ -279,8 +269,6 @@
      }
 
      .CI-C .active {
-         /* width: 9px !important;
-         height: 10px !important; */
          border: 1px solid #AAC5F7 !important;
 
      }
@@ -358,10 +346,6 @@
          margin-top: 5vh;
          margin-bottom: 3vh;
      }
-
-
-
-
 
      .CCN-C,
      .CCP-C {
@@ -516,15 +500,17 @@
      }
  }
 
- @media screen and (max-width: 325px) {
+ @media screen and (max-width: 344px) {
 
      .hero {
-         padding: 2vh 3vh 0 3vh;
+         padding-top: 9vh;
      }
-
  }
 
+
+
  @media screen and (max-width: 285px) {
+
      .hero-text {
          margin-left: -2vh;
      }
@@ -561,7 +547,7 @@
 
  @media screen and (max-width:260px) {
      .hero {
-         padding: 2vh 2vh 0 2vh;
+         padding-top: 8vh;
      }
 
      .hero-text {
