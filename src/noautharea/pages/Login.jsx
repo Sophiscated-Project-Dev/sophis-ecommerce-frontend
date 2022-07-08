@@ -6,7 +6,7 @@ import { AiFillGoogleCircle } from "react-icons/ai";
 
 const Login = () => {
   return (
-    <div className="login d-flex justify-content-center align-items-center py-5">
+    <div className="login d-flex justify-content-center align-items-center py-2">
       <Form className="login-form bg-white py-3 px-5">
         <Form.Group>
           <Form.Label className="login-header pb-2">Log In</Form.Label>
