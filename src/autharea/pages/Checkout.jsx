@@ -4,8 +4,25 @@ import AddressBox from "../components/AddressBox";
 import CheckoutHeader from "../components/CheckoutHeader";
 import PaymentMethod from '../components/PayMethod';
 import {FaApplePay, FaCcVisa, FaCcMastercard, FaDhl} from 'react-icons/fa'
+import { useState } from 'react';
 
 const Checkout = () => {
+    const initial = {
+        name: '',
+        email: '',
+        street: '',
+        state: '',
+        country: '',
+    }
+    
+    const [billingAddress, setBillingAddress] =  useState(initial)
+    const [shippingAddress, setShippingAddress] =  useState(initial)
+
+    function handleCheckout(event) {
+        event.preventDefault()
+        console.log(billingAddress, shippingAddress);
+    }
+
     return (
         <>
             <div className="container">
@@ -23,10 +40,10 @@ const Checkout = () => {
                         <span className="checkout-total-price">$3,000</span>
                     </div>
 
-                    <form className="checkout-form">
+                    <form className="checkout-form" onSubmit={handleCheckout}>
                         <div className="checkout-section">
                             <CheckoutHeader title={'Billing Address'}/>
-                            <AddressBox/>
+                            <AddressBox data={billingAddress} setData={setBillingAddress}/>
                         </div>
 
                         <div className="checkout-section">
@@ -35,7 +52,7 @@ const Checkout = () => {
                                 <input id="auto-address" type="checkbox"/>
                                 same as billing address
                             </label>
-                            <AddressBox/>
+                            <AddressBox data={shippingAddress} setData={setShippingAddress}/>
                         </div>
 
                         <div className="checkout-section">
