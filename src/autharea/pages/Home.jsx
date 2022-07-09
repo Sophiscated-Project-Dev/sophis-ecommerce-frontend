@@ -3,14 +3,11 @@ import RecomProds from "../components/RecomProds";
 import NewArrivals from "../components/NewArrivals";
 import Hero from "../components/Carousel";
 import Review from "../components/Review";
-import { Link } from "react-router-dom";
+import Offers from "../components/Offers";
 const Home = () => {
   return (
     <div>
       <Hero />
-      <Link to="/successful">
-        <div>ORDER SUCCESFUL</div>
-      </Link>
       <RecomProds />
 
       <div>{/* -------------------Flash Sales---------------- */}</div>
@@ -23,7 +20,7 @@ const Home = () => {
 
       <Review />
 
-      <div>{/* -------------------What we offer---------------- */}</div>
+      <Offers />
     </div>
   );
 };
