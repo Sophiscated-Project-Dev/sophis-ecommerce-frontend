@@ -91,7 +91,11 @@ a {
 .prod-price {
   margin: 15px 0;
 }
-
+@media screen and (max-width: 500px) {
+  .products-grp {
+    padding: 0;
+  }
+}
 @media screen and (min-width: 765px) {
   .recom-header {
     justify-content: flex-start;

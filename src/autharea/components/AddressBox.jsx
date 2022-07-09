@@ -7,6 +7,7 @@ const AddressBox = ({data, setData}) => {
     function handleEdit() {
         ref.current.focus()
     }
+    
     function handleChange(event, which) {
         setData(prev => {
             return {
