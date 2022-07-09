@@ -11,7 +11,10 @@ import reportWebVitals from "./reportWebVitals";
 import "./index.css";
 import Layout from "./Layout";
 import Register from "./noautharea/pages/Register";
+<<<<<<< HEAD
 import OrderSuccess from "./noautharea/pages/orderSuccess";
+=======
+>>>>>>> 3212b6bc717e63391ced8ce8da419e672c8116c0
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
