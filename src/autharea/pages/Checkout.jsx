@@ -7,6 +7,9 @@ import {FaApplePay, FaCcVisa, FaCcMastercard, FaDhl} from 'react-icons/fa'
 import { useState } from 'react';
 
 const Checkout = () => {
+
+    const [sameAddress, setSameAddress] = useState(false)
+
     const initial = {
         name: '',
         email: '',
@@ -21,6 +24,13 @@ const Checkout = () => {
     function handleCheckout(event) {
         event.preventDefault()
         console.log(billingAddress, shippingAddress);
+    }
+
+    function handleAddress() {
+        if (!sameAddress) {
+            setShippingAddress(billingAddress)
+        }
+        setSameAddress(prevState => !prevState)
     }
 
     return (
@@ -49,7 +59,7 @@ const Checkout = () => {
                         <div className="checkout-section">
                             <CheckoutHeader title={'Shipping Address'}/>
                             <label htmlFor="auto-address" className="same-as">
-                                <input id="auto-address" type="checkbox"/>
+                                <input id="auto-address" type="checkbox" value={sameAddress} onChange={handleAddress}/>
                                 same as billing address
                             </label>
                             <AddressBox data={shippingAddress} setData={setShippingAddress}/>
