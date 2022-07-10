@@ -17,13 +17,15 @@ const Checkout = () => {
         state: '',
         country: '',
     }
+
+    const [paymentMethod, setPaymentMethod] = useState("")
     
     const [billingAddress, setBillingAddress] =  useState(initial)
     const [shippingAddress, setShippingAddress] =  useState(initial)
 
     function handleCheckout(event) {
         event.preventDefault()
-        console.log(billingAddress, shippingAddress);
+        console.log(billingAddress, shippingAddress, paymentMethod);
     }
 
     function handleAddress() {
@@ -68,10 +70,10 @@ const Checkout = () => {
                         <div className="checkout-section">
                             <CheckoutHeader title={'Payment Method'}/>
                             <ul className="payment-methods">
-                                <PaymentMethod id={'master-card'} Icon={<FaCcMastercard/>}/>
-                                <PaymentMethod id={'visa'} Icon={<FaCcVisa/>}/>
-                                <PaymentMethod id={'apple-pay'} Icon={<FaApplePay/>}/>
-                                <PaymentMethod id={'dhl'} Icon={<FaDhl/>}/>
+                                <PaymentMethod id={'master-card'} Icon={<FaCcMastercard/>} setPaymentMethod={setPaymentMethod}/>
+                                <PaymentMethod id={'visa'} Icon={<FaCcVisa/>} setPaymentMethod={setPaymentMethod}/>
+                                <PaymentMethod id={'apple-pay'} Icon={<FaApplePay/>} setPaymentMethod={setPaymentMethod}/>
+                                <PaymentMethod id={'dhl'} Icon={<FaDhl/>} setPaymentMethod={setPaymentMethod}/>
                             </ul> 
                         </div>
                         <button className="btn confirm-order">Confirm order</button>

@@ -1,7 +1,12 @@
-const PaymentMethod = ({ Icon, id}) => {
+const PaymentMethod = ({ Icon, id, setPaymentMethod}) => {
+
+    function setPayMethod(event) {
+        setPaymentMethod(event.target.value)
+    }
+    
     return (
         <li className={`payment-method ${id}`}>
-            <input name="payment-method" id={id} type="radio"/>
+            <input name="payment-method" id={id} value={id} onChange={setPayMethod} type="radio"/>
             <label htmlFor={id}>{Icon}</label>
         </li>
     )
