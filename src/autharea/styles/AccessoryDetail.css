@@ -1,0 +1,72 @@
+.accessory h2 {
+  font: 500 0.875rem Open Sans, sans-serif;
+}
+
+.accessory h2 span {
+  color: #2a6fea;
+}
+
+.accessoryRightHeader {
+  color: #030710;
+  font: 600 2rem Montserrat, sans-serif;
+}
+
+.accessoryRightHeader span {
+  color: rgba(233, 30, 67, 0.6);
+  font-size: 2rem;
+}
+
+.accessoryRating,
+.accessoryBrand,
+.accessoryPrice {
+  color: #828282;
+  font: 500 0.75rem Open Sans, sans-serif;
+}
+
+.accessoryRating :first-child {
+  color: #f6ca2e;
+}
+
+.accessoryRating span,
+.accessoryBrand span,
+.accessorySizes *,
+.accessoryQuantity p,
+.accessoryQuantity button,
+.accessoryQuantity span {
+  color: #030710;
+}
+
+.accessoryBrand :last-child {
+  color: #2a6fea;
+}
+
+.accessoryDiscount {
+  font: 600 1.5rem Montserrat, sans-serif;
+}
+
+.accessoryPrice {
+  font-size: 0.875rem;
+}
+
+.accessorySizes *,
+.accessoryQuantity p,
+.accessoryQuantity button,
+.accessoryQuantity span {
+  font: 600 1rem Montserrat, sans-serif;
+}
+
+.accessorySizes input[type="checkbox"] {
+  border: 1px solid #686a70;
+}
+
+.accessoryQuantity button{
+  background-color: #d4e2fb;
+  font-size: 2rem;
+  height: 44px;
+  padding: 2px 8px;
+  width: 40px;
+}
+
+.accessoryQuantity span{
+  font-size: 1.5rem;
+}

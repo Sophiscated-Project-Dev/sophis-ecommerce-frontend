@@ -135,7 +135,7 @@ const Register = () => {
             </Link>
           </span>
         </p>
-
+        <hr/>
         <p className="registerLogin">
           Already have an Account?{" "}
           <span>

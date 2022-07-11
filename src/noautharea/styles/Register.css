@@ -65,3 +65,9 @@ p.registerAlternative span {
 .registerLogin span * {
   color: #2a6fea;
 }
+
+.registerPolicy + hr{
+  background-color: #cdcdcf;
+  height: 1px;
+  margin: 2rem 0;
+}

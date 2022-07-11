@@ -1,0 +1,69 @@
+#seller, #delivery {
+  border-radius: 4px;
+  max-width: 19.25rem;
+  padding: 1.25rem 0.625rem;
+}
+
+#seller > div:first-child,
+#delivery > div:first-child {
+  border-bottom: 1px solid #e6e6e7;
+  color: #030710;
+  font: 600 0.8rem Montserrat, sans-serif;
+  line-height: 1.5rem;
+}
+
+#seller h2 {
+  color: #6832a5;
+  font: 600 1.25rem Montserrat, sans-serif;
+}
+
+#seller button {
+  background-color: #2a6fea;
+  height: 40px;
+  max-width: 113px !important;
+}
+
+#seller button a {
+  font: 600 1rem Montserrat, sans-serif;
+}
+
+#seller .sellerRatings div span {
+  height: 36px;
+  width: 36px;
+}
+
+#seller .sellerBody :nth-child(3) div span {
+  background-color: rgba(42, 111, 234, 0.1);
+  color: #2a6fea;
+}
+
+#seller .sellerBody :nth-child(4) div span {
+  background-color: rgba(15, 155, 15, 0.1);
+  color: #0f9b0f;
+}
+
+#seller .sellerBody :nth-child(5) div span {
+  background-color: rgba(149, 82, 224, 0.1);
+}
+
+#seller .sellerBody :nth-child(5) div span small {
+  background-color: #9552e0;
+  font-size: 0.75rem;
+  height: 1rem;
+  width: 1rem;
+}
+
+#seller .sellerBody :nth-child(6) div span {
+  background-color: rgba(246, 202, 46, 0.1);
+  color: #f6ca2e;
+}
+
+#seller .sellerRatings div p,
+#seller .sellerRatings p {
+  color: #030710;
+  font: 600 0.75rem Montserrat, sans-serif;
+}
+
+#seller .sellerRatings p {
+  font: 600 1rem Montserrat, sans-serif;
+}
