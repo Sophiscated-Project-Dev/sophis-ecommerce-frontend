@@ -1,0 +1,237 @@
+ .reviews {
+     background: #F4F8FE;
+     margin-bottom: 0;
+     padding-left: 10vh;
+     padding-right: 10vh;
+     /* height: 100vh; */
+ }
+
+ .tete {
+     height: 612px;
+ }
+
+ .review-text {
+     text-align: center;
+ }
+
+ .review-title {
+     padding-top: 100px;
+     font-weight: 600;
+     font-size: 32px;
+     line-height: 40px;
+     font-family: 'Montserrat';
+     color: #030710;
+     text-align: center;
+     margin: 0px 0px 48px 0px;
+ }
+
+ .review-comment {
+     font-style: italic;
+     font-family: 'Open Sans';
+     font-size: 16px;
+     line-height: 34px;
+     text-align: center;
+     letter-spacing: 0.05em;
+     color: #353940;
+     margin: auto 10vh 30px 10vh;
+     font-weight: 400;
+ }
+
+ .review-client {
+     margin-bottom: 8px;
+ }
+
+ .review-client-name {
+     font-size: 16px;
+     font-style: normal;
+     font-family: 'Montserrat';
+     font-weight: 600;
+     font-size: 16px;
+     color: #030710;
+ }
+
+ .review-rating {
+     margin-top: 8px;
+     margin-bottom: 120px;
+     font-size: 16px;
+     font-weight: 600;
+     font-family: 'Montserrat';
+     color: #030710;
+ }
+
+ .review-star {
+     margin-right: 8px;
+     margin-bottom: 5px;
+ }
+
+
+ .CCN,
+ .CCP {
+     opacity: 1;
+     background: #fff;
+     border-radius: 50%;
+     height: 4vh;
+     width: 4vh;
+     padding: 3.5px 3.5px 3.5px 2px;
+     margin: auto 10vh;
+ }
+
+
+ .CCPI {
+     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='320' height='320' viewBox='0 0 320 320'%3E%3Cpath d='M209.63603896932108,48L97.63603896932108,160L209.63603896932108,272L222.36396103067892,259.27207793864216L123.09188309203677,160L222.36396103067892,60.72792206135786L209.63603896932108,48z'%3E%3C/path%3E%3C/svg%3E");
+ }
+
+ .CCNI {
+     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='320' height='320' viewBox='0 0 320 320'%3E%3Cpath d='M110.36396103067894,48L222.36396103067892,160L110.36396103067894,272L97.63603896932108,259.27207793864216L196.90811690796323,160L97.63603896932108,60.72792206135786L110.36396103067894,48z'%3E%3C/path%3E%3C/svg%3E");
+
+ }
+
+ .CI [data-bs-target] {
+     border-radius: 50%;
+     background: #D4E2FB;
+     opacity: 1;
+     margin-right: 2vh;
+     margin-bottom: 100px;
+ }
+
+ .CI .active {
+     background: #558CEE;
+ }
+
+
+ /* MEDIA QUERY */
+ /* TABLET */
+ @media screen and (max-width: 1100px) {
+     .review-title {
+         margin-bottom: 30px;
+     }
+
+     .review-comment {
+         font-size: 14px;
+     }
+
+     .review-client {
+         width: 80px;
+         height: 80px;
+         margin-bottom: 10px;
+     }
+
+     .CI [data-bs-target] {
+         width: 21px;
+     }
+
+     .CCN,
+     .CCP {
+         margin: auto 5vh;
+     }
+ }
+
+ @media screen and (max-width: 967px) {
+
+     .review-comment {
+         font-size: 14px;
+         margin: auto 10vh 30px 10vh;
+     }
+
+     .review-client {
+         width: 80px;
+         height: 80px;
+         margin-bottom: 10px;
+     }
+
+     .CCN,
+     .CCP {
+         margin: auto 4vh;
+     }
+
+     .CI[data-bs-target] {
+         width: 20px;
+     }
+ }
+
+ @media screen and (max-width: 869px) {
+     .review-title {
+         font-size: 30px;
+     }
+
+     .review-comment {
+         font-size: 13.5px;
+         margin: auto 8vh 30px 8vh;
+     }
+
+     .CCN,
+     .CCP {
+         margin: auto 1vh;
+     }
+
+     .CI [data-bs-target] {
+         width: 15px;
+         height: 1px;
+         margin-right: 1.5vh;
+     }
+ }
+
+ @media screen and (max-width: 700px) {
+     .review-comment {
+         margin: auto 4vh 30px 4vh;
+     }
+
+     .CCN,
+     .CCP {
+         margin: auto -2vh;
+     }
+
+     .CI [data-bs-target] {
+         width: 2vh;
+         height: 0vh;
+     }
+ }
+
+ /* PHONE */
+ @media screen and (max-width:524px) {
+     .review-comment {
+         margin: auto -3vh 30px -3vh;
+     }
+ }
+
+ @media screen and (max-width: 465px) {
+
+     .review-title {
+         font-size: 28px;
+         white-space: nowrap;
+     }
+
+     .review-comment {
+         font-size: 12px;
+         line-height: 28px;
+         text-align: center;
+         letter-spacing: 0.04em;
+         margin: auto -3vh 30px -3vh;
+     }
+
+     .CCN,
+     .CCP {
+         margin: auto -6vh;
+         height: 3.5vh;
+         width: 3.5vh;
+         padding: 4px 4px 4px 2.5px;
+     }
+
+     .CI[data-bs-target] {
+         width: 1.5vh;
+     }
+
+
+ }
+
+ @media screen and (max-width: 333px) {
+     .review-title {
+         font-size: 20px;
+         margin-bottom: 10px;
+         white-space: nowrap;
+     }
+
+     .review-comment {
+         margin: auto -5vh 30px -5vh;
+     }
+ }

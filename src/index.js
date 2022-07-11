@@ -1,17 +1,21 @@
+// Bootstrap CSS
+import "bootstrap/dist/css/bootstrap.min.css";
+// Bootstrap Bundle JS
+import "bootstrap/dist/js/bootstrap.bundle.min";
+
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./autharea/pages/Home";
 import Login from "./noautharea/pages/Login";
 import reportWebVitals from "./reportWebVitals";
-// Bootstrap CSS
-import "bootstrap/dist/css/bootstrap.min.css";
-// Bootstrap Bundle JS
-import "bootstrap/dist/js/bootstrap.bundle.min";
 import "./index.css";
 import Layout from "./Layout";
 import Register from "./noautharea/pages/Register";
 import SingleProduct from "./autharea/pages/SingleProduct";
+import Checkout from "./autharea/pages/Checkout";
+
+import OrderSuccess from "./noautharea/pages/orderSuccess";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -19,10 +23,15 @@ root.render(
     <Router>
       <Layout>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
+
+          <Route path="/" exact element={<Home />} />
+          <Route path="login" element={<Login />} />
+          <Route path="register" element={<Register />} />
+
+          <Route path="checkout" element={<Checkout/>}/>
           <Route path="/singleProduct" element={<SingleProduct />} />
+          <Route path="/successful" element={<OrderSuccess />} />
+
         </Routes>
       </Layout>
     </Router>

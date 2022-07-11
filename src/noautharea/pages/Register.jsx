@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import { BsFacebook } from "react-icons/bs";
 import { AiFillGoogleCircle } from "react-icons/ai";
-
 import "../styles/Register.css";
 
 const Register = () => {
