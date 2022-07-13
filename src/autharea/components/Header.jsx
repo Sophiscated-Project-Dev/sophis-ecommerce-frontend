@@ -117,7 +117,12 @@ const Header = () => {
                 </Nav.Link>
                 <div className="nav-link" href="#link">
                   <div className="navBar-cart-icon">
-                    <Link to="cart">
+                    <Link
+                      to="cart"
+                      onClick={() => {
+                        setShowMain(false);
+                      }}
+                    >
                       <FaShoppingCart className="cart" />
                       <p>Cart</p>
                     </Link>
