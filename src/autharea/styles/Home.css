@@ -1,13 +1,12 @@
-.home {
+/* .home {
   background-color: #f4f8fe;
   padding: 2rem 0;
-  /* padding-top: 3; */
   color: #030710;
-}
+} */
 
 /* Media Query */
-@media only screen and (max-width: 992px) {
+/* @media only screen and (max-width: 992px) {
   .home {
     padding: 1rem 0;
   }
-}
+} */
