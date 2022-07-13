@@ -1,13 +1,15 @@
 import React from "react";
 import RecomProds from "../components/RecomProds";
 import NewArrivals from "../components/NewArrivals";
+import Hero from "../components/Carousel";
+import Review from "../components/Review";
+import Offers from "../components/Offers";
 import "../styles/Home.css";
-
+import { Link } from "react-router-dom";
 const Home = () => {
   return (
     <div className="home">
-      <div>{/* -------------------Carousel---------------- */}</div>
-
+      <Hero />
       <RecomProds />
 
       <div>{/* -------------------Flash Sales---------------- */}</div>
@@ -18,9 +20,9 @@ const Home = () => {
 
       <div>{/* -------------------Brands---------------- */}</div>
 
-      <div>{/* -------------------Client Reviews---------------- */}</div>
+      <Review />
 
-      <div>{/* -------------------What we offer---------------- */}</div>
+      <Offers />
     </div>
   );
 };
