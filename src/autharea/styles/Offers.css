@@ -1,0 +1,63 @@
+.line {
+    border: 1px solid #CDCDCF;
+    margin: 0 78px auto;
+    margin-bottom: 78px;
+}
+
+.Offers- {
+    max-width: 100%;
+}
+
+.Offers {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+
+.Offers-divs p {
+    margin: 16px 20px 130px 20px;
+    font-size: 14px;
+}
+
+.guarantee {
+    max-width: 100px;
+    height: 80px;
+}
+
+.Cert {
+    position: relative;
+}
+
+.check {
+    position: absolute;
+    margin-right: 5vh;
+}
+
+.Offers div {
+    max-width: 35vh;
+}
+
+.to-top {
+    background: #D4E2FB;
+    padding: 10.81px 0;
+    text-align: center;
+    color: #2A6FEA;
+    font-size: 12px;
+}
+
+@media screen and (max-width:850px) {
+    .Offers {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .Offers div {
+        max-width: 50vh;
+    }
+
+    .Offers-divs p {
+        width: 100%;
+        margin: 16px 0 130px 0;
+    }
+}
