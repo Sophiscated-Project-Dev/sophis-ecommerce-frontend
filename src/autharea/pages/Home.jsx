@@ -4,9 +4,11 @@ import NewArrivals from "../components/NewArrivals";
 import Hero from "../components/Carousel";
 import Review from "../components/Review";
 import Offers from "../components/Offers";
+import "../styles/Home.css";
+import { Link } from "react-router-dom";
 const Home = () => {
   return (
-    <div>
+    <div className="home">
       <Hero />
       <RecomProds />
 

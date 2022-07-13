@@ -1,0 +1,205 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+ul {
+    list-style: none;
+}
+label {
+    cursor: pointer;
+}
+body {
+    font-family: "Montserrat", sans-serif;
+    background: #F4F8FE;
+}
+.checkout-nav {
+    margin-top: 10px;
+}
+.checkout-nav > a:nth-child(3) {
+    color: #000000;
+    pointer-events: none;
+}
+.checkout-main {
+    width: 98%;
+    max-width: 716px;
+    margin: 40px auto;
+}
+.checkout-title {
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+.checkout-form + a {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    text-align: center;
+    display: block;
+    font-weight: 600;
+    color: #2A6FEA;
+}
+.checkout-bill {
+    padding: 30px 20px;
+    background-color: #FFFFFF;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.05);
+}
+.checkout-price {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #030710;
+    margin-bottom: 50px;
+}
+.checkout-total-tag {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    color: #030710;
+}
+.checkout-total-price {
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 40px;
+    color: #2A6FEA;
+}
+.checkout-section {
+    margin-bottom: 50px;
+}
+.checkout-header {
+    display: flex;
+    margin-bottom: 35px;
+}
+.checkout-header > h3 {
+    font-size: 16px;
+    line-height: 24px;
+    background-color: #D4E2FB;
+    color: #2A6FEA;
+    display: inline-block;
+    flex-basis: 100%;
+    padding: 12px 20px;
+    margin-left: 20px;
+}
+.address-box  {
+    border-left: 1px solid #CDCDCF;
+    padding-left: 33px;
+}
+.address-container {
+    margin-bottom: 20px;
+    flex-basis: 75%;
+}
+.address-input {
+    border: 1px solid #CDCDCF;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 100%;
+    color: #000000;
+    margin-bottom: 30px;
+}
+.location {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+}
+.location > .address-input {
+    margin-bottom: 0;
+}
+.address-edit {
+    gap: 8px;
+    padding: 10px;
+    border: none;
+    justify-self: right;
+    border-radius: 2px;
+    background-color: #2A6FEA;
+    color: white;
+    margin-left: auto;
+    align-self: flex-end;
+}
+label.same-as {
+    gap: 10px;
+    margin-bottom: 20px;
+}
+.address-input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #000000;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    opacity: 1; /* Firefox */
+}
+  
+.address-input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #000000;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+}
+  
+.address-input::-ms-input-placeholder { /* Microsoft Edge */
+    color: #000000;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+}
+.payment-methods, .payment-method, label.same-as, .address-edit {
+    display: flex;
+    align-items: center;
+}
+.payment-methods {
+    row-gap: 20px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    padding-left: 35px;
+    justify-content: space-between;
+}
+.payment-method {
+    gap: 20px;
+}
+.payment-method > input:checked + label {
+    border: 1.5px solid rgb(104, 236, 104);
+}
+.payment-method > label {
+    border: 1.5px solid #2A6FEA;
+    height: 64px;
+    padding: 10px 10px;
+}
+.payment-method svg {
+    font-size: 40px;
+}
+.payment-method.master-card svg {
+    background-color: rgb(12, 8, 1);
+    color: white;
+}
+.payment-method.visa svg {
+    color: purple;
+}
+.payment-method.dhl svg {
+    color: orangered;
+}
+.confirm-order {
+    font-size: 24px;
+    background-color: #2A6FEA;
+    border: none;
+    color: white;
+    padding: 10px;
+    width: 100%;
+}
+@media screen and (min-width: 765px){
+    .checkout-nav {
+        margin-top: 50px;
+    }
+    .checkout-title {
+        font-size: 32px;
+        line-height: 40px;
+    }
+    .address-box {
+        padding-left: 35px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .address-container {
+        margin-bottom: 40px;
+    }
+    .location {
+        flex-wrap: nowrap;
+        gap: 5%;
+    }
+}
