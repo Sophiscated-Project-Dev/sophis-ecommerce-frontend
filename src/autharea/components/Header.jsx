@@ -19,7 +19,7 @@ const Header = () => {
       <Navbar expand="lg">
         <Container>
           <Col>
-            <Navbar.Brand href="#home">
+            <div className="navbar-brand" href="#home">
               <div className="navBar-logo">
                 <div className="navBar-img-container d-flex">
                   <div className="navBar-logo1">
@@ -48,7 +48,7 @@ const Header = () => {
                   </div>
                 </div>
               </div>
-            </Navbar.Brand>
+            </div>
           </Col>
 
           <Navbar.Toggle
@@ -87,7 +87,7 @@ const Header = () => {
                   <FaUser className="user-icon" />
                   <p>Account</p>
                 </div>
-                <Nav.Link href="#home">
+                <div className="nav-link" href="#home">
                   <div className="navBar-signIn">
                     <p
                       onClick={() => {
@@ -108,21 +108,26 @@ const Header = () => {
                       </Link>
                     </p>
                   </div>
-                </Nav.Link>
+                </div>
                 <Nav.Link href="#link">
                   <div className="navbar-wishlis-icon">
                     <FaHeart className="heart-icon" />
                     <p>Wishlist</p>
                   </div>
                 </Nav.Link>
-                <Nav.Link href="#link">
+                <div className="nav-link" href="#link">
                   <div className="navBar-cart-icon">
-                    <Link to="cart">
+                    <Link
+                      to="cart"
+                      onClick={() => {
+                        setShowMain(false);
+                      }}
+                    >
                       <FaShoppingCart className="cart" />
                       <p>Cart</p>
                     </Link>
                   </div>
-                </Nav.Link>
+                </div>
               </Nav>
             </Col>
           </div>

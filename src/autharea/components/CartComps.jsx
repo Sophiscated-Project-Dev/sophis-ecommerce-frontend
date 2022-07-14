@@ -41,7 +41,7 @@ const CartComps = () => {
 
   return (
     <div className="cart-comps">
-      <div className="container p-5 change-p5">
+      <div className="container change-p5">
         <div className="cart-header">Cart</div>
         <Card className="cart-card mt-2">
           <Card.Header className="d-flex justify-content-between cart-card-top ">
