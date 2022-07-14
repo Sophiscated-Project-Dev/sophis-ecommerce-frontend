@@ -133,27 +133,6 @@ label.same-as {
     gap: 10px;
     margin-bottom: 20px;
 }
-.address-input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-    color: #000000;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 16px;
-    opacity: 1; /* Firefox */
-}
-  
-.address-input:-ms-input-placeholder { /* Internet Explorer 10-11 */
-    color: #000000;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 16px;
-}
-  
-.address-input::-ms-input-placeholder { /* Microsoft Edge */
-    color: #000000;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 16px;
-}
 .payment-methods, .payment-method, label.same-as, .address-edit {
     display: flex;
     align-items: center;
