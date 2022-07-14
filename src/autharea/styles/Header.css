@@ -1,7 +1,8 @@
 .header {
-  height: 144px;
+  height: auto;
   width: 100%;
-  /* margin-bottom: 2.1rem; */
+  margin-bottom: 0.2rem;
+  background: #ffffff;
   position: sticky;
   z-index: 151;
 }
@@ -19,7 +20,7 @@
 .navBar-img-container {
   display: flex;
   align-items: center;
-  margin-top: 1rem;
+  /* margin-top: 1rem; */
 }
 
 .navBar-logo1 {
@@ -255,9 +256,8 @@
 /* Media Query */
 @media only screen and (max-width: 992px) {
   .header {
-    height: 100px;
+    margin-bottom: 0.5rem;
     width: 100vw;
-    margin: 0 auto;
   }
 
   .navbar-collapse1 {
@@ -275,10 +275,6 @@
     align-items: center;
     flex-direction: column;
     /* height: 100px; */
-  }
-
-  .header {
-    margin-bottom: 0.5rem;
   }
 
   .col-four {

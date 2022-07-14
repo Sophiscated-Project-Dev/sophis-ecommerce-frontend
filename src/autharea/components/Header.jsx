@@ -15,11 +15,11 @@ const Header = () => {
   // const [showMain2, setShowMain2] = useState(false);
 
   return (
-    <div className="header">
+    <div className="header" id="top">
       <Navbar expand="lg">
         <Container>
           <Col>
-            <Navbar.Brand href="#home">
+            <div className="navbar-brand" href="#home">
               <div className="navBar-logo">
                 <div className="navBar-img-container d-flex">
                   <div className="navBar-logo1">
@@ -48,11 +48,10 @@ const Header = () => {
                   </div>
                 </div>
               </div>
-            </Navbar.Brand>
+            </div>
           </Col>
 
           <Navbar.Toggle
-            // className={showMain ? "navbar-toggler-icon" : ""}
             aria-controls="basic-navbar-nav"
             onClick={() => {
               setShowMain((prev) => !prev);
@@ -60,7 +59,6 @@ const Header = () => {
           />
           <div
             className="collapse1 navbar-collapse1"
-            // className={`navbar-collapse collapse `}
             // id="basic-navbar-nav"
             id={showMain ? "showNav" : ""}
           >
@@ -89,14 +87,14 @@ const Header = () => {
                   <FaUser className="user-icon" />
                   <p>Account</p>
                 </div>
-                <Nav.Link href="#home">
+                <div className="nav-link" href="#home">
                   <div className="navBar-signIn">
                     <p
                       onClick={() => {
                         setShowMain(false);
                       }}
                     >
-                      <Link to="login">Sign In </Link>
+                      <Link to="login">Sign In</Link>
                     </p>
                     <p>Or</p>
                     <p>
@@ -110,19 +108,26 @@ const Header = () => {
                       </Link>
                     </p>
                   </div>
-                </Nav.Link>
+                </div>
                 <Nav.Link href="#link">
                   <div className="navbar-wishlis-icon">
                     <FaHeart className="heart-icon" />
                     <p>Wishlist</p>
                   </div>
                 </Nav.Link>
-                <Nav.Link href="#link">
+                <div className="nav-link" href="#link">
                   <div className="navBar-cart-icon">
-                    <FaShoppingCart className="cart" />
-                    <p>Cart</p>
+                    <Link
+                      to="cart"
+                      onClick={() => {
+                        setShowMain(false);
+                      }}
+                    >
+                      <FaShoppingCart className="cart" />
+                      <p>Cart</p>
+                    </Link>
                   </div>
-                </Nav.Link>
+                </div>
               </Nav>
             </Col>
           </div>
