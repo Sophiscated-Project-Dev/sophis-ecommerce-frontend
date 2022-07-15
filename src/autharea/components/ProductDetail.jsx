@@ -2,7 +2,7 @@ import "../styles/ProductDetail.css";
 
 const ProductDetail = () => {
   return (
-    <div className="pDetail bg-white">
+    <div className="pDetail bg-white mt-5">
       <ul className="nav nav-pills mb-3" id="pills-tab" role="tablist">
         <li className="nav-item" role="presentation">
           <button

@@ -1,11 +1,101 @@
-.accessory h2 {
-  font: 500 0.875rem Open Sans, sans-serif;
+/* Accessory Left Side */
+.accessoryLeft {
+  margin-bottom: 7rem;
 }
 
-.accessory h2 span {
-  color: #2a6fea;
+.accessoryLeft,
+.accessoryLeftUpper {
+  padding: 20px;
 }
 
+.accessoryLeftUpper {
+  background-color: #fafafa;
+}
+
+.accessoryLeftUpper .carousel-item {
+  height: 296px;
+}
+
+.accessoryLeftUpper .ccp span,
+.accessoryLeftUpper .ccn span {
+  color: #030710 !important;
+  font-size: 1rem;
+  top: 25%;
+}
+
+.accessoryLeftUpper .ccp span {
+  left: -50%;
+}
+
+.accessoryLeftUpper .ccn span {
+  right: -50%;
+}
+@media all and (min-width: 25.875rem) {
+  .accessoryLeftUpper .ccp span {
+    left: -30%;
+  }
+
+  .accessoryLeftUpper .ccn span {
+    right: -30%;
+  }
+}
+
+.accessoryLeft h4 {
+  font: 600 1rem Montserrat, sans-serif;
+}
+
+.accessoryLeftUpper h4 {
+  margin-top: -45%;
+  z-index: 12;
+}
+@media all and (min-width: 20.625rem) {
+  .accessoryLeftUpper h4 {
+    margin-top: -15%;
+  }
+}
+@media all and (min-width: 23.75rem) {
+  .accessoryLeftUpper h4 {
+    margin-top: 0;
+  }
+}
+
+.accessoryLeftUpper .modalButton {
+  z-index: 100;
+}
+
+.accessoryLeftUpper .modalButton img {
+  border: 0.5px solid #030710;
+  border-radius: 4px;
+  height: 3.5rem;
+  width: 3.5rem;
+}
+
+.accessoryLeft .carousel-indicators {
+  bottom: -20%;
+  height: 5rem;
+  width: 70%;
+}
+@media all and (min-width: 25rem) {
+  .accessoryLeft .carousel-indicators {
+    bottom: -15%;
+  }
+}
+
+.accessoryLeft .carousel-indicators button {
+  background-color: transparent;
+  width: 3.5rem;
+}
+
+.accessoryLeft .carousel-indicators button img {
+  height: 3.5rem;
+  width: 3.5rem;
+}
+
+.accessoryLeft .carousel-indicators button p {
+  font: 500 0.75rem Open Sans, sans-serif;
+  color: #828282;
+}
+/* Accessory Right Side */
 .accessoryRightHeader {
   color: #030710;
   font: 600 2rem Montserrat, sans-serif;
@@ -31,6 +121,7 @@
 .accessoryBrand span,
 .accessorySizes *,
 .accessoryQuantity p,
+.accessoryShare p,
 .accessoryQuantity button,
 .accessoryQuantity span {
   color: #030710;
@@ -50,16 +141,22 @@
 
 .accessorySizes *,
 .accessoryQuantity p,
+.accessoryShare p,
 .accessoryQuantity button,
 .accessoryQuantity span {
   font: 600 1rem Montserrat, sans-serif;
+}
+@media all and (min-width: 57rem) {
+  .accessorySizes:not(:last-child) {
+    width: 75%;
+  }
 }
 
 .accessorySizes input[type="checkbox"] {
   border: 1px solid #686a70;
 }
 
-.accessoryQuantity button{
+.accessoryQuantity button {
   background-color: #d4e2fb;
   font-size: 2rem;
   height: 44px;
@@ -67,6 +164,15 @@
   width: 40px;
 }
 
-.accessoryQuantity span{
+.accessoryQuantity span {
   font-size: 1.5rem;
+}
+
+.accessoryShare:last-child {
+  width: 50%;
+}
+@media all and (min-width: 57rem) {
+  .accessoryShare:last-child {
+    width: 30%;
+  }
 }

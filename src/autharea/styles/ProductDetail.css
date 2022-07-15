@@ -12,7 +12,17 @@
 .pDetail ul li button {
   background-color: transparent !important;
   color: #000000 !important;
-  font: 600 1.5rem Montserrat, sans-serif;
+  font: 600 1rem Montserrat, sans-serif;
+}
+@media all and (min-width: 768px) {
+  .pDetail ul li button.active,
+  .pDetail ul li button {
+    font-size: 1.25rem;
+  }
+  .pDetail ul :last-child button.active {
+    color: #030710;
+    font-size: 0.625rem;
+  }
 }
 
 .pDetail ul li button {

@@ -8,7 +8,7 @@ const SellerCard = () => {
       <div className="mb-4">Seller Information & Performance</div>
 
       <div className="sellerBody row ">
-        <h2 className="col-6 pt-1">Ikeoha</h2>
+        <h2 className="col-6 pt-1 mt-0">Ikeoha</h2>
 
         <button
           type="submit"
