@@ -13,6 +13,9 @@ import "./index.css";
 import Layout from "./Layout";
 import Register from "./noautharea/pages/Register";
 import SingleProduct from "./autharea/pages/SingleProduct";
+
+import CartComps from "./autharea/components/CartComps";
+
 import Checkout from "./autharea/pages/Checkout";
 
 import OrderSuccess from "./noautharea/pages/orderSuccess";
@@ -31,7 +34,10 @@ root.render(
           <Route path="checkout" element={<Checkout/>}/>
           <Route path="/singleProduct" element={<SingleProduct />} />
           <Route path="/successful" element={<OrderSuccess />} />
+          <Route path="cart" element={<CartComps />} />
 
+
+          <Route path="/successful" element={<OrderSuccess />} />
         </Routes>
       </Layout>
     </Router>
