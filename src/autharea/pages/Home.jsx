@@ -2,6 +2,7 @@ import React from "react";
 import RecomProds from "../components/RecomProds";
 import NewArrivals from "../components/NewArrivals";
 import TopProducts from "../components/TopProducts";
+import FlashProducts from "../components/FlashProducts";
 import Hero from "../components/Carousel";
 import Review from "../components/Review";
 import Offers from "../components/Offers";
@@ -12,7 +13,7 @@ const Home = () => {
       <Hero />
       <RecomProds />
 
-      <div>{/* -------------------Flash Sales---------------- */}</div>
+      <FlashProducts/>
 
       <NewArrivals />
 
