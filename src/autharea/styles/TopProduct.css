@@ -1,0 +1,17 @@
+.top-product {
+    padding: 5px;
+    display: grid;
+    place-items: center;
+}
+.top-product .prod-name {
+    margin-top: 10px;
+}
+@media screen and (min-width: 500px) {
+    .top-prods {
+        justify-content: flex-start;
+    }
+    .top-product {
+        place-items: start;
+        max-width: 218px !important;
+    }
+}
