@@ -88,9 +88,6 @@ a {
   height: 15px;
   margin: 0;
 }
-.prod-price {
-  margin: 15px 0;
-}
 @media screen and (max-width: 500px) {
   .products-grp {
     padding: 0;
@@ -105,5 +102,8 @@ a {
   }
   .recom-prods {
     padding: 30px 10px 25px 10px;
+  }
+  .recom-prod1 {
+    min-width: 358px;
   }
 }
