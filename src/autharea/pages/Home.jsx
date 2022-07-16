@@ -6,6 +6,7 @@ import Review from "../components/Review";
 import Offers from "../components/Offers";
 import "../styles/Home.css";
 import { Link } from "react-router-dom";
+import BrandsComp from "../components/BrandsComp";
 const Home = () => {
   return (
     <div className="home">
@@ -18,7 +19,7 @@ const Home = () => {
 
       <div>{/* -------------------Top Ranked---------------- */}</div>
 
-      <div>{/* -------------------Brands---------------- */}</div>
+      <BrandsComp />
 
       <Review />
 
