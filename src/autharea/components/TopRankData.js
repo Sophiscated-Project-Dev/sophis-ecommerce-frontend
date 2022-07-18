@@ -46,6 +46,62 @@ const data = [
     },
  ]
 
-
+ export const flashSale = [
+    {
+        image: 'jacket',
+        name: 'Jean Jacket, Dark blue ..',
+        grossPrice: '800',
+        salePrice: '560',
+        percentDiscount: 30,
+        rating: 3.9,
+        reviewNumber: 16,
+        left: 5,
+        total: 25,
+    },
+    {
+        image: 'camera',
+        name: 'Canon EOS Rebel T3i ..',
+        grossPrice: '350',
+        salePrice: '332',
+        percentDiscount: 5,
+        rating: 5.0,
+        reviewNumber: 20,
+        left: 20,
+        total: 25,
+    },
+    {
+        image: 'pack',
+        name: '24 Pack Bundle Sensory.',
+        grossPrice: '',
+        salePrice: '30',
+        percentDiscount: '',
+        rating: 4.0,
+        reviewNumber: 5,
+        left: 5,
+        total: 10,
+    },
+    {
+        image: 'stethoscope',
+        name: 'Head Stethoscope - Bl..',
+        grossPrice: '15',
+        salePrice: '13',
+        percentDiscount: 20,
+        rating: 4.0,
+        reviewNumber: 20,
+        left: 3,
+        total: 6,
+    },
+    {
+        image: 'jotter',
+        name: 'Virtual Jotter -Blue',
+        grossPrice: '',
+        salePrice: '5',
+        percentDiscount: '',
+        rating: 4.4,
+        reviewNumber: 12,
+        left: 20,
+        total: 40,
+    },
+ ]
 
  export default data
