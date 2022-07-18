@@ -3,8 +3,23 @@
     display: grid;
     place-items: center;
 }
-.top-product .prod-name {
-    margin-top: 10px;
+.prod-name {
+    margin: 10px 0;
+}
+.prod-price {
+    margin-bottom: 0px;
+}
+.countdown {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 10px 30px;
+}
+.progress {
+    height: 8px;
+    width: 160px;
+    border-radius: 5px;
+    background-color: #f8eab6;
 }
 @media screen and (min-width: 500px) {
     .top-prods {
