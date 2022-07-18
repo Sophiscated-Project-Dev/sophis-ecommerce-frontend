@@ -18,7 +18,8 @@ const Structure = ({ structData }) => {
             <p className="vendor-NOP"> {numOfProd} products</p>
             <div className="vendor-stats">
               <img src={star} alt="star" />
-              <strong>{rating} </strong> |<span> {reviewNumber} Reviews </span>
+              <strong>{rating} </strong> <span className="ssp">|</span>
+              <span> {reviewNumber} Reviews </span>
             </div>
           </div>
         </div>

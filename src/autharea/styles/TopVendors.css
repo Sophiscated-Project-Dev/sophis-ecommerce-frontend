@@ -63,6 +63,10 @@
     font-weight: 500;
 }
 
+.ssp {
+    font-size: 16px;
+}
+
 @media screen and (max-width: 767px) {
     .vendor-NOP {
         white-space: nowrap;
