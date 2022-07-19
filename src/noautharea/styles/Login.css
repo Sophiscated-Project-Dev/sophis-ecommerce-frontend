@@ -1,11 +1,13 @@
 .login {
   background-color: #f4f8fe;
   padding-top: 1.5rem !important;
+  padding-bottom: 1.5rem !important;
 }
 
 .login-form {
   width: 440px;
   /*height: 664px; */
+  box-shadow: 1px 1px 10px rgb(0 0 0 / 5%);
 }
 
 .login-header {

@@ -151,7 +151,7 @@ export const LaptopListComs = () => {
       <div className="laptop-card d-flex justify-content-center align-items-center py-5 bg-white">
         <div className="laptop-card-row d-flex">
           {laptopLists.map((item, index) => {
-            return <LaptopComs {...item} />;
+            return <LaptopComs {...item} key={index} />;
           })}
         </div>
       </div>
