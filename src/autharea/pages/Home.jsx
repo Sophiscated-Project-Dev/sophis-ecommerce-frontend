@@ -6,6 +6,7 @@ import Review from "../components/Review";
 import Offers from "../components/Offers";
 import "../styles/Home.css";
 import { Link } from "react-router-dom";
+import TopVendors from "../components/TopVendors/TopVendors";
 const Home = () => {
   return (
     <div className="home">
@@ -17,6 +18,8 @@ const Home = () => {
       <NewArrivals />
 
       <div>{/* -------------------Top Ranked---------------- */}</div>
+
+      <TopVendors />
 
       <div>{/* -------------------Brands---------------- */}</div>
 
