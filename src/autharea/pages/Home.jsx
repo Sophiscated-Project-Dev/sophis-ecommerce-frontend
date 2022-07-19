@@ -1,12 +1,17 @@
 import React from "react";
 import RecomProds from "../components/RecomProds";
+
 import NewArrivals from "../components/NewArrivals";
 import Hero from "../components/Carousel";
 import Review from "../components/Review";
 import Offers from "../components/Offers";
 import "../styles/Home.css";
 import { Link } from "react-router-dom";
+
 import BrandsComp from "../components/BrandsComp";
+
+import TopVendors from "../components/TopVendors/TopVendors";
+
 const Home = () => {
   return (
     <div className="home">
@@ -19,7 +24,13 @@ const Home = () => {
 
       <div>{/* -------------------Top Ranked---------------- */}</div>
 
+
       <BrandsComp />
+
+      <TopVendors />
+
+      <div>{/* -------------------Brands---------------- */}</div>
+
 
       <Review />
 

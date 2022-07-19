@@ -1,0 +1,35 @@
+.pDetail > ul {
+  background-color: #d4e2fb;
+  padding: 0.75rem 1.25rem;
+}
+
+.pDetail ul :last-child button {
+  color: #2a6fea !important;
+  font: 400 0.635rem Open Sans, sans-serif;
+}
+
+.pDetail ul li button.active,
+.pDetail ul li button {
+  background-color: transparent !important;
+  color: #000000 !important;
+  font: 600 1rem Montserrat, sans-serif;
+}
+@media all and (min-width: 768px) {
+  .pDetail ul li button.active,
+  .pDetail ul li button {
+    font-size: 1.25rem;
+  }
+  .pDetail ul :last-child button.active {
+    color: #030710;
+    font-size: 0.625rem;
+  }
+}
+
+.pDetail ul li button {
+  color: #828282 !important;
+}
+
+.pDetail .tab-pane {
+  font: 400 1rem Open Sans, sans-serif;
+  line-height: 22px;
+}

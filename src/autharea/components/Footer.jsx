@@ -23,7 +23,7 @@ const Footer = () => {
       {/* Subscribe */}
       <div className="row" id="subscribe">
         <h3 className="footerHeader col-12 col-md text-white mb-5">
-          Sophis<span>Mart</span>
+          Sophis{' '}<span>Mart</span>
         </h3>
 
         <div className="col-12 col-md">
