@@ -1,5 +1,6 @@
 import React from "react";
 import RecomProds from "../components/RecomProds";
+
 import NewArrivals from "../components/NewArrivals";
 import Hero from "../components/Carousel";
 import Review from "../components/Review";
