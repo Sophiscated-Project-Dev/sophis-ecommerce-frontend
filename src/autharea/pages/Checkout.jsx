@@ -1,7 +1,8 @@
-import '../styles/Checkout.css'
+import "../styles/Checkout.css";
 import { Link } from "react-router-dom";
 import AddressBox from "../components/AddressBox";
 import CheckoutHeader from "../components/CheckoutHeader";
+
 import PaymentMethod from '../components/PayMethod';
 import {FaApplePay, FaCcVisa, FaCcMastercard, FaDhl} from 'react-icons/fa'
 import { useState } from 'react';
@@ -78,12 +79,11 @@ const Checkout = () => {
                         </div>
                         <button className="btn confirm-order">Confirm order</button>
                     </form>
+          <Link to={"/"}>continue shopping</Link>
+        </div>
+      </main>
+    </>
+  );
+};
 
-                    <Link to={'/'}>continue shopping</Link>
-                </div>
-            </main>
-        </>
-    )
-}
-
-export default Checkout
+export default Checkout;

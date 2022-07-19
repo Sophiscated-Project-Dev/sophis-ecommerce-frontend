@@ -2,7 +2,11 @@ import React from "react";
 import "bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../styles/Carousel.css";
-import HeroImg from "../../assets/images/hero-image.png";
+import HeroImg1 from "../../assets/Carousel/hero-image-1.png";
+import HeroImg2 from "../../assets/Carousel/hero-image-2.png";
+import HeroImg3 from "../../assets/Carousel/hero-image-3.png";
+import HeroImg4 from "../../assets/Carousel/hero-image-4.png";
+import HeroImg5 from "../../assets/Carousel/hero-image-5.png";
 
 const Hero = () => {
   return (
@@ -64,7 +68,7 @@ const Hero = () => {
           {/* CONTENT START*/}
           <div className="carousel-item active hght ">
             {" "}
-            <img className="d-block  gg" src={HeroImg} alt="First slide" />
+            <img className="d-block  gg" src={HeroImg1} alt="First slide" />
             <div className="carousel-caption  hero-text">
               <h3>Best Gadgets Deal</h3>
               <p className="hero-p1">Up to 70% Off! </p>
@@ -72,7 +76,15 @@ const Hero = () => {
             </div>
           </div>
           <div className="carousel-item  hght">
-            <img className="d-block gg" src={HeroImg} alt="First slide" />
+            <img className="d-block gg" src={HeroImg2} alt="First slide" />
+            <div className="carousel-caption  hero-text">
+              <h3>Best Clothing Deal</h3>
+              <p className="hero-p1">Up to 70% Off! </p>
+              <button className="hero-btn">Shop Now </button>
+            </div>
+          </div>
+          <div className="carousel-item  hght">
+            <img className="d-block gg" src={HeroImg3} alt="First slide" />
             <div className="carousel-caption  hero-text">
               <h3>Best Gadgets Deal</h3>
               <p className="hero-p1">Up to 70% Off! </p>
@@ -80,7 +92,15 @@ const Hero = () => {
             </div>
           </div>
           <div className="carousel-item  hght">
-            <img className="d-block gg" src={HeroImg} alt="First slide" />
+            <img className="d-block gg" src={HeroImg4} alt="First slide" />
+            <div className="carousel-caption  hero-text">
+              <h3>Best Clothing Deal</h3>
+              <p className="hero-p1">Up to 70% Off! </p>
+              <button className="hero-btn">Shop Now </button>
+            </div>
+          </div>
+          <div className="carousel-item  hght">
+            <img className="d-block gg" src={HeroImg5} alt="First slide" />
             <div className="carousel-caption  hero-text">
               <h3>Best Gadgets Deal</h3>
               <p className="hero-p1">Up to 70% Off! </p>
@@ -88,23 +108,7 @@ const Hero = () => {
             </div>
           </div>
           <div className="carousel-item  hght">
-            <img className="d-block gg" src={HeroImg} alt="First slide" />
-            <div className="carousel-caption  hero-text">
-              <h3>Best Gadgets Deal</h3>
-              <p className="hero-p1">Up to 70% Off! </p>
-              <button className="hero-btn">Shop Now </button>
-            </div>
-          </div>
-          <div className="carousel-item  hght">
-            <img className="d-block gg" src={HeroImg} alt="First slide" />
-            <div className="carousel-caption  hero-text">
-              <h3>Best Gadgets Deal</h3>
-              <p className="hero-p1">Up to 70% Off! </p>
-              <button className="hero-btn">Shop Now </button>
-            </div>
-          </div>
-          <div className="carousel-item  hght">
-            <img className="d-block gg" src={HeroImg} alt="First slide" />
+            <img className="d-block gg" src={HeroImg1} alt="First slide" />
             <div className="carousel-caption  hero-text">
               <h3>Best Gadgets Deal</h3>
               <p className="hero-p1">Up to 70% Off! </p>
@@ -113,9 +117,9 @@ const Hero = () => {
           </div>
           <div className="carousel-item  hght">
             {" "}
-            <img className="d-block gg" src={HeroImg} alt="First slide" />
+            <img className="d-block gg" src={HeroImg2} alt="First slide" />
             <div className="carousel-caption  hero-text">
-              <h3>Best Gadgets Deal</h3>
+              <h3>Best Clothing Deal</h3>
               <p className="hero-p1">Up to 70% Off! </p>
               <button className="hero-btn">Shop Now </button>
             </div>

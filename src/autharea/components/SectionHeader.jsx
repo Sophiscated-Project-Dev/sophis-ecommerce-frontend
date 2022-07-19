@@ -1,3 +1,4 @@
+
 import { BsArrowRight } from "react-icons/bs"
 const SectionHeader = (props) => {
     return (
@@ -12,4 +13,6 @@ const SectionHeader = (props) => {
     )
 }
 
-export default SectionHeader
+};
+
+export default SectionHeader;
