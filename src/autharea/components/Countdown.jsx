@@ -34,7 +34,7 @@ const Countdown = ({ endDate }) => {
         <div className="countdown">
             <h4>ENDS IN</h4>
             <h4>
-                {/* <span>{timeRemain.daysRemaining || 0} days :</span> */}
+                <span>{timeRemain.daysRemaining || 0} days :</span>
                 <span>{timeRemain.hoursRemaining || 0} hrs :</span>
                 <span>{timeRemain.minutesRemaining || 0} mins :</span>
                 <span>{timeRemain.secondsRemaining || 0} secs</span>

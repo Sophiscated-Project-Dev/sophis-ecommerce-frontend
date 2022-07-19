@@ -6,17 +6,21 @@ a {
 }
 .recom-header {
   display: flex;
-  gap: 40px;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px 40px;
   align-items: center;
   background: #d4e2fb;
   border-radius: 4px;
-  height: 3.5rem;
+}
+.recom-header .section-title {
+  display: flex;
+  gap: 40px;
+  justify-content: space-between;
 }
 .recom-header h4 {
   margin: 0;
   padding: 0;
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: 600;
   line-height: 32px;
   color: #030710;

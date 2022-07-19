@@ -5,7 +5,7 @@ import { flashSale } from './TopRankData';
 import Countdown from './Countdown';
 
 const FlashProducts = () => {
-    const endDate = new Date(2022, 6, 19, 0, 0, 0)
+    const endDate = new Date(2022, 11, 19, 0, 0, 0)
     const topElements = flashSale.map((prodData, i) => {
         return <FlashSaleElement key={i} prodData={prodData}/>
     })
