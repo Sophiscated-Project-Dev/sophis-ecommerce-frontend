@@ -1,0 +1,37 @@
+.singleProduct {
+  background-color: #f4f8fe;
+}
+
+.singleProduct :first-child h2 {
+  font: 500 0.875rem Open Sans, sans-serif;
+}
+
+.singleProduct :first-child h2 span {
+  color: #2a6fea;
+}
+@media all and (max-width: 30rem) {
+  .singleProduct :first-child h2 {
+    margin-top: 2rem;
+  }
+}
+
+/* Product Likes */
+.productLikes .recom-header {
+  gap: 2px;
+}
+
+.productLikes .recom-header h4 {
+  font-size: 0.85rem;
+}
+
+.productLikes .recom-header .see-all {
+  font-size: 0.65rem;
+}
+@media all and (min-width: 36rem) {
+  .productLikes .recom-header h4 {
+    font-size: 1.5rem;
+  }
+  .productLikes .recom-header .see-all {
+    font-size: 0.75rem;
+  }
+}

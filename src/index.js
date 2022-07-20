@@ -2,6 +2,7 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 // Bootstrap Bundle JS
 import "bootstrap/dist/js/bootstrap.bundle.min";
+
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
@@ -11,6 +12,7 @@ import reportWebVitals from "./reportWebVitals";
 import "./index.css";
 import Layout from "./Layout";
 import Register from "./noautharea/pages/Register";
+import SingleProduct from "./autharea/pages/SingleProduct";
 
 import CartComps from "./autharea/components/CartComps";
 
@@ -25,13 +27,16 @@ root.render(
     <Router>
       <Layout>
         <Routes>
+
           <Route path="/" exact element={<Home />} />
           <Route path="login" element={<Login />} />
           <Route path="register" element={<Register />} />
 
+          <Route path="checkout" element={<Checkout/>}/>
+          <Route path="/singleProduct" element={<SingleProduct />} />
+          <Route path="/successful" element={<OrderSuccess />} />
           <Route path="cart" element={<CartComps />} />
 
-          <Route path="checkout" element={<Checkout />} />
 
           <Route path="/successful" element={<OrderSuccess />} />
 

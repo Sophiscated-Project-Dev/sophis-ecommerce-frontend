@@ -7,7 +7,7 @@ const NewArrivals = () => {
         prodData => <RecomProd key={ prodData.name } prodData={ prodData }/>
     )
     return (
-        <div className="container">
+        <div className="container products-grp">
             <div className="recom-section">
                 <SectionHeader title={'New Arrivals'}/>
                 <div className="row recom-prods">

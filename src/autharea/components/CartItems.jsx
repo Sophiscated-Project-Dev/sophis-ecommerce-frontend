@@ -12,7 +12,7 @@ export const CartItems = ({
   discount,
 }) => {
   return (
-    <div key={id} className="cart-card-body-item mb-4 pt-2">
+    <div className="cart-card-body-item mb-4 pt-2">
       {/* <div> */}
       <div className="cart-img-spec ">
         <img src={img} alt="" className="cart-img" />

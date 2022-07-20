@@ -40,7 +40,7 @@
         name: 'Sumec Firman 2.8KVA',
         grossPrice: '',
         salePrice: '399',
-        percentDiscount: '',
+        percentDiscount: 20,
         rating: 4.0,
         reviewNumber: 16
     },
@@ -49,7 +49,7 @@
         name: 'NIVEA RICH NOURISHIN...',
         grossPrice: '',
         salePrice: '15.6',
-        percentDiscount: '',
+        percentDiscount: 42,
         rating: 5.0,
         reviewNumber: 32
     },

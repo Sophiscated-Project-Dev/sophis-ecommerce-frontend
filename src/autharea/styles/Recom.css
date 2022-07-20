@@ -8,16 +8,23 @@ a {
 
 .recom-header {
   display: flex;
-  gap: 40px;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px 40px;
   align-items: center;
   background: #d4e2fb;
   border-radius: 4px;
 }
 
+.recom-header .section-title {
+  display: flex;
+  gap: 40px;
+  justify-content: space-between;
+}
+
 .recom-header h4 {
   margin: 0;
   padding: 0;
+  font-size: 1rem;
   font-weight: 600;
   line-height: 32px;
   color: #030710;
@@ -105,8 +112,10 @@ a {
   margin: 0;
 }
 
-.prod-price {
-  margin: 15px 0;
+@media screen and (max-width: 500px) {
+  .products-grp {
+    padding: 0;
+  }
 }
 
 @media screen and (min-width: 765px) {
@@ -120,5 +129,9 @@ a {
 
   .recom-prods {
     padding: 30px 10px 25px 10px;
+  }
+
+  .recom-prod1 {
+    min-width: 358px;
   }
 }

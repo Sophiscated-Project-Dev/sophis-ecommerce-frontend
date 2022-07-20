@@ -5,6 +5,7 @@ import { CartItems } from "./CartItems";
 import CartLaptop from "../../assets/cart-img/cartlaptop.png";
 import CartBag from "../../assets/cart-img/cartbag.png";
 import CartShoe from "../../assets/cart-img/cartshoe.png";
+import { Link } from "react-router-dom";
 
 const data = [
   {
@@ -54,7 +55,7 @@ const CartComps = () => {
           <Card.Body>
             {/* <Card.Title>Special title treatment</Card.Title> */}
             {data.map((item) => {
-              return <CartItems {...item} />;
+              return <CartItems {...item} key={item.id} />;
             })}
           </Card.Body>
           <div className="cart-card-summary">
@@ -75,7 +76,15 @@ const CartComps = () => {
             </div>
           </div>
           <div className="cart-checkout">
-            <h3>Checkout $3,000</h3>
+            <h3>
+              <Link
+                to="/checkout"
+                style={{ color: "white" }}
+                className="cart-checkout-btn"
+              >
+                Checkout $3,000
+              </Link>
+            </h3>
           </div>
           <div className="cont-shopping py-3">Continue Shopping</div>
         </Card>
