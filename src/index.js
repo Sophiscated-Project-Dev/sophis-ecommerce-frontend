@@ -15,8 +15,9 @@ import Register from "./noautharea/pages/Register";
 import CartComps from "./autharea/components/CartComps";
 
 import Checkout from "./autharea/pages/Checkout";
-
+import ToCart from "./noautharea/pages/addToCart";
 import OrderSuccess from "./noautharea/pages/orderSuccess";
+import Confirm from "./noautharea/pages/orderConfirmation";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -33,6 +34,10 @@ root.render(
           <Route path="checkout" element={<Checkout />} />
 
           <Route path="/successful" element={<OrderSuccess />} />
+
+          <Route path="/confirm-order" element={<Confirm />} />
+
+          <Route path="/add-to-cart" element={<ToCart />} />
         </Routes>
       </Layout>
     </Router>
