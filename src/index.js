@@ -27,16 +27,14 @@ root.render(
     <Router>
       <Layout>
         <Routes>
-
           <Route path="/" exact element={<Home />} />
           <Route path="login" element={<Login />} />
           <Route path="register" element={<Register />} />
 
-          <Route path="checkout" element={<Checkout/>}/>
+          <Route path="checkout" element={<Checkout />} />
           <Route path="/singleProduct" element={<SingleProduct />} />
           <Route path="/successful" element={<OrderSuccess />} />
           <Route path="cart" element={<CartComps />} />
-
 
           <Route path="/successful" element={<OrderSuccess />} />
 
