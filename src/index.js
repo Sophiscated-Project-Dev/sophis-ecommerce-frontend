@@ -6,6 +6,10 @@ import "bootstrap/dist/js/bootstrap.bundle.min";
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { ToastContainer} from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { Provider } from "react-redux";
+import store from "./store";
 import Home from "./autharea/pages/Home";
 import Login from "./noautharea/pages/Login";
 import reportWebVitals from "./reportWebVitals";
@@ -23,24 +27,25 @@ import OrderSuccess from "./noautharea/pages/orderSuccess";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <Router>
-      <Layout>
-        <Routes>
+    <Provider store={store}>
+      <ToastContainer autoClose={2000} />
+      <Router>
+        <Layout>
+          <Routes>
+            <Route path="/" exact element={<Home />} />
+            <Route path="login" element={<Login />} />
+            <Route path="register" element={<Register />} />
 
-          <Route path="/" exact element={<Home />} />
-          <Route path="login" element={<Login />} />
-          <Route path="register" element={<Register />} />
+            <Route path="checkout" element={<Checkout />} />
+            <Route path="/singleProduct" element={<SingleProduct />} />
+            <Route path="/successful" element={<OrderSuccess />} />
+            <Route path="cart" element={<CartComps />} />
 
-          <Route path="checkout" element={<Checkout/>}/>
-          <Route path="/singleProduct" element={<SingleProduct />} />
-          <Route path="/successful" element={<OrderSuccess />} />
-          <Route path="cart" element={<CartComps />} />
-
-
-          <Route path="/successful" element={<OrderSuccess />} />
-        </Routes>
-      </Layout>
-    </Router>
+            <Route path="/successful" element={<OrderSuccess />} />
+          </Routes>
+        </Layout>
+      </Router>
+    </Provider>
   </React.StrictMode>
 );
 
