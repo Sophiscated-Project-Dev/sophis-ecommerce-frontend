@@ -6,7 +6,7 @@ import "bootstrap/dist/js/bootstrap.bundle.min";
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { ToastContainer} from "react-toastify";
+import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Provider } from "react-redux";
 import store from "./store";
@@ -21,8 +21,9 @@ import SingleProduct from "./autharea/pages/SingleProduct";
 import CartComps from "./autharea/components/CartComps";
 
 import Checkout from "./autharea/pages/Checkout";
-
+import ToCart from "./noautharea/pages/addToCart";
 import OrderSuccess from "./noautharea/pages/orderSuccess";
+import Confirm from "./noautharea/pages/orderConfirmation";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -40,7 +41,9 @@ root.render(
             <Route path="/singleProduct" element={<SingleProduct />} />
             <Route path="/successful" element={<OrderSuccess />} />
             <Route path="cart" element={<CartComps />} />
+            <Route path="/confirm-order" element={<Confirm />} />
 
+            <Route path="/add-to-cart" element={<ToCart />} />
             <Route path="/successful" element={<OrderSuccess />} />
           </Routes>
         </Layout>

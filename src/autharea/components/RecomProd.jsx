@@ -1,3 +1,4 @@
+import ProdPrice from "./ProdPrice"
 const RecomProd = ({prodData}) => {
     const {
         image,
@@ -10,7 +11,7 @@ const RecomProd = ({prodData}) => {
     } = prodData
 
     return (
-      <div className="col recom-prod">
+      <div className="col recom-prod recom-prod1">
         {percentDiscount && <p className="discount-tag">-{percentDiscount}%</p>}
         <div className="product">
           <div>
@@ -18,12 +19,7 @@ const RecomProd = ({prodData}) => {
           </div>
           <div className="prod-info">
             <p className="prod-name">{name}</p>
-            <p className="prod-price">
-              {grossPrice
-                &&<span className="gross-price">${grossPrice}</span>
-              }
-              <strong className="sale-price">${salePrice}</strong>
-            </p>
+            <ProdPrice grossPrice={grossPrice} salePrice={salePrice}/>
             <div className="prod-stat">
               <img src={require(`../../assets/recom_images/star.png`)} alt="star"/>
               <strong className="prod-rating">{rating} &nbsp;</strong>
