@@ -17,17 +17,4 @@ const RecomProds = () => {
   );
 };
 
-//   const recomProdsElements = data.map((prodData) => (
-//     <RecomProd prodData={prodData} key={prodData.name} />
-//   ));
-//   return (
-//     <div className="container">
-//       <div className="recom-section">
-//         <SectionHeader title={"Recommended"} />
-//         <div className="row recom-prods">{recomProdsElements}</div>
-//       </div>
-//     </div>
-//   );
-// };
-
 export default RecomProds;

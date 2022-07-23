@@ -1,5 +1,7 @@
 import React from "react";
 import "../styles/BrandsComp.css";
+import { BsArrowRight } from "react-icons/bs";
+
 import APPLE from "../../assets/brand-img/apple.png";
 import CANON from "../../assets/brand-img/canon.png";
 import CHANEL from "../../assets/brand-img/chanel.png";
@@ -70,7 +72,11 @@ const BrandsComp = () => {
       <div className="brand_section">
         <div className="brand-sec_head">
           <h3>Brands</h3>
-          <p>see all items &#8594;</p>
+
+          <div className="next-pointer">
+            <span style={{ paddingRight: "1rem" }}>see all items</span>
+            <BsArrowRight className="" />
+          </div>
         </div>
         <div className="row brand-sec_body">
           {brand?.map((item, index) => {
