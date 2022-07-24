@@ -1,0 +1,90 @@
+.O_Confirm {
+    max-width: 541px;
+    max-height: 480px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 15vh auto;
+    border-radius: 15px;
+    padding-bottom: 80px;
+}
+
+.O_Confirm p {
+    margin-top: 80px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 32px;
+    text-align: center;
+    max-width: 413px;
+}
+
+.BTN_1 {
+    width: 395px;
+    height: 45px;
+    margin-top: 64px;
+    border: 1px solid #2A6FEA;
+    background: #2A6FEA;
+    color: #fff;
+    font-weight: 600;
+}
+
+.BTN_1:hover {
+    background: #fff;
+    color: #2A6FEA;
+}
+
+.BTN_2 {
+    width: 395px;
+    height: 45px;
+    margin-top: 64px;
+    border: 1px solid #2A6FEA;
+    font-weight: 600;
+    background: #fff;
+    color: #2A6FEA;
+
+}
+
+.BTN_2:hover {
+    background: #2A6FEA;
+    color: #fff;
+
+}
+
+/* MEDIA QUERY */
+
+@media screen and (max-width: 600px) {
+
+    .O_Confirm {
+        max-width: 450px;
+    }
+
+    .O_Confirm p,
+    .O_Confirm button {
+        max-width: 350px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .O_Confirm {
+        max-width: 380px;
+    }
+
+    .O_Confirm p,
+    .O_Confirm button {
+        max-width: 290px;
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 398px) {
+    .O_Confirm {
+        max-width: 270px;
+    }
+
+    .O_Confirm p,
+    .O_Confirm button {
+        max-width: 200px;
+        font-size: 14px;
+    }
+}

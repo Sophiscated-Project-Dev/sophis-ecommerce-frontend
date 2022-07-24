@@ -1,6 +1,7 @@
 import React from "react";
 import { Dropdown } from "react-bootstrap";
 import { LaptopComs } from "./LaptopComs";
+import ReactPaginate from "react-paginate";
 import "../styles/LaptopComs.css";
 
 import { FaSortAmountDown, FaFilter } from "react-icons/fa";
@@ -107,6 +108,24 @@ const laptopLists = [
 ];
 
 export const LaptopListComs = () => {
+  // PAGINATION
+  const [currentItems, setCurrentItems] = useState(null);
+  const [pageCount, setPageCount] = useState(0);
+  const [itemOffset, setItemOffset] = useState(0);
+  const itemsPerPage = 20;
+
+  // PAGINATION
+  useEffect(() => {
+    const endOffset = itemOffset + itemsPerPage;
+    setCurrentItems(topReferrals.slice(itemOffset, endOffset));
+    setPageCount(Math.ceil(topReferrals.length / itemsPerPage));
+  }, [itemOffset, itemsPerPage, topReferrals]);
+
+  const handlePageClick = (event) => {
+    const newOffset = (event.selected * itemsPerPage) % topReferrals.length;
+    setItemOffset(newOffset);
+  };
+
   return (
     <div className="Laptop-comps p-5">
       <div className="laptop-comps-top">
@@ -151,9 +170,24 @@ export const LaptopListComs = () => {
       <div className="laptop-card d-flex justify-content-center align-items-center py-5 bg-white">
         <div className="laptop-card-row d-flex">
           {laptopLists.map((item, index) => {
-            return <LaptopComs {...item} />;
+            return <LaptopComs {...item} key={index} />;
           })}
         </div>
+        <ReactPaginate
+          breakLabel="..."
+          nextLabel="next >"
+          onPageChange={handlePageClick}
+          pageRangeDisplayed={5}
+          pageCount={pageCount}
+          previousLabel="< previous"
+          renderOnZeroPageCount={null}
+          // styling the whole btns, note: always know when to use thw class with link a tags and without for just li tags
+          containerClassName="pagination"
+          pageLinkClassName="page-num"
+          previousLinkClassName="page-num"
+          nextLinkClassName="page-num"
+          activeLinkClassName="active"
+        />
       </div>
     </div>
   );

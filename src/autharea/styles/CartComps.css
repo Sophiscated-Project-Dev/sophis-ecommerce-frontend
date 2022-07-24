@@ -7,6 +7,7 @@
 .cart-card {
   background: #ffffff;
   border: none;
+  box-shadow: 1px 1px 10px rgb(0 0 0 / 5%);
 }
 
 .cart-card-top {
@@ -254,6 +255,9 @@
   height: 50px;
   background: #2a6fea;
   /*  */
+}
+.cart-checkout .cart-checkout-btn:hover {
+  color: #212529 !important;
 }
 .cart-checkout h3 {
   font-weight: 600;

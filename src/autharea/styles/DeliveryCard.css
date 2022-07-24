@@ -1,0 +1,79 @@
+.deliveryLogo h3 {
+  color: #030710;
+  font: 600 1.5rem Montserrat, sans-serif;
+}
+
+.deliveryLogo h3 span {
+  color: #2a6fea;
+}
+
+.deliveryLogo + p {
+  font: 300 0.875rem Open Sans, sans-serif;
+  line-height: 1rem;
+}
+
+.deliveryBody h2 {
+  color: #030710;
+  font: 600 1rem Montserrat, sans-serif;
+}
+
+.deliveryBody select {
+  border: 1px solid #cdcdcf;
+  border-radius: 5px;
+  height: 48px;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+
+.deliverySelect select {
+  color: #030710;
+  font: 500 0.875rem Open Sans, sans-serif;
+}
+
+.deliverySelectIcon {
+  width: 40px;
+  height: 100%;
+  right: 12px;
+  border-radius: 0px 3px 3px 0px;
+  pointer-events: none;
+}
+
+.deliverySelectIcon > i {
+  left: 30%;
+  top: 12px;
+}
+
+.deliverySelectIcon::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  width: 1px;
+}
+
+.deliverySelect + hr {
+  border: 1px solid #e6e6e7;
+  width: 90%;
+}
+
+.deliveryModeIcon {
+  margin-left: -12px !important;
+  margin-right: 12px;
+}
+
+.deliveryModeText div p,
+.deliveryModeText div + p {
+  color: #030710;
+  font: 600 0.75rem Montserrat, sans-serif;
+}
+
+.deliveryModeText div + p {
+  font: 400 0.625rem Open Sans, sans-serif;
+}
+
+.deliveryModeText div p + * {
+  color: #2a6fea;
+  font: 600 0.625rem Montserrat, sans-serif;
+}
