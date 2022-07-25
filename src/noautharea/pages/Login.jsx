@@ -9,6 +9,8 @@ import "../styles/Login.css";
 import { FaFacebook } from "react-icons/fa";
 import { AiFillGoogleCircle } from "react-icons/ai";
 
+import { logInWithGoogle } from "./Firebase/Firebase";
+
 const Login = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -101,9 +103,9 @@ const Login = () => {
             <FaFacebook />
             facebook
           </button>
-          <button className="login-btn-google">
+          <button className="login-btn-google" onClick={logInWithGoogle}>
             <AiFillGoogleCircle />
-            google
+            Log in with Google
           </button>
         </Form.Group>
 
