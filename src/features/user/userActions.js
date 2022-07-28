@@ -1,7 +1,7 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 
-const API_URL = process.env.REACT_APP_BASEURL;
-
+// const API_URL = process.env.REACT_APP_BASEURL;
+const API_URL = "https://sophdev.herokuapp.com/api/v1";
 export const userLogin = createAsyncThunk(
   "user/login",
   async ({ email, password }, { rejectWithValue }) => {
