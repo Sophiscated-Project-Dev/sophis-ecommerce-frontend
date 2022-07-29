@@ -11,7 +11,7 @@ const RecomProds = () => {
     <div className="container products-grp">
       <div className="recom-section">
         <SectionHeader title={"Recommended"} />
-        <div className="row recom-prods">{recomProdsElements}</div>
+        <div className="row recom-prods">{/* {recomProdsElements} */}</div>
       </div>
     </div>
   );
