@@ -28,7 +28,7 @@ const userSlice = createSlice({
       state.success = true;
       state.token = payload.token;
     },
-    [userLogin.rejected]: (state, { payload }) => {
+    [userLogin.rejected]: (state) => {
       state.loading = false;
       state.error = true;
     },
