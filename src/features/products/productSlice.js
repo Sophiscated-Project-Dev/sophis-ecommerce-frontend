@@ -1,9 +1,10 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { getNewArrivals } from "./productActions";
+import { getNewArrivals, getTopRanked } from "./productActions";
 
 const initialState = {
   loading: false,
   newArrivals: [],
+  topRanked: [],
   error: null,
 };
 
@@ -25,6 +26,22 @@ const productSlice = createSlice({
       //   console.log("payload", payload);
       state.loading = false;
       state.newArrivals = [];
+      state.error = true;
+    },
+    // TOP RANKED
+    [getTopRanked.pending]: (state) => {
+      state.loading = true;
+    },
+    [getTopRanked.fulfilled]: (state, { payload }) => {
+      // console.log("payload", payload);
+      state.loading = false;
+      state.topRanked = payload;
+      state.error = null;
+    },
+    [getTopRanked.rejected]: (state, { payload }) => {
+      // console.log("payload", payload);
+      state.loading = false;
+      state.topRanked = [];
       state.error = true;
     },
   },
