@@ -22,7 +22,7 @@ const Register = () => {
     email: "",
     phoneNumber: "",
     password: "",
-    comfirmPassword: "",
+    confirmPassword: "",
   });
 
   //handle input fields
@@ -54,8 +54,8 @@ const Register = () => {
       return toast.error("check the password field");
     // validate confirmPassword
     if (
-      data.comfirmPassword !== data.password ||
-      data.comfirmPassword.trim().length < 1
+      data.confirmPassword !== data.password ||
+      data.confirmPassword.trim().length < 1
     )
       return toast.error("Comfirm password should match password");
     dispatch(userRegister(data));
