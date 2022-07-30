@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchBrands } from "../../features/brand/brandActions";
 import "../styles/BrandsComp.css";
+import { BsArrowRight } from "react-icons/bs";
 import FIRMAN from "../../assets/brand-img/firman.png";
 
 const BrandsComp = () => {
@@ -17,7 +18,11 @@ const BrandsComp = () => {
       <div className="brand_section">
         <div className="brand-sec_head">
           <h3>Brands</h3>
-          <p>see all items &#8594;</p>
+
+          <div className="next-pointer">
+            <span style={{ paddingRight: "1rem" }}>see all items</span>
+            <BsArrowRight className="" />
+          </div>
         </div>
         {loading ? (
           <h5>loading...</h5>
