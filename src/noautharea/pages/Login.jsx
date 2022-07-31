@@ -57,7 +57,7 @@ const Login = () => {
     };
 
     userLogin();
-  }, [navigate, loading, error, success]);
+  }, [navigate, loading, error, success, dispatch]);
 
   return (
     <div className="login d-flex justify-content-center align-items-center py-2">

@@ -1,19 +1,30 @@
-import React from "react";
 import star from "../../../assets/top_vendors/star.png";
 
-const Structure = ({ structData }) => {
-  const { rank, image, name, numOfProd, rating, reviewNumber } = structData;
+const Structure = ({ vendor }) => {
+  const { rank, firstName, numOfProd, rating, reviewNumber } = vendor;
+  /* "topVendors": [
+    {
+      "vendor": {
+        "_id": "62d6dc5ee1e089eb4f5d8ab8",
+        "firstName": "Ebune",
+        "lastName": "Daniel",
+        "email": "example1@gmail.com",
+        "businessName": "soph-dev",
+        "phoneNumber": "08120776546",
+        "__v": 0
+      }
+    }, */
   return (
-    <div className="col vendor-tiletag">
+    <div className="col vendor-tiletag"> 
       <div>
         <div className="vendor-card">
           <div className="rank">{rank}</div>
           <div>
-            <img src={image} alt="" className="vendor-img" />
+            <img src={star} alt="" className="vendor-img" />
           </div>
           <div className="vendor-info">
             <strong>
-              <p className="vendor-name">{name} </p>
+              <p className="vendor-name">{firstName} </p>
             </strong>
             <p className="vendor-NOP"> {numOfProd} products</p>
             <div className="vendor-stats">
