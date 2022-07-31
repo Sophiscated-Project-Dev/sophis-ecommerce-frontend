@@ -8,7 +8,7 @@ import { Col, Container, Navbar, Nav, NavDropdown } from "react-bootstrap";
 
 // import { FaAngleDown } from "react-icons/fa";
 import "../styles/Header.css";
-import { NavLink, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [showMain, setShowMain] = useState(false);
