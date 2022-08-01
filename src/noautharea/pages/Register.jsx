@@ -1,23 +1,81 @@
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
+import { useDispatch, useSelector } from "react-redux";
+import { userRegister } from "../../features/user/userActions";
+import { clearState } from "../../features/user/userSlice";
+// import { useHistory } from "react-router-dom";
+
 import { BsFacebook } from "react-icons/bs";
 import { AiFillGoogleCircle } from "react-icons/ai";
 import "../styles/Register.css";
-import { auth, googleProv } from "./Firebase/Firebase";
-import { signInWithPopup } from "firebase/auth";
 
 const Register = () => {
-  const logInWithGoogle2 = () => {
-    signInWithPopup(auth, googleProv)
-      .then((result) => {
-        console.log(result);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const { loading, error, success, errorMessage } = useSelector(
+    (state) => state.user
+  );
+  const [data, setData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    phoneNumber: "",
+    password: "",
+    confirmPassword: "",
+  });
+
+  //handle input fields
+  const handleInputChange = (e) => {
+    setData((prevState) => ({
+      ...prevState,
+      [e.target.name]: e.target.value,
+    }));
   };
+
+  //handle form submission
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    //Regex: email
+    const EMAIL_REGEX = /^\[A-z\][A-z0-9-_]{3,23}$/;
+    // number
+    if (data.phoneNumber.trim().length < 1)
+      return toast.error("check your phone number");
+    if (data.firstName.trim().length < 1)
+      return toast.error("check your first name field");
+    if (data.lastName.trim().length < 1)
+      return toast.error("check your last name field");
+    // validate email
+    if (EMAIL_REGEX.test(data.email) || data.email.trim().length < 4)
+      return toast.error("email must be filled corectly");
+    // validate password
+    if (data.password.trim().length < 1)
+      return toast.error("check the password field");
+    // validate confirmPassword
+    if (
+      data.confirmPassword !== data.password ||
+      data.confirmPassword.trim().length < 1
+    )
+      return toast.error("Comfirm password should match password");
+    dispatch(userRegister(data));
+  };
+
+  useEffect(() => {
+    if (success) {
+      dispatch(clearState());
+      navigate("/login");
+      toast.success("Registration Successful");
+    }
+
+    if (error) return toast.error("All Fields Are Required/Error");
+
+    if (loading) toast.info("Loading ...", { autoClose: 1000 });
+  }, [success, error, loading, errorMessage, navigate]);
+
   return (
     <div className="register d-flex justify-content-center align-items-sm-center py-5">
-      <form className="bg-white p-3">
+      <form onSubmit={handleSubmit} className="bg-white p-3">
         <h2 className="registerHeader mb-3">Register</h2>
 
         <div className="row">
@@ -25,8 +83,10 @@ const Register = () => {
             <label>First Name</label>
             <input
               type="text"
+              name="firstName"
               className="form-control mb-3"
               placeholder="Enter your first name"
+              onChange={handleInputChange}
             />
           </div>
 
@@ -34,8 +94,10 @@ const Register = () => {
             <label>Last Name</label>
             <input
               type="text"
+              name="lastName"
               className="form-control mb-3"
               placeholder="Enter your last name"
+              onChange={handleInputChange}
             />
           </div>
         </div>
@@ -44,9 +106,11 @@ const Register = () => {
           <div className=" registerInputGroups col-12 col-sm me-md-3">
             <label>Email Address</label>
             <input
-              type="text"
+              type="email"
+              name="email"
               className="form-control mb-3"
               placeholder="example@email.com"
+              onChange={handleInputChange}
             />
           </div>
 
@@ -54,8 +118,10 @@ const Register = () => {
             <label>Phone Number</label>
             <input
               type="text"
+              name="phoneNumber"
               className="form-control mb-3"
               placeholder="Enter your phone number"
+              onChange={handleInputChange}
             />
           </div>
         </div>
@@ -64,18 +130,22 @@ const Register = () => {
           <div className="registerInputGroups col-12 col-sm me-md-3">
             <label>Password</label>
             <input
-              type="text"
+              type="password"
+              name="password"
               className="form-control mb-3"
               placeholder="Enter password"
+              onChange={handleInputChange}
             />
           </div>
 
           <div className="registerInputGroups col-12 col-sm">
             <label>Confirm Password</label>
             <input
-              type="text"
+              type="password"
+              name="confirmPassword"
               className="form-control mb-3"
               placeholder="Re-enter password"
+              onChange={handleInputChange}
             />
           </div>
         </div>
@@ -121,10 +191,7 @@ const Register = () => {
               <AiFillGoogleCircle /> Register with Google
             </a>
           </button> */}
-          <button
-            className="login-btn-google col-sm"
-            onClick={logInWithGoogle2}
-          >
+          <button className="login-btn-google col-sm">
             <AiFillGoogleCircle />
             Register with Google
           </button>

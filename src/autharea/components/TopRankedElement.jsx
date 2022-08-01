@@ -1,24 +1,19 @@
-import ProdPrice from "./ProdPrice"
+import ProdPrice from "./ProdPrice";
 const TopRankedElement = ({ prodData }) => {
+  const { images, name, price, discount, averageRating, numberOfReviews } =
+    prodData;
+  // console.log(discount);
+  const discountPerc = discount * 100;
+  const grossPrice = discountPerc / 100;
 
-    const {
-        image,
-        name,
-        grossPrice,
-        salePrice,
-        percentDiscount,
-        rating,
-        reviewNumber
-    } = prodData
+  return (
+    <div className="col recom-prod top-product">
+      <p className="discount-tag">-{discountPerc}%</p>
+      <img width={200} src={images[0]} alt="" />
+      <p className="prod-name">{name}</p>
+      <ProdPrice grossPrice={grossPrice} salePrice={price} />
+    </div>
+  );
+};
 
-    return (
-        <div className="col recom-prod top-product">
-            {percentDiscount && <p className="discount-tag">-{percentDiscount}%</p>}
-            <img src={require(`../../assets/topRankedImages/${image}.png`)} alt=""/>
-            <p className="prod-name">{name}</p>
-            <ProdPrice grossPrice={grossPrice} salePrice={salePrice}/>
-        </div>
-    )
-}
-
-export default TopRankedElement
+export default TopRankedElement;
