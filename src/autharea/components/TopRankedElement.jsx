@@ -2,7 +2,7 @@ import ProdPrice from "./ProdPrice";
 const TopRankedElement = ({ prodData }) => {
   const { images, name, price, discount, averageRating, numberOfReviews } =
     prodData;
-  console.log(discount);
+  // console.log(discount);
   const discountPerc = discount * 100;
   const grossPrice = discountPerc / 100;
 

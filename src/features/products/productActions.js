@@ -5,6 +5,9 @@ const URL_New_ARRIVAL =
 
 const TOP_RANKED = "https://sophdev.herokuapp.com/api/v1/products/top-ranks";
 
+const RECOMMENDEDProd =
+  "https://sophdev.herokuapp.com/api/v1/products/recommended";
+
 // Generates pending, fulfilled and rejected action types
 export const getNewArrivals = createAsyncThunk(
   "product/getNewArrivals",
@@ -23,6 +26,14 @@ export const getTopRanked = createAsyncThunk(
   "product/getTopranked",
   async (thunkAPI) => {
     const response = await axios.get(TOP_RANKED);
+    return response.data;
+  }
+);
+
+export const getRecommendedProd = createAsyncThunk(
+  "product/getRecommendedProd",
+  async (thunkAPI) => {
+    const response = await axios.get(RECOMMENDEDProd);
     return response.data;
   }
 );
