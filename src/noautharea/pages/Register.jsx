@@ -2,8 +2,19 @@ import { Link } from "react-router-dom";
 import { BsFacebook } from "react-icons/bs";
 import { AiFillGoogleCircle } from "react-icons/ai";
 import "../styles/Register.css";
+import { auth, googleProv } from "./Firebase/Firebase";
+import { signInWithPopup } from "firebase/auth";
 
 const Register = () => {
+  const logInWithGoogle2 = () => {
+    signInWithPopup(auth, googleProv)
+      .then((result) => {
+        console.log(result);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
   return (
     <div className="register d-flex justify-content-center align-items-sm-center py-5">
       <form className="bg-white p-3">
@@ -97,7 +108,7 @@ const Register = () => {
             </a>
           </button>
 
-          <button
+          {/* <button
             type="submit"
             className="registerGoogle col-12 col-sm btn btn-primary rounded-0 border-0"
           >
@@ -109,6 +120,13 @@ const Register = () => {
             >
               <AiFillGoogleCircle /> Register with Google
             </a>
+          </button> */}
+          <button
+            className="login-btn-google col-sm"
+            onClick={logInWithGoogle2}
+          >
+            <AiFillGoogleCircle />
+            Register with Google
           </button>
         </div>
 
@@ -134,7 +152,7 @@ const Register = () => {
             </Link>
           </span>
         </p>
-        <hr/>
+        <hr />
         <p className="registerLogin">
           Already have an Account?{" "}
           <span>

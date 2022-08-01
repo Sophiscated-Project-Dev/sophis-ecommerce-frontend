@@ -9,7 +9,7 @@ import "../styles/Login.css";
 import { FaFacebook } from "react-icons/fa";
 import { AiFillGoogleCircle } from "react-icons/ai";
 
-import { logInWithGoogle } from "./Firebase/Firebase";
+// import { logInWithGoogle } from "./Firebase/Firebase";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -103,7 +103,10 @@ const Login = () => {
             <FaFacebook />
             facebook
           </button>
-          <button className="login-btn-google" onClick={logInWithGoogle}>
+          <button
+            className="login-btn-google"
+            // onClick={logInWithGoogle}
+          >
             <AiFillGoogleCircle />
             Log in with Google
           </button>
