@@ -35,7 +35,7 @@ export const userLogin = createAsyncThunk(
 export const userRegister = createAsyncThunk(
   "user/register",
   async (
-    { firstName, lastName, email, phoneNumber, password, comfirmPassword },
+    { firstName, lastName, email, phoneNumber, password, confirmPassword },
     { rejectWithValue }
   ) => {
     try {
@@ -53,7 +53,7 @@ export const userRegister = createAsyncThunk(
             email,
             phoneNumber,
             password,
-            comfirmPassword,
+            confirmPassword,
           }),
         }
       );
