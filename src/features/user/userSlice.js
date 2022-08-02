@@ -26,6 +26,12 @@ const userSlice = createSlice({
 
       return state;
     },
+    logOut: (state) => {
+      localStorage.removeItem("token");
+      state.loading = false;
+      state.error = null;
+      state.success = false;
+    },
   },
   extraReducers: {
     // user registration
@@ -60,7 +66,6 @@ const userSlice = createSlice({
   },
 });
 
-export const { clearState } = userSlice.actions;
+export const { clearState, logOut} = userSlice.actions;
 
 export default userSlice.reducer;
-//{ "assert": require.resolve("assert/") }

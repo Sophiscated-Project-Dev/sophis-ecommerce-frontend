@@ -5,6 +5,7 @@ import "../../styles/TopVendors.css";
 import Structure from "./TopVendorStructure";
 import SectionHeader from "../SectionHeader";
 import { fetchVendors } from "../../../features/topVendors/vendorActions";
+import Spinner from "../../../utils/spinner/Spinner";
 
 const TopVendors = () => {
   const { vendors, loading, error } = useSelector((state) => state.vendors);
@@ -14,13 +15,24 @@ const TopVendors = () => {
     dispatch(fetchVendors());
   }, [dispatch]);
 
-  const topVendorDetails = loading ? <h5>Loading...</h5> : error ? <h5>{error}</h5> : vendors?.map((vendor) => (
-    <Structure vendor={vendor.vendor} key={vendor.vendor._id} />
-  ));
+  const topVendorDetails = loading ? (
+    <Spinner />
+  ) : error ? (
+    <h5>{error}</h5>
+  ) : (
+    vendors?.map((vendor, index) => (
+      <Structure
+        vendor={vendor.vendor}
+        rank={index}
+        numOfProd={vendor.productCount}
+        key={vendor.vendor._id}
+      />
+    ))
+  );
 
   return (
     <div className="container">
-      <div className="vendor-detail">
+      <div className="vendor-detail position-relative">
         <SectionHeader title={"Top Vendors"} />
         <div className="row vendor-tiles"> {topVendorDetails} </div>
       </div>
@@ -29,4 +41,3 @@ const TopVendors = () => {
 };
 
 export default TopVendors;
-

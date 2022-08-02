@@ -4,6 +4,7 @@ import { fetchBrands } from "../../features/brand/brandActions";
 import "../styles/BrandsComp.css";
 import { BsArrowRight } from "react-icons/bs";
 import FIRMAN from "../../assets/brand-img/firman.png";
+import Spinner from "../../utils/spinner/Spinner";
 
 const BrandsComp = () => {
   const { brands, loading, error } = useSelector((state) => state.brands);
@@ -25,7 +26,7 @@ const BrandsComp = () => {
           </div>
         </div>
         {loading ? (
-          <h5>loading...</h5>
+          <Spinner />
         ) : error ? (
           <h1>{error}</h1>
         ) : (

@@ -1,0 +1,65 @@
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+.spinner {
+  align-items: center;
+  animation: text-color 2s ease-in-out infinite alternate;
+  display: flex;
+  font-size: 1rem;
+  height: 100px;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  width: 100px;
+}
+
+.spinnerSector {
+  animation: rotate var(--duration) var(--timing) infinite;
+  border-radius: 50%;
+  border: 5px solid transparent;
+  height: 100%;
+  mix-blend-mode: overlay;
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+}
+
+.spinnerSectorRed {
+  border-top-color: red;
+  --duration: 1.5s;
+  --timing: ease-in-out;
+}
+
+.spinnerSectorBlue {
+  border-left-color: blue;
+  --duration: 2s;
+  --timing: ease-in;
+}
+
+.spinnerSectorGreen {
+  border-left-color: green;
+  --duration: 2.5s;
+  --timing: ease-out;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes text-color {
+  0% {
+    color: rgba(0, 0, 0, 1);
+  }
+  50% {
+    color: rgba(0, 0, 0, 0.5);
+  }
+  100% {
+    color: rgba(0, 0, 0, 0.1);
+  }
+}
