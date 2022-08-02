@@ -1,7 +1,6 @@
 import { useState} from "react";
 import { logOut} from "../../features/user/userSlice";
 import { useDispatch, useSelector } from "react-redux";
-
 import LOGO from "../../assets/images/logo1.png";
 import SOPHIS from "../../assets/images/SophisMart.png";
 import LOCATE from "../../assets/images/Locate.png";
@@ -97,7 +96,7 @@ const Header = () => {
                   <FaUser className="user-icon" />
                   <p>Account</p>
                 </div>
-                <div className="nav-link" href="#home">
+                <div className="nav-link">
                   <div className="navBar-signIn">
                     {!success ? (
                       <>

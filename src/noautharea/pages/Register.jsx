@@ -62,7 +62,7 @@ const Register = () => {
   useEffect(() => {
     if (success) {
       dispatch(clearState());
-      navigate("/");
+      navigate("/login");
       toast.success("Registration Successful");
     }
 
@@ -140,7 +140,7 @@ const Register = () => {
             <label>Confirm Password</label>
             <input
               type="password"
-              name="comfirmPassword"
+              name="confirmPassword"
               className="form-control mb-3"
               placeholder="Re-enter password"
               onChange={handleInputChange}
