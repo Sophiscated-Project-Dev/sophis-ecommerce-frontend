@@ -5,16 +5,25 @@ import "../styles/AccessoryDetail.css";
 import { AiFillStar } from "react-icons/ai";
 import { HiHeart } from "react-icons/hi";
 import Facebook from "../../assets/images/colouredIcons/facebook.png";
-
-import Headset from "../../assets/images/dummyImages/headset.png";
-import GreenHeadset from "../../assets/images/dummyImages/greenHeadset.png";
-import VividHeadset from "../../assets/images/dummyImages/vividHeadset.png";
 import Twitter from "../../assets/images/colouredIcons/twitter.png";
 import Whatsapp from "../../assets/images/colouredIcons/whatsapp.png";
 
 import AddToCart from "./AddToCart";
 
-const AccessoryDetail = () => {
+const AccessoryDetail = ({ product }) => {
+  const {
+    name,
+    category,
+    images,
+    colors,
+    averageRating,
+    numberOfReviews,
+    brand,
+    discount,
+    price,
+    size,
+  } = product;
+  let randomId = Math.floor(Math.random() * 1000000 + 1);
   return (
     <section className="accessory row bg-white pb-4">
       <div className="accessoryLeft col-12 col-md-6 position-relative">
@@ -25,83 +34,61 @@ const AccessoryDetail = () => {
             data-bs-ride="carousel"
           >
             <div className="carousel-inner">
-              <div className="carousel-item active">
-                <img src={Headset} className="d-block w-100" alt="" />
-              </div>
-              <div className="carousel-item">
-                <img
-                  src={GreenHeadset}
-                  className="d-block w-100 img-fluid"
-                  alt=""
-                />
-              </div>
-              <div className="carousel-item">
-                <img src={VividHeadset} className="d-block w-100" alt="" />
-              </div>
+              {images?.map((image, index) => (
+                <div
+                  key={index + randomId}
+                  className={
+                    index === 0 ? "carousel-item active" : "carousel-item"
+                  }
+                >
+                  <img src={image} className="d-block w-100" alt={name} />
+                </div>
+              ))}
             </div>
 
             <h4 className="text-dark">Closer view</h4>
+
             {/* Button trigger modal  */}
-            <button
-              type="button"
-              className="btn modalButton  position-relative"
-              data-bs-toggle="modal"
-              data-bs-target="#exampleModal"
-            >
-              <img src={Headset} alt="item" />
-            </button>
+            {images?.map((image, index) => (
+              <button
+                type="button"
+                key={index + randomId}
+                className="btn modalButton  position-relative"
+                data-bs-toggle="modal"
+                data-bs-target={`#${category}_${index}`}
+              >
+                <img src={image} alt={name} />
+              </button>
+            ))}
 
-            <button
-              type="button"
-              className="btn modalButton  position-relative"
-              data-bs-toggle="modal"
-              data-bs-target="#exampleModal"
-            >
-              <img src={Headset} alt="item" />
-            </button>
-
-            <button
-              type="button"
-              className="btn modalButton  position-relative"
-              data-bs-toggle="modal"
-              data-bs-target="#exampleModal"
-            >
-              <img src={Headset} alt="item" />
-            </button>
-
-            <button
-              type="button"
-              className="btn modalButton  position-relative"
-              data-bs-toggle="modal"
-              data-bs-target="#exampleModal"
-            >
-              <img src={Headset} alt="item" />
-            </button>
-
-            <div
-              className="modal fade"
-              id="exampleModal"
-              tabIndex="-1"
-              aria-labelledby="exampleModalLabel"
-              aria-hidden="true"
-            >
-              <div className="modal-dialog modal-dialog-centered">
-                <div className="modal-content">
-                  <div className="modal-header">
-                    <button
-                      type="button"
-                      className="btn-close"
-                      data-bs-dismiss="modal"
-                      aria-label="Close"
-                    ></button>
-                  </div>
-                  <div className="modal-body">
-                    <img className="img-fluid" src={Headset} alt="item" />
+            {images?.map((image, index) => (
+              <div
+                key={index + randomId}
+                className="modal fade"
+                id={`${category}_${index}`}
+                tabIndex="-1"
+                aria-labelledby="exampleModalLabel"
+                aria-hidden="true"
+              >
+                <div className="modal-dialog modal-dialog-centered">
+                  <div className="modal-content">
+                    <div className="modal-header">
+                      <button
+                        type="button"
+                        className="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                      ></button>
+                    </div>
+                    <div className="modal-body">
+                      <img className="img-fluid" src={image} alt="item" />
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
+            ))}
 
+            {/* Carousel control buttons */}
             <button
               className="carousel-control-prev ccp"
               type="button"
@@ -112,7 +99,6 @@ const AccessoryDetail = () => {
                 &#9001;
               </span>
             </button>
-
             <button
               className="carousel-control-next ccn"
               type="button"
@@ -128,52 +114,25 @@ const AccessoryDetail = () => {
 
         <h4 className="text-dark ms-4">Color:</h4>
         <div className="carousel-indicators position-absolute d-flex mx-auto justify-content-between">
-          <button className="border-0 ">
-            <img
-              className=""
-              type="button"
-              data-bs-target="#carouselExampleIndicators"
-              data-bs-slide-to="0"
-              aria-label="Slide 1"
-              src={Headset}
-              alt="item"
-            />
-            <p>Gold</p>
-          </button>
-
-          <button className="border-0 ">
-            <img
-              className="h-75"
-              type="button"
-              data-bs-target="#carouselExampleIndicators"
-              data-bs-slide-to="1"
-              aria-label="Slide 2"
-              src={GreenHeadset}
-              alt="item"
-            />
-            <p>Green</p>
-          </button>
-
-          <button className="border-0 ">
-            <img
-              className="h-75"
-              type="button"
-              data-bs-target="#carouselExampleIndicators"
-              data-bs-slide-to="2"
-              aria-label="Slide 3"
-              src={VividHeadset}
-              alt="item"
-            />
-            <p>Blue</p>
-          </button>
+          {images?.map((image, index) => (
+            <button className="border-0 " key={index + randomId}>
+              <img
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide-to={index}
+                aria-label="Slide 1"
+                src={image}
+                alt={name}
+              />
+              <p>{colors[index] && colors[index]}</p>
+            </button>
+          ))}
         </div>
       </div>
 
       <div className="accessoryRight col-12 col-md-6 pt-4">
         <div className="accessoryRightHeader d-flex justify-content-between">
-          <h3>
-            P9 Wireless Headphones Hifi Stereo With Mic For iOs And Android
-          </h3>
+          <h3>{name}</h3>
 
           <span>
             <HiHeart />
@@ -181,64 +140,42 @@ const AccessoryDetail = () => {
         </div>
 
         <p className="accessoryRating">
-          <AiFillStar /> <span>5.0</span> | 16 Reviews
+          <AiFillStar /> <span>{averageRating}.0</span> | {numberOfReviews}{" "}
+          Reviews
         </p>
 
         <p className="accessoryBrand">
-          Brand: <span className="fw-bold">Oraimo</span> |{" "}
+          Brand: <span className="fw-bold">{brand}</span> |{" "}
           <Link to="/" className="text-decoration-none">
-            Oher products from Oraimo
+            Other products from {brand}
           </Link>
         </p>
 
-        <p className="accessoryDiscount d-inline-block me-3">$1,620.00</p>
-
-        <sup className="accessoryPrice ">
-          <del>$1,800.00</del>
-        </sup>
+        {discount === 0 && (
+          <p className="accessoryDiscount d-inline-block me-3">${price}</p>
+        )}
+        {discount !== 0 && (
+          <>
+            <p className="accessoryDiscount d-inline-block me-3">${discount}</p>{" "}
+            <sup className="accessoryPrice ">
+              <del>${price}</del>
+            </sup>
+          </>
+        )}
 
         <div className="accessorySizes d-flex justify-content-between">
           <span>Size:</span>
-
-          <div>
-            <input
-              className="form-check-input rounded-0 mt-0 me-2"
-              type="checkbox"
-              id="S"
-              value="S"
-            />
-            <label htmlFor="S"> S</label>
-          </div>
-
-          <div>
-            <input
-              className="form-check-input rounded-0 mt-0 me-2"
-              type="checkbox"
-              id="M"
-              value="M"
-            />
-            <label htmlFor="M"> M</label>
-          </div>
-
-          <div>
-            <input
-              className="form-check-input rounded-0 mt-0 me-2"
-              type="checkbox"
-              id="L"
-              value="L"
-            />
-            <label htmlFor="L"> L</label>
-          </div>
-
-          <div>
-            <input
-              className="form-check-input rounded-0 mt-0 me-2"
-              type="checkbox"
-              id="XL"
-              value="XL"
-            />
-            <label htmlFor="XL"> XL</label>
-          </div>
+          {size?.map((item, index) => (
+            <div key={index + randomId}>
+              <input
+                className="form-check-input rounded-0 mt-0 me-2"
+                type="checkbox"
+                id={item.toUpperCase()}
+                value={item.toUpperCase()}
+              />
+              <label htmlFor={item.toUpperCase()}> {item.toUpperCase()}</label>
+            </div>
+          ))}
         </div>
 
         <div className="accessoryQuantity">
