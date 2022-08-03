@@ -1,6 +1,13 @@
 import "../styles/ProductDetail.css";
 
-const ProductDetail = () => {
+const ProductDetail = ({ product }) => {
+   const {
+     numberOfReviews,
+     description,
+     specification,
+  } = product;
+  
+
   return (
     <div className="pDetail bg-white mt-5">
       <ul className="nav nav-pills mb-3" id="pills-tab" role="tablist">
@@ -70,48 +77,21 @@ const ProductDetail = () => {
           id="pills-details"
           role="tabpanel"
           aria-labelledby="pills-details-tab"
-        >
-          1Eu odio venenatis, nam pharetra, praesent elit id diam diam. Enim
-          ornare nisl, in ut bibendum. Sit donec odio vestibulum feugiat potenti
-          hendrerit. Tincidunt vivamus pharetra, risus ligula. Adipiscing neque
-          dictum tellus, turpis eu placerat. Turpis integer massa duis at proin
-          quis sagittis. Sed aliquet netus sollicitudin facilisi netus nullam
-          malesuada. Pharetra, habitant iaculis elit donec nulla lorem cras.
-          Cras amet faucibus fringilla aliquam quis scelerisque massa aliquet
-          volutpat. Id mauris, ac, amet, ut diam erat.
-        </div>
+        >{description}</div>
 
         <div
           className="tab-pane fade"
           id="pills-specifications"
           role="tabpanel"
           aria-labelledby="pills-specifications-tab"
-        >
-          2Eu odio venenatis, nam pharetra, praesent elit id diam diam. Enim
-          ornare nisl, in ut bibendum. Sit donec odio vestibulum feugiat potenti
-          hendrerit. Tincidunt vivamus pharetra, risus ligula. Adipiscing neque
-          dictum tellus, turpis eu placerat. Turpis integer massa duis at proin
-          quis sagittis. Sed aliquet netus sollicitudin facilisi netus nullam
-          malesuada. Pharetra, habitant iaculis elit donec nulla lorem cras.
-          Cras amet faucibus fringilla aliquam quis scelerisque massa aliquet
-          volutpat. Id mauris, ac, amet, ut diam erat.
-        </div>
+        >{specification}</div>
 
         <div
           className="tab-pane fade"
           id="pills-reviews"
           role="tabpanel"
           aria-labelledby="pills-reviews-tab"
-        >
-          3Eu odio venenatis, nam pharetra, praesent elit id diam diam. Enim
-          ornare nisl, in ut bibendum. Sit donec odio vestibulum feugiat potenti
-          hendrerit. Tincidunt vivamus pharetra, risus ligula. Adipiscing neque
-          dictum tellus, turpis eu placerat. Turpis integer massa duis at proin
-          quis sagittis. Sed aliquet netus sollicitudin facilisi netus nullam
-          malesuada. Pharetra, habitant iaculis elit donec nulla lorem cras.
-          Cras amet faucibus fringilla aliquam quis scelerisque massa aliquet
-          volutpat. Id mauris, ac, amet, ut diam erat.
-        </div>
+        >{numberOfReviews}</div>
 
         <div
           className="tab-pane fade"
@@ -119,15 +99,7 @@ const ProductDetail = () => {
           role="tabpanel"
           aria-labelledby="pills-report-tab"
         >
-          4Eu odio venenatis, nam pharetra, praesent elit id diam diam. Enim
-          ornare nisl, in ut bibendum. Sit donec odio vestibulum feugiat potenti
-          hendrerit. Tincidunt vivamus pharetra, risus ligula. Adipiscing neque
-          dictum tellus, turpis eu placerat. Turpis integer massa duis at proin
-          quis sagittis. Sed aliquet netus sollicitudin facilisi netus nullam
-          malesuada. Pharetra, habitant iaculis elit donec nulla lorem cras.
-          Cras amet faucibus fringilla aliquam quis scelerisque massa aliquet
-          volutpat. Id mauris, ac, amet, ut diam erat.
-        </div>
+          A form or something should be here</div>
       </div>
     </div>
   );
