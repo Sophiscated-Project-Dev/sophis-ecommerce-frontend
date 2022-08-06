@@ -19,3 +19,7 @@ This is project built by a group of reactjs beginners who gathered themselves as
 [Netlify](https://www.netlify.com/)
 
 <!-- https://sophdev.herokuapp.com/api/v1/products/new-arrivals -->
+<!-- https://sophdev.herokuapp.com/api/v1/products/top-ranks -->
+<!-- https://sophdev.herokuapp.com/api/v1/products/top-brands -->
+<!-- https://sophdev.herokuapp.com/api/v1/products/recommended -->
+<!-- https://sophdev.herokuapp.com/api/v1/products/id -->

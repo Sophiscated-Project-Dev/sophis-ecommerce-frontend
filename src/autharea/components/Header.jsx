@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+// import { useDispatch, useSelector } from "react-redux";
 import LOGO from "../../assets/images/logo1.png";
 import SOPHIS from "../../assets/images/SophisMart.png";
 import LOCATE from "../../assets/images/Locate.png";
@@ -6,13 +7,12 @@ import LOCATE from "../../assets/images/Locate.png";
 import { FaSearch, FaHeart, FaShoppingCart, FaUser } from "react-icons/fa";
 import { Col, Container, Navbar, Nav, NavDropdown } from "react-bootstrap";
 
-// import { FaAngleDown } from "react-icons/fa";
 import "../styles/Header.css";
 import { NavLink, Link } from "react-router-dom";
 
 const Header = () => {
+  // const { token } = useSelector((state) => state.user);
   const [showMain, setShowMain] = useState(false);
-  // const [showMain2, setShowMain2] = useState(false);
 
   return (
     <div className="header" id="top">
@@ -87,7 +87,7 @@ const Header = () => {
                   <FaUser className="user-icon" />
                   <p>Account</p>
                 </div>
-                <div className="nav-link" href="#home">
+                <div className="nav-link">
                   <div className="navBar-signIn">
                     <p
                       onClick={() => {
