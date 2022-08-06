@@ -2,13 +2,14 @@ import { AiFillStar } from "react-icons/ai";
 import { BsCheckLg, BsShieldCheck } from "react-icons/bs";
 import "../styles/SellerCard.css";
 
-const SellerCard = () => {
+const SellerCard = ({ product }) => {
+  // const { vendor } = product;
   return (
     <div id="seller" className="bg-white mx-auto mb-5">
       <div className="mb-4">Seller Information & Performance</div>
 
       <div className="sellerBody row ">
-        <h2 className="col-6 pt-1 mt-0">Ikeoha</h2>
+        <h2 className="col-6 pt-1 mt-0">{product?.vendor?.firstName}</h2>
 
         <button
           type="submit"
@@ -16,11 +17,11 @@ const SellerCard = () => {
         >
           <a
             href="http://localhost:3000"
-            className="text-white text-decoration-none "
+            className="text-white text-decoration-none d-flex justify-content-center"
             target="_blank"
             rel="noreferrer"
           >
-            Contact
+            {product?.vendor?.phoneNumber}
           </a>
         </button>
 
@@ -43,7 +44,7 @@ const SellerCard = () => {
             <p className="ps-1 pt-2 ">Quality Score</p>
           </div>
 
-          <p className="pt-2 ">(5.0)</p>
+          <p className="pt-2 ">({product?.vendor?.averageRating})</p>
         </div>
 
         <div className="sellerRatings col-12 d-flex flex-md-column flex-lg-row justify-content-between mt-2">
