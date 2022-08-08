@@ -1,6 +1,7 @@
 import "../styles/ProductDetail.css";
 
-const ProductDetail = () => {
+const ProductDetail = ({ product }) => {
+  // const { description, reviews, specification } = product;
   return (
     <div className="pDetail bg-white mt-5">
       <ul className="nav nav-pills mb-3" id="pills-tab" role="tablist">
@@ -71,14 +72,7 @@ const ProductDetail = () => {
           role="tabpanel"
           aria-labelledby="pills-details-tab"
         >
-          1Eu odio venenatis, nam pharetra, praesent elit id diam diam. Enim
-          ornare nisl, in ut bibendum. Sit donec odio vestibulum feugiat potenti
-          hendrerit. Tincidunt vivamus pharetra, risus ligula. Adipiscing neque
-          dictum tellus, turpis eu placerat. Turpis integer massa duis at proin
-          quis sagittis. Sed aliquet netus sollicitudin facilisi netus nullam
-          malesuada. Pharetra, habitant iaculis elit donec nulla lorem cras.
-          Cras amet faucibus fringilla aliquam quis scelerisque massa aliquet
-          volutpat. Id mauris, ac, amet, ut diam erat.
+          {product?.description}
         </div>
 
         <div
@@ -87,14 +81,7 @@ const ProductDetail = () => {
           role="tabpanel"
           aria-labelledby="pills-specifications-tab"
         >
-          2Eu odio venenatis, nam pharetra, praesent elit id diam diam. Enim
-          ornare nisl, in ut bibendum. Sit donec odio vestibulum feugiat potenti
-          hendrerit. Tincidunt vivamus pharetra, risus ligula. Adipiscing neque
-          dictum tellus, turpis eu placerat. Turpis integer massa duis at proin
-          quis sagittis. Sed aliquet netus sollicitudin facilisi netus nullam
-          malesuada. Pharetra, habitant iaculis elit donec nulla lorem cras.
-          Cras amet faucibus fringilla aliquam quis scelerisque massa aliquet
-          volutpat. Id mauris, ac, amet, ut diam erat.
+          {product?.specification}
         </div>
 
         <div
@@ -103,14 +90,7 @@ const ProductDetail = () => {
           role="tabpanel"
           aria-labelledby="pills-reviews-tab"
         >
-          3Eu odio venenatis, nam pharetra, praesent elit id diam diam. Enim
-          ornare nisl, in ut bibendum. Sit donec odio vestibulum feugiat potenti
-          hendrerit. Tincidunt vivamus pharetra, risus ligula. Adipiscing neque
-          dictum tellus, turpis eu placerat. Turpis integer massa duis at proin
-          quis sagittis. Sed aliquet netus sollicitudin facilisi netus nullam
-          malesuada. Pharetra, habitant iaculis elit donec nulla lorem cras.
-          Cras amet faucibus fringilla aliquam quis scelerisque massa aliquet
-          volutpat. Id mauris, ac, amet, ut diam erat.
+          {product?.reviews[0]}
         </div>
 
         <div

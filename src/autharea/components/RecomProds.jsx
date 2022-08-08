@@ -16,7 +16,7 @@ const RecomProds = () => {
     dispatch(getRecommendedProd());
   }, []);
 
-  console.log(recommendedProd);
+  // console.log(recommendedProd);
 
   const recomProdsElements = recommendedProd.recommended
     ?.slice(0, 6)
