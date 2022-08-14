@@ -22,6 +22,7 @@ import Checkout from "./autharea/pages/Checkout";
 import ToCart from "./noautharea/pages/addToCart";
 import OrderSuccess from "./noautharea/pages/orderSuccess";
 import Confirm from "./noautharea/pages/orderConfirmation";
+import ProductListPage from "./autharea/pages/ProductListPage";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -35,7 +36,8 @@ root.render(
             <Route path="login" element={<Login />} />
             <Route path="register" element={<Register />} />
             <Route path="checkout" element={<Checkout />} />
-            <Route path="/singleProduct" element={<SingleProduct />} />
+            <Route path="/:productId" element={<SingleProduct />} />
+            <Route path="/allProducts" element={<ProductListPage />} />
             <Route path="/successful" element={<OrderSuccess />} />
             <Route path="cart" element={<CartComps />} />
             <Route path="/confirm-order" element={<Confirm />} />

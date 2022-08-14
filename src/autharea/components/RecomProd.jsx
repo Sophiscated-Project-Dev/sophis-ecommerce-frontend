@@ -1,4 +1,6 @@
 import ProdPrice from "./ProdPrice";
+import { Link } from "react-router-dom";
+
 const RecomProd = ({ prodData }) => {
   // const {
   //   image,
@@ -9,8 +11,10 @@ const RecomProd = ({ prodData }) => {
   //   rating,
   //   reviewNumber,
   // } = prodData;
-  const { images, name, price, discount, averageRating, numberOfReviews } =
+  const { images, name, price, discount, averageRating, numberOfReviews, _id } =
     prodData;
+
+  // console.log(prodData);
 
   const discountPerc = discount * 100;
   const grossPrice = discountPerc / 100;
@@ -20,7 +24,9 @@ const RecomProd = ({ prodData }) => {
       <p className="discount-tag">-{discountPerc}%</p>
       <div className="product">
         <div>
-          <img width={200} src={images[0]} alt="" />
+          <Link to={`/${_id}`}>
+            <img width={200} src={images[0]} alt="" />
+          </Link>
         </div>
         <div className="prod-info">
           <p className="prod-name">{name}</p>

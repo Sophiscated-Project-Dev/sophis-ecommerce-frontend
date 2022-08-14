@@ -11,19 +11,27 @@ import Whatsapp from "../../assets/images/colouredIcons/whatsapp.png";
 import AddToCart from "./AddToCart";
 
 const AccessoryDetail = ({ product }) => {
-  const {
-    name,
-    category,
-    images,
-    colors,
-    averageRating,
-    numberOfReviews,
-    brand,
-    discount,
-    price,
-    size,
-  } = product;
-  let randomId = Math.floor(Math.random() * 1000000 + 1);
+
+  // const {
+  //  name,
+  //   averageRating,
+  //   discount,
+  //   description,
+  //   colors,
+  //   brand,
+  //   category,
+  //   inventory,
+  //   price,
+  //   reviews,
+  //   size,
+  //   images,
+  //   tax,
+  //   numberOfReviews,
+  //   vendor,
+  //   specification,
+  // } = product;
+  console.log(product);
+
   return (
     <section className="accessory row bg-white pb-4">
       <div className="accessoryLeft col-12 col-md-6 position-relative">
@@ -34,55 +42,107 @@ const AccessoryDetail = ({ product }) => {
             data-bs-ride="carousel"
           >
             <div className="carousel-inner">
-              {images?.map((image, index) => (
-                <div
-                  key={index + randomId}
-                  className={
-                    index === 0 ? "carousel-item active" : "carousel-item"
-                  }
-                >
-                  <img src={image} className="d-block w-100" alt={name} />
-                </div>
-              ))}
+
+              <div className="carousel-item active">
+                {product?.images[0] && (
+                  <img
+                    src={product?.images[0]}
+                    className="d-block w-100"
+                    alt=""
+                  />
+                )}
+              </div>
+              <div className="carousel-item">
+                {product?.images[1] && (
+                  <img
+                    src={product?.images[1]}
+                    className="d-block w-100"
+                    alt=""
+                  />
+                )}
+              </div>
+              <div className="carousel-item">
+                {product?.images[2] && (
+                  <img
+                    src={product?.images[2]}
+                    className="d-block w-100"
+                    alt=""
+                  />
+                )}
+              </div>
             </div>
 
             <h4 className="text-dark">Closer view</h4>
 
             {/* Button trigger modal  */}
-            {images?.map((image, index) => (
-              <button
-                type="button"
-                key={index + randomId}
-                className="btn modalButton  position-relative"
-                data-bs-toggle="modal"
-                data-bs-target={`#${category}_${index}`}
-              >
-                <img src={image} alt={name} />
-              </button>
-            ))}
 
-            {images?.map((image, index) => (
-              <div
-                key={index + randomId}
-                className="modal fade"
-                id={`${category}_${index}`}
-                tabIndex="-1"
-                aria-labelledby="exampleModalLabel"
-                aria-hidden="true"
-              >
-                <div className="modal-dialog modal-dialog-centered">
-                  <div className="modal-content">
-                    <div className="modal-header">
-                      <button
-                        type="button"
-                        className="btn-close"
-                        data-bs-dismiss="modal"
-                        aria-label="Close"
-                      ></button>
-                    </div>
-                    <div className="modal-body">
-                      <img className="img-fluid" src={image} alt="item" />
-                    </div>
+            <button
+              type="button"
+              className="btn modalButton  position-relative"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal"
+            >
+              {product?.images[0] && (
+                <img src={product?.images[0]} alt="item" />
+              )}
+            </button>
+
+            <button
+              type="button"
+              className="btn modalButton  position-relative"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal"
+            >
+              {product?.images[1] && (
+                <img src={product?.images[1]} alt="item" />
+              )}
+            </button>
+
+            <button
+              type="button"
+              className="btn modalButton  position-relative"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal"
+            >
+              {product?.images[2] && (
+                <img src={product?.images[2]} alt="item" />
+              )}
+            </button>
+
+            <button
+              type="button"
+              className="btn modalButton  position-relative"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal"
+            >
+              {product?.images[3] && (
+                <img src={product?.images[3]} alt="item" />
+              )}
+            </button>
+
+            <div
+              className="modal fade"
+              id="exampleModal"
+              tabIndex="-1"
+              aria-labelledby="exampleModalLabel"
+              aria-hidden="true"
+            >
+              <div className="modal-dialog modal-dialog-centered">
+                <div className="modal-content">
+                  <div className="modal-header">
+                    <button
+                      type="button"
+                      className="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                  <div className="modal-body">
+                    <img
+                      className="img-fluid"
+                      src={product?.images[0]}
+                      alt="item"
+                    />
                   </div>
                 </div>
               </div>
@@ -114,25 +174,56 @@ const AccessoryDetail = ({ product }) => {
 
         <h4 className="text-dark ms-4">Color:</h4>
         <div className="carousel-indicators position-absolute d-flex mx-auto justify-content-between">
-          {images?.map((image, index) => (
-            <button className="border-0 " key={index + randomId}>
-              <img
-                type="button"
-                data-bs-target="#carouselExampleIndicators"
-                data-bs-slide-to={index}
-                aria-label="Slide 1"
-                src={image}
-                alt={name}
-              />
-              <p>{colors[index] && colors[index]}</p>
-            </button>
-          ))}
+
+          {product?.colors.map((color) => {
+            return (
+              <button className="border-0 ">
+                <img
+                  className=""
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide-to="0"
+                  aria-label="Slide 1"
+                  src={product?.images[0]}
+                  alt="item"
+                />
+                <p>{color}</p>
+              </button>
+            );
+          })}
+
+          {/* <button className="border-0 ">
+            <img
+              className="h-75"
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+              src={GreenHeadset}
+              alt="item"
+            />
+            <p>Green</p>
+          </button>
+
+          <button className="border-0 ">
+            <img
+              className="h-75"
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+              src={VividHeadset}
+              alt="item"
+            />
+            <p>Blue</p>
+          </button> */}
         </div>
-      </div>
+      </div></div>
 
       <div className="accessoryRight col-12 col-md-6 pt-4">
         <div className="accessoryRightHeader d-flex justify-content-between">
-          <h3>{name}</h3>
+
+          <h3>{product?.name}</h3>
 
           <span>
             <HiHeart />
@@ -140,42 +231,72 @@ const AccessoryDetail = ({ product }) => {
         </div>
 
         <p className="accessoryRating">
-          <AiFillStar /> <span>{averageRating}.0</span> | {numberOfReviews}{" "}
-          Reviews
+
+          <AiFillStar /> <span>{product?.averageRating}</span> |{" "}
+          {product?.numberOfReviews} Reviews
         </p>
 
         <p className="accessoryBrand">
-          Brand: <span className="fw-bold">{brand}</span> |{" "}
+          Brand: <span className="fw-bold">{product?.brand}</span> |{" "}
           <Link to="/" className="text-decoration-none">
             Other products from {brand}
           </Link>
         </p>
 
-        {discount === 0 && (
-          <p className="accessoryDiscount d-inline-block me-3">${price}</p>
-        )}
-        {discount !== 0 && (
-          <>
-            <p className="accessoryDiscount d-inline-block me-3">${discount}</p>{" "}
-            <sup className="accessoryPrice ">
-              <del>${price}</del>
-            </sup>
-          </>
-        )}
+
+        <p className="accessoryDiscount d-inline-block me-3">
+          ${product?.price}
+        </p>
+
+        <sup className="accessoryPrice ">
+          <del>$1,800.00</del>
+        </sup>
 
         <div className="accessorySizes d-flex justify-content-between">
           <span>Size:</span>
-          {size?.map((item, index) => (
-            <div key={index + randomId}>
-              <input
-                className="form-check-input rounded-0 mt-0 me-2"
-                type="checkbox"
-                id={item.toUpperCase()}
-                value={item.toUpperCase()}
-              />
-              <label htmlFor={item.toUpperCase()}> {item.toUpperCase()}</label>
-            </div>
-          ))}
+
+          {product?.size.map((item) => {
+            return (
+              <div>
+                <input
+                  className="form-check-input rounded-0 mt-0 me-2"
+                  type="checkbox"
+                  id="S"
+                  value="S"
+                />
+                <label htmlFor="S"> {item}</label>
+              </div>
+            );
+          })}
+          {/* <div>
+            <input
+              className="form-check-input rounded-0 mt-0 me-2"
+              type="checkbox"
+              id="M"
+              value="M"
+            />
+            <label htmlFor="M"> M</label>
+          </div>
+
+          <div>
+            <input
+              className="form-check-input rounded-0 mt-0 me-2"
+              type="checkbox"
+              id="L"
+              value="L"
+            />
+            <label htmlFor="L"> L</label>
+          </div>
+
+          <div>
+            <input
+              className="form-check-input rounded-0 mt-0 me-2"
+              type="checkbox"
+              id="XL"
+              value="XL"
+            />
+            <label htmlFor="XL"> XL</label>
+          </div> */}
         </div>
 
         <div className="accessoryQuantity">

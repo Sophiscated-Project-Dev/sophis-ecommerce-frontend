@@ -22,3 +22,4 @@ This is project built by a group of reactjs developers who gathered themselves a
 <!-- https://sophdev.herokuapp.com/api/v1/products/top-ranks -->
 <!-- https://sophdev.herokuapp.com/api/v1/products/top-brands -->
 <!-- https://sophdev.herokuapp.com/api/v1/products/recommended -->
+<!-- https://sophdev.herokuapp.com/api/v1/products/id -->
