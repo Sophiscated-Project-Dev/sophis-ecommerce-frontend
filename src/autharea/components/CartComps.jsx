@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, Button } from "react-bootstrap";
+import { Card} from "react-bootstrap";
 import "../styles/CartComps.css";
 import { CartItems } from "./CartItems";
 import CartLaptop from "../../assets/cart-img/cartlaptop.png";
@@ -38,7 +38,6 @@ const data = [
 ];
 
 const CartComps = () => {
-  //   console.log(data);
 
   return (
     <div className="cart-comps">

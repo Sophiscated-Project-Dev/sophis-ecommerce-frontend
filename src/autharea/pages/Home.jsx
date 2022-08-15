@@ -8,11 +8,7 @@ import Hero from "../components/Carousel";
 import Review from "../components/Review";
 import Offers from "../components/Offers";
 import "../styles/Home.css";
-
-import { Link } from "react-router-dom";
-
 import BrandsComp from "../components/BrandsComp";
-
 import TopVendors from "../components/TopVendors/TopVendors";
 
 const Home = () => {

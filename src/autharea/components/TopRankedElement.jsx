@@ -1,9 +1,13 @@
 import { Link } from "react-router-dom";
 import ProdPrice from "./ProdPrice";
 const TopRankedElement = ({ prodData }) => {
+<<<<<<< HEAD
+  const { images, name, price, discount} =
+=======
   const { images, name, price, discount, _id, averageRating, numberOfReviews } =
+>>>>>>> a17650bd2a91ca0c29910d6a89cb145e340d1a9b
     prodData;
-  // console.log(discount);
+
   const discountPerc = discount * 100;
   const grossPrice = discountPerc / 100;
 

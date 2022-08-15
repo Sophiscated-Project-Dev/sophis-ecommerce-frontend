@@ -5,16 +5,13 @@ import "../styles/AccessoryDetail.css";
 import { AiFillStar } from "react-icons/ai";
 import { HiHeart } from "react-icons/hi";
 import Facebook from "../../assets/images/colouredIcons/facebook.png";
-
-import Headset from "../../assets/images/dummyImages/headset.png";
-import GreenHeadset from "../../assets/images/dummyImages/greenHeadset.png";
-import VividHeadset from "../../assets/images/dummyImages/vividHeadset.png";
 import Twitter from "../../assets/images/colouredIcons/twitter.png";
 import Whatsapp from "../../assets/images/colouredIcons/whatsapp.png";
 
 import AddToCart from "./AddToCart";
 
 const AccessoryDetail = ({ product }) => {
+
   // const {
   //  name,
   //   averageRating,
@@ -45,6 +42,7 @@ const AccessoryDetail = ({ product }) => {
             data-bs-ride="carousel"
           >
             <div className="carousel-inner">
+
               <div className="carousel-item active">
                 {product?.images[0] && (
                   <img
@@ -75,7 +73,9 @@ const AccessoryDetail = ({ product }) => {
             </div>
 
             <h4 className="text-dark">Closer view</h4>
+
             {/* Button trigger modal  */}
+
             <button
               type="button"
               className="btn modalButton  position-relative"
@@ -146,8 +146,9 @@ const AccessoryDetail = ({ product }) => {
                   </div>
                 </div>
               </div>
-            </div>
+            ))}
 
+            {/* Carousel control buttons */}
             <button
               className="carousel-control-prev ccp"
               type="button"
@@ -158,7 +159,6 @@ const AccessoryDetail = ({ product }) => {
                 &#9001;
               </span>
             </button>
-
             <button
               className="carousel-control-next ccn"
               type="button"
@@ -174,6 +174,7 @@ const AccessoryDetail = ({ product }) => {
 
         <h4 className="text-dark ms-4">Color:</h4>
         <div className="carousel-indicators position-absolute d-flex mx-auto justify-content-between">
+
           {product?.colors.map((color) => {
             return (
               <button className="border-0 ">
@@ -217,10 +218,11 @@ const AccessoryDetail = ({ product }) => {
             <p>Blue</p>
           </button> */}
         </div>
-      </div>
+      </div></div>
 
       <div className="accessoryRight col-12 col-md-6 pt-4">
         <div className="accessoryRightHeader d-flex justify-content-between">
+
           <h3>{product?.name}</h3>
 
           <span>
@@ -229,6 +231,7 @@ const AccessoryDetail = ({ product }) => {
         </div>
 
         <p className="accessoryRating">
+
           <AiFillStar /> <span>{product?.averageRating}</span> |{" "}
           {product?.numberOfReviews} Reviews
         </p>
@@ -236,9 +239,10 @@ const AccessoryDetail = ({ product }) => {
         <p className="accessoryBrand">
           Brand: <span className="fw-bold">{product?.brand}</span> |{" "}
           <Link to="/" className="text-decoration-none">
-            Oher products from Oraimo
+            Other products from {brand}
           </Link>
         </p>
+
 
         <p className="accessoryDiscount d-inline-block me-3">
           ${product?.price}

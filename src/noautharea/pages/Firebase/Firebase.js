@@ -25,8 +25,8 @@ const googleProv = new GoogleAuthProvider();
 export const logInWithGoogle = () => {
   signInWithPopup(auth, googleProv)
     .then((result) => {
-      const name = result.user.displayName;
-      const email = result.user.email;
+      //const name = result.user.displayName;
+      //const email = result.user.email;
       console.log(result);
     })
     .catch((error) => {

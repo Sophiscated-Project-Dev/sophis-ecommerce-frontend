@@ -1,5 +1,6 @@
-import React, { useState } from "react";
-// import { useDispatch, useSelector } from "react-redux";
+import { useState} from "react";
+import { logOut} from "../../features/user/userSlice";
+import { useDispatch, useSelector } from "react-redux";
 import LOGO from "../../assets/images/logo1.png";
 import SOPHIS from "../../assets/images/SophisMart.png";
 import LOCATE from "../../assets/images/Locate.png";
@@ -8,11 +9,19 @@ import { FaSearch, FaHeart, FaShoppingCart, FaUser } from "react-icons/fa";
 import { Col, Container, Navbar, Nav, NavDropdown } from "react-bootstrap";
 
 import "../styles/Header.css";
-import { NavLink, Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Header = () => {
-  // const { token } = useSelector((state) => state.user);
+  const { success} = useSelector((state) => state.user);
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
   const [showMain, setShowMain] = useState(false);
+
+  //log out user
+  const handleLogOut = () => {
+    dispatch(logOut());
+    navigate("/login");
+  };
 
   return (
     <div className="header" id="top">
@@ -89,24 +98,34 @@ const Header = () => {
                 </div>
                 <div className="nav-link">
                   <div className="navBar-signIn">
-                    <p
-                      onClick={() => {
-                        setShowMain(false);
-                      }}
-                    >
-                      <Link to="login">Sign In</Link>
-                    </p>
-                    <p>Or</p>
-                    <p>
-                      <Link
-                        to="register"
-                        onClick={() => {
-                          setShowMain(false);
-                        }}
-                      >
-                        Register
-                      </Link>
-                    </p>
+                    {!success ? (
+                      <>
+                        <p
+                          onClick={() => {
+                            setShowMain(false);
+                          }}
+                        >
+                          <Link to="login">Sign In</Link>
+                        </p>
+                        <p>Or</p>
+                        <p>
+                          <Link
+                            to="register"
+                            onClick={() => {
+                              setShowMain(false);
+                            }}
+                          >
+                            Register
+                          </Link>
+                        </p>
+                      </>
+                    ) : (
+                      <p>
+                        <Link to="/login" onClick={handleLogOut}>
+                          Log Out
+                        </Link>
+                      </p>
+                    )}
                   </div>
                 </div>
                 <Nav.Link href="#link">

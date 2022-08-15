@@ -1,9 +1,9 @@
 import React from "react";
-import { Card, Button } from "react-bootstrap";
-import CartLaptop from "../../assets/cart-img/cartlaptop.png";
+// import { Card, Button } from "react-bootstrap";
+// import CartLaptop from "../../assets/cart-img/cartlaptop.png";
 
 export const CartItems = ({
-  id,
+  //id,
   productName,
   vendor,
   img,
