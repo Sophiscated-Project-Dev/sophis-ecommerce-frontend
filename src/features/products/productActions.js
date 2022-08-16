@@ -13,7 +13,10 @@ export const getNewArrivals = createAsyncThunk(
   "product/getNewArrivals",
   async (thunkAPI) => {
     const response = await axios.get(URL_New_ARRIVAL);
-    return response.data;
+
+    const { data } = response;
+    // localStorage.setItem("newArrivals", data);
+    return data;
   }
   //   async () => {
   //     return fetch(

@@ -1,6 +1,7 @@
 import data from "../components/RecomProdsData";
 import "../styles/SingleProduct.css";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 import ProductDetail from "../components/ProductDetail";
 import SellerCard from "../components/SellerCard";
@@ -15,7 +16,10 @@ const PRODUCT_ID = "https://sophdev.herokuapp.com/api/v1/products";
 
 const SingleProduct = () => {
   const { productId } = useParams();
-  // console.log(productId);
+  const { newArrivals, recommendedProd } = useSelector(
+    (state) => state.product
+  );
+  // console.log(newArrivals);
   const [productDetail, setProductDetail] = useState([]);
   const fetchProductById = async () => {
     try {
@@ -40,23 +44,6 @@ const SingleProduct = () => {
   }, [productId]);
 
   const { product } = productDetail;
-  // const {
-  //   averageRating,
-  //   discount,
-  //   description,
-  //   colors,
-  //   brand,
-  //   category,
-  //   inventory,
-  //   price,
-  //   reviews,
-  //   size,
-  //   tax,
-  //   numberOfReviews,
-  //   vendor,
-  //   specification,
-  // } = product;
-  // console.log(product);
 
   return (
     <section className=" singleProduct d-flex flex-column justify-content-center align-items-center px-sm-5 pt-5 mb-5">
@@ -79,13 +66,13 @@ const SingleProduct = () => {
       {/* Likes */}
       <div className="productLikes container row mx-auto mt-5 position-relative">
         <SectionHeader title={"You may also like"} />
-        <ImageSlider data={data} />
+        <ImageSlider data={newArrivals} />
       </div>
 
       {/* Frequently Bought Together */}
       <div className="productLikes container row mx-auto mt-5 position-relative">
         <SectionHeader title={"Frequently bought together"} />
-        <ImageSlider data={data} />
+        <ImageSlider data={newArrivals} />
       </div>
     </section>
   );

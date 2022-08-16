@@ -25,8 +25,12 @@ import ToCart from "./noautharea/pages/addToCart";
 import OrderSuccess from "./noautharea/pages/orderSuccess";
 import Confirm from "./noautharea/pages/orderConfirmation";
 import ProductListPage from "./autharea/pages/ProductListPage";
+import { getCartTotal } from "./features/Cart/cartSlice";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
+
+store.dispatch(getCartTotal());
+
 root.render(
   <React.StrictMode>
     <Provider store={store}>

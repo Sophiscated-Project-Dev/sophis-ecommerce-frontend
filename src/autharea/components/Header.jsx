@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-// import { useDispatch, useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import LOGO from "../../assets/images/logo1.png";
 import SOPHIS from "../../assets/images/SophisMart.png";
 import LOCATE from "../../assets/images/Locate.png";
@@ -11,7 +11,7 @@ import "../styles/Header.css";
 import { NavLink, Link } from "react-router-dom";
 
 const Header = () => {
-  // const { token } = useSelector((state) => state.user);
+  const { cartTotalQuanty } = useSelector((state) => state.cart);
   const [showMain, setShowMain] = useState(false);
 
   return (
@@ -124,6 +124,7 @@ const Header = () => {
                       }}
                     >
                       <FaShoppingCart className="cart" />
+                      <span className="cartCount">{cartTotalQuanty}</span>
                       <p>Cart</p>
                     </Link>
                   </div>

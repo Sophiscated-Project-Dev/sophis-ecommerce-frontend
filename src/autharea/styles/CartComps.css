@@ -142,7 +142,7 @@
   /* padding-bottom: -5px !important; */
   margin-bottom: 0px;
   font-weight: 600;
-  font-size: 24px;
+  font-size: 20px;
   line-height: 32px;
   color: #030710;
 }
@@ -150,7 +150,7 @@
 .second-span1 {
   color: #353131;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 13px;
   line-height: 15px;
   text-decoration: line-through;
 }
@@ -210,7 +210,7 @@
 
 .sub-tot-p2 {
   font-weight: 600;
-  font-size: 24px;
+  font-size: 21px;
   line-height: 32px;
   color: #030710;
 }
@@ -237,7 +237,7 @@
 
 .total-cart-p2 {
   font-weight: 600;
-  font-size: 24px;
+  font-size: 21px;
   line-height: 32px;
   color: #030710;
 }
