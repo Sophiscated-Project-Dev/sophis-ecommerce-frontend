@@ -58,7 +58,7 @@ const SingleProduct = () => {
         </div>
 
         <div className="col-12 col-lg-3 d-flex flex-column flex-md-row flex-lg-column">
-          <SellerCard product={product} />
+          {/* <SellerCard product={product} /> */}
           <DeliveryCard />
         </div>
       </div>

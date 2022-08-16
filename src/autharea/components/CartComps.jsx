@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { Card, Button } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
+
 import "../styles/CartComps.css";
 import { CartItems } from "./CartItems";
 import CartLaptop from "../../assets/cart-img/cartlaptop.png";

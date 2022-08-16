@@ -7,8 +7,8 @@ const FlashSaleElement = ({ prodData }) => {
     grossPrice,
     salePrice,
     percentDiscount,
-    rating,
-    reviewNumber,
+    /* rating,
+    reviewNumber, */
     left,
     total,
   } = prodData;

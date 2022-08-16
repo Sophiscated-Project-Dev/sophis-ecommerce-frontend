@@ -5,10 +5,6 @@ import "../styles/AccessoryDetail.css";
 import { AiFillStar } from "react-icons/ai";
 import { HiHeart } from "react-icons/hi";
 import Facebook from "../../assets/images/colouredIcons/facebook.png";
-
-import Headset from "../../assets/images/dummyImages/headset.png";
-import GreenHeadset from "../../assets/images/dummyImages/greenHeadset.png";
-import VividHeadset from "../../assets/images/dummyImages/vividHeadset.png";
 import Twitter from "../../assets/images/colouredIcons/twitter.png";
 import Whatsapp from "../../assets/images/colouredIcons/whatsapp.png";
 
@@ -55,7 +51,9 @@ const AccessoryDetail = ({ product }) => {
             </div>
 
             <h4 className="text-dark">Closer view</h4>
+
             {/* Button trigger modal  */}
+
             <button
               type="button"
               className="btn modalButton  position-relative"
@@ -126,52 +124,57 @@ const AccessoryDetail = ({ product }) => {
                   </div>
                 </div>
               </div>
-            </div>
 
-            <button
-              className="carousel-control-prev ccp"
-              type="button"
-              data-bs-target="#carouselExampleIndicators"
-              data-bs-slide="prev"
-            >
-              <span className="fw-bolder position-absolute" aria-hidden="true">
-                &#9001;
-              </span>
-            </button>
-
-            <button
-              className="carousel-control-next ccn"
-              type="button"
-              data-bs-target="#carouselExampleIndicators"
-              data-bs-slide="next"
-            >
-              <span className="fw-bolder position-absolute" aria-hidden="true">
-                &#9002;
-              </span>
-            </button>
-          </div>
-        </div>
-
-        <h4 className="text-dark ms-4">Color:</h4>
-        <div className="carousel-indicators position-absolute d-flex mx-auto justify-content-between">
-          {product?.colors.map((index, color) => {
-            return (
-              <button key={index} className="border-0 ">
-                <img
-                  className=""
-                  type="button"
-                  data-bs-target="#carouselExampleIndicators"
-                  data-bs-slide-to="0"
-                  aria-label="Slide 1"
-                  src={product?.images[0]}
-                  alt="item"
-                />
-                <p>{color}</p>
+              {/* Carousel control buttons */}
+              <button
+                className="carousel-control-prev ccp"
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev"
+              >
+                <span
+                  className="fw-bolder position-absolute"
+                  aria-hidden="true"
+                >
+                  &#9001;
+                </span>
               </button>
-            );
-          })}
+              <button
+                className="carousel-control-next ccn"
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next"
+              >
+                <span
+                  className="fw-bolder position-absolute"
+                  aria-hidden="true"
+                >
+                  &#9002;
+                </span>
+              </button>
+            </div>
+          </div>
 
-          {/* <button className="border-0 ">
+          <h4 className="text-dark ms-4">Color:</h4>
+          <div className="carousel-indicators position-absolute d-flex mx-auto justify-content-between">
+            {product?.colors.map((index, color) => {
+              return (
+                <button key={index} className="border-0 ">
+                  <img
+                    className=""
+                    type="button"
+                    data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide-to="0"
+                    aria-label="Slide 1"
+                    src={product?.images[0]}
+                    alt="item"
+                  />
+                  <p>{color}</p>
+                </button>
+              );
+            })}
+
+            {/* <button className="border-0 ">
             <img
               className="h-75"
               type="button"
@@ -196,6 +199,7 @@ const AccessoryDetail = ({ product }) => {
             />
             <p>Blue</p>
           </button> */}
+          </div>
         </div>
       </div>
 
@@ -216,7 +220,7 @@ const AccessoryDetail = ({ product }) => {
         <p className="accessoryBrand">
           Brand: <span className="fw-bold">{product?.brand}</span> |{" "}
           <Link to="/" className="text-decoration-none">
-            Oher products from Oraimo
+            {/* Other products from {brand} */}
           </Link>
         </p>
 

@@ -1,25 +1,33 @@
-import React from "react";
 import star from "../../../assets/top_vendors/star.png";
 
-const Structure = ({ structData }) => {
-  const { rank, image, name, numOfProd, rating, reviewNumber } = structData;
+const Structure = ({ vendor, rank, numOfProd }) => {
+  const { firstName, averageRating, numberOfReviews } = vendor;
+
+  //check the number of an item to pluralise/not pluralise
+  const quantityCheck = (field, plural) =>
+    field === 1 ? `${field} ${plural}` : `${field} ${plural}s`;
+
   return (
     <div className="col vendor-tiletag">
       <div>
         <div className="vendor-card">
-          <div className="rank">{rank}</div>
+          <div className="rank">{rank + 1}</div>
           <div>
-            <img src={image} alt="" className="vendor-img" />
+            <img
+              src="https://i.ibb.co/bWTbJ3w/pfp-2.png"
+              alt=""
+              className="vendor-img"
+            />
           </div>
           <div className="vendor-info">
             <strong>
-              <p className="vendor-name">{name} </p>
+              <p className="vendor-name">{firstName} </p>
             </strong>
-            <p className="vendor-NOP"> {numOfProd} products</p>
+            <p className="vendor-NOP"> {quantityCheck(numOfProd, "product")}</p>
             <div className="vendor-stats">
               <img src={star} alt="star" />
-              <strong>{rating} </strong> <span className="ssp">|</span>
-              <span> {reviewNumber} Reviews </span>
+              <strong>{averageRating} </strong> <span className="ssp">|</span>
+              <span> {quantityCheck(numberOfReviews, "Review")} </span>
             </div>
           </div>
         </div>
