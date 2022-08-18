@@ -11,7 +11,6 @@ import Whatsapp from "../../assets/images/colouredIcons/whatsapp.png";
 import AddToCart from "./AddToCart";
 
 const AccessoryDetail = ({ product }) => {
-
   // const {
   //  name,
   //   averageRating,
@@ -42,7 +41,6 @@ const AccessoryDetail = ({ product }) => {
             data-bs-ride="carousel"
           >
             <div className="carousel-inner">
-
               <div className="carousel-item active">
                 {product?.images[0] && (
                   <img
@@ -73,9 +71,7 @@ const AccessoryDetail = ({ product }) => {
             </div>
 
             <h4 className="text-dark">Closer view</h4>
-
             {/* Button trigger modal  */}
-
             <button
               type="button"
               className="btn modalButton  position-relative"
@@ -146,9 +142,8 @@ const AccessoryDetail = ({ product }) => {
                   </div>
                 </div>
               </div>
-            ))}
+            </div>
 
-            {/* Carousel control buttons */}
             <button
               className="carousel-control-prev ccp"
               type="button"
@@ -159,6 +154,7 @@ const AccessoryDetail = ({ product }) => {
                 &#9001;
               </span>
             </button>
+
             <button
               className="carousel-control-next ccn"
               type="button"
@@ -174,7 +170,6 @@ const AccessoryDetail = ({ product }) => {
 
         <h4 className="text-dark ms-4">Color:</h4>
         <div className="carousel-indicators position-absolute d-flex mx-auto justify-content-between">
-
           {product?.colors.map((color) => {
             return (
               <button className="border-0 ">
@@ -204,7 +199,6 @@ const AccessoryDetail = ({ product }) => {
             />
             <p>Green</p>
           </button>
-
           <button className="border-0 ">
             <img
               className="h-75"
@@ -218,11 +212,10 @@ const AccessoryDetail = ({ product }) => {
             <p>Blue</p>
           </button> */}
         </div>
-      </div></div>
+      </div>
 
       <div className="accessoryRight col-12 col-md-6 pt-4">
         <div className="accessoryRightHeader d-flex justify-content-between">
-
           <h3>{product?.name}</h3>
 
           <span>
@@ -231,7 +224,6 @@ const AccessoryDetail = ({ product }) => {
         </div>
 
         <p className="accessoryRating">
-
           <AiFillStar /> <span>{product?.averageRating}</span> |{" "}
           {product?.numberOfReviews} Reviews
         </p>
@@ -239,10 +231,9 @@ const AccessoryDetail = ({ product }) => {
         <p className="accessoryBrand">
           Brand: <span className="fw-bold">{product?.brand}</span> |{" "}
           <Link to="/" className="text-decoration-none">
-            Other products from {brand}
+            Oher products from Oraimo
           </Link>
         </p>
-
 
         <p className="accessoryDiscount d-inline-block me-3">
           ${product?.price}
@@ -277,7 +268,6 @@ const AccessoryDetail = ({ product }) => {
             />
             <label htmlFor="M"> M</label>
           </div>
-
           <div>
             <input
               className="form-check-input rounded-0 mt-0 me-2"
@@ -287,7 +277,6 @@ const AccessoryDetail = ({ product }) => {
             />
             <label htmlFor="L"> L</label>
           </div>
-
           <div>
             <input
               className="form-check-input rounded-0 mt-0 me-2"
