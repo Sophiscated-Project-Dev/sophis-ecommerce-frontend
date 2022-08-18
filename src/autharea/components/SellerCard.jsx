@@ -8,7 +8,6 @@ import "../styles/SellerCard.css";
 import Spinner from "../../utils/spinner/Spinner";
 
 const SellerCard = ({ product }) => {
-<<<<<<< HEAD
   const { vendor: vendorId } = product;
 
   const dispatch = useDispatch();
@@ -20,14 +19,14 @@ const SellerCard = ({ product }) => {
 
   //get all sellers
   const sellers = vendors?.map((vendor) => vendor);
-  
+
   //get single seller
-  const vendor = sellers?.filter((seller) => seller.vendor.id === vendorId); 
+  const vendor = sellers?.filter((seller) => seller.vendor.id === vendorId);
   //const {firstName, email, averageRating} = vendor[0]?.vendor
-  
-=======
-  // const { vendor } = product;
->>>>>>> a17650bd2a91ca0c29910d6a89cb145e340d1a9b
+
+  // =======
+  //   // const { vendor } = product;
+  // >>>>>>> a17650bd2a91ca0c29910d6a89cb145e340d1a9b
   return (
     <div id="seller" className="bg-white mx-auto mb-5">
       <div className="mb-4">Seller Information & Performance</div>
@@ -39,7 +38,7 @@ const SellerCard = ({ product }) => {
         <div className="sellerBody row ">
           <h2 className="col-6 pt-1 mt-0">{vendor[0]?.vendor.firstName}</h2>
 
-<<<<<<< HEAD
+          {/* <<<<<<< HEAD
           <button
             type="submit"
             className="registerFacebook col btn rounded-0 border-0"
@@ -53,61 +52,57 @@ const SellerCard = ({ product }) => {
               Contact
             </a>
           </button>
-=======
-      <div className="sellerBody row ">
-        <h2 className="col-6 pt-1 mt-0">{product?.vendor?.firstName}</h2>
+======= */}
+          <div className="sellerBody row ">
+            <h2 className="col-6 pt-1 mt-0">{product?.vendor?.firstName}</h2>
 
-        <button
-          type="submit"
-          className="registerFacebook col btn rounded-0 border-0"
-        >
-          <a
-            href="http://localhost:3000"
-            className="text-white text-decoration-none d-flex justify-content-center"
-            target="_blank"
-            rel="noreferrer"
-          >
-            {product?.vendor?.phoneNumber}
-          </a>
-        </button>
->>>>>>> a17650bd2a91ca0c29910d6a89cb145e340d1a9b
+            <button
+              type="submit"
+              className="registerFacebook col btn rounded-0 border-0"
+            >
+              <a
+                href="http://localhost:3000"
+                className="text-white text-decoration-none d-flex justify-content-center"
+                target="_blank"
+                rel="noreferrer"
+              >
+                {product?.vendor?.phoneNumber}
+              </a>
+            </button>
 
-          <div className="sellerRatings col-12 d-flex flex-md-column flex-lg-row justify-content-between mt-3">
-            <div className="d-flex">
-              <span className="rounded-circle d-flex justify-content-center align-items-center">
-                <AiFillStar />
-              </span>
-              <p className="ps-1 pt-2 ">Order performance</p>
+            <div className="sellerRatings col-12 d-flex flex-md-column flex-lg-row justify-content-between mt-3">
+              <div className="d-flex">
+                <span className="rounded-circle d-flex justify-content-center align-items-center">
+                  <AiFillStar />
+                </span>
+                <p className="ps-1 pt-2 ">Order performance</p>
+              </div>
+
+              <p className="pt-2 ">(4.6)</p>
             </div>
 
-            <p className="pt-2 ">(4.6)</p>
-          </div>
+            <div className="sellerRatings col-12 d-flex flex-md-column flex-lg-row justify-content-between mt-2">
+              <div className="d-flex">
+                <span className="rounded-circle d-flex justify-content-center align-items-center">
+                  <BsCheckLg />
+                </span>
+                <p className="ps-1 pt-2 ">Quality Score</p>
+              </div>
 
-          <div className="sellerRatings col-12 d-flex flex-md-column flex-lg-row justify-content-between mt-2">
-            <div className="d-flex">
-              <span className="rounded-circle d-flex justify-content-center align-items-center">
-                <BsCheckLg />
-              </span>
-              <p className="ps-1 pt-2 ">Quality Score</p>
+              <p className="pt-2 ">(5.0)</p>
             </div>
 
-            <p className="pt-2 ">(5.0)</p>
-          </div>
-
-<<<<<<< HEAD
-          <div className="sellerRatings col-12 d-flex flex-md-column flex-lg-row justify-content-between mt-2">
-            <div className="d-flex">
-              <span className="rounded-circle d-flex justify-content-center align-items-center">
-                <small className="text-white rounded-circle text-center">
-                  P
-                </small>
-              </span>
-              <p className="ps-1 pt-2 ">Total Product</p>
+            <div className="sellerRatings col-12 d-flex flex-md-column flex-lg-row justify-content-between mt-2">
+              <div className="d-flex">
+                <span className="rounded-circle d-flex justify-content-center align-items-center">
+                  <small className="text-white rounded-circle text-center">
+                    P
+                  </small>
+                </span>
+                <p className="ps-1 pt-2 ">Total Product</p>
+              </div>
+              <p className="pt-2 ">({product?.vendor?.averageRating})</p>
             </div>
-=======
-          <p className="pt-2 ">({product?.vendor?.averageRating})</p>
-        </div>
->>>>>>> a17650bd2a91ca0c29910d6a89cb145e340d1a9b
 
             <p className="pt-2 ">{vendor[0]?.productCount}</p>
           </div>
@@ -120,7 +115,7 @@ const SellerCard = ({ product }) => {
               <p className="ps-1 pt-2 ">Customer Review</p>
             </div>
 
-            <p className="pt-2 ">{(vendor[0]?.vendor?.averageRating) }</p>
+            <p className="pt-2 ">{vendor[0]?.vendor?.averageRating}</p>
           </div>
         </div>
       )}

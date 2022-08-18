@@ -1,17 +1,10 @@
 import "../styles/ProductDetail.css";
 
 const ProductDetail = ({ product }) => {
-<<<<<<< HEAD
-   const {
-     numberOfReviews,
-     description,
-     specification,
-  } = product;
-  
+  // const { numberOfReviews, description, specification } = product;
 
-=======
   // const { description, reviews, specification } = product;
->>>>>>> a17650bd2a91ca0c29910d6a89cb145e340d1a9b
+
   return (
     <div className="pDetail bg-white mt-5">
       <ul className="nav nav-pills mb-3" id="pills-tab" role="tablist">
@@ -81,39 +74,36 @@ const ProductDetail = ({ product }) => {
           id="pills-details"
           role="tabpanel"
           aria-labelledby="pills-details-tab"
-<<<<<<< HEAD
-        >{description}</div>
-=======
+          // <<<<<<< HEAD
+          //         >{description}</div>
+          // =======
         >
           {product?.description}
         </div>
->>>>>>> a17650bd2a91ca0c29910d6a89cb145e340d1a9b
 
         <div
           className="tab-pane fade"
           id="pills-specifications"
           role="tabpanel"
           aria-labelledby="pills-specifications-tab"
-<<<<<<< HEAD
-        >{specification}</div>
-=======
+          // <<<<<<< HEAD
+          //         >{specification}</div>
+          // =======
         >
           {product?.specification}
         </div>
->>>>>>> a17650bd2a91ca0c29910d6a89cb145e340d1a9b
 
         <div
           className="tab-pane fade"
           id="pills-reviews"
           role="tabpanel"
           aria-labelledby="pills-reviews-tab"
-<<<<<<< HEAD
-        >{numberOfReviews}</div>
-=======
+          // <<<<<<< HEAD
+          //         >{numberOfReviews}</div>
+          // =======
         >
           {product?.reviews[0]}
         </div>
->>>>>>> a17650bd2a91ca0c29910d6a89cb145e340d1a9b
 
         <div
           className="tab-pane fade"
@@ -121,7 +111,8 @@ const ProductDetail = ({ product }) => {
           role="tabpanel"
           aria-labelledby="pills-report-tab"
         >
-          A form or something should be here</div>
+          A form or something should be here
+        </div>
       </div>
     </div>
   );
