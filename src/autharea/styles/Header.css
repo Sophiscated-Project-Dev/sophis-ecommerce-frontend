@@ -215,6 +215,24 @@
 .navBar-cart-icon {
   width: 32px;
   height: 32px;
+  position: relative;
+}
+
+.navBar-cart-icon .cartCount {
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  transform: translate(-15%, 20%);
+  z-index: 10;
+  background: rgb(247, 243, 5);
+  padding: 0.1rem 0.5rem;
+  font-size: 0.89rem;
+  border-radius: 50%;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #030710;
 }
 
 .navBar-cart-icon .cart {

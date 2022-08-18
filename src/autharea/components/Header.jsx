@@ -1,5 +1,6 @@
-import { useState} from "react";
-import { logOut} from "../../features/user/userSlice";
+import React, { useState } from "react";
+
+import { logOut } from "../../features/user/userSlice";
 import { useDispatch, useSelector } from "react-redux";
 import LOGO from "../../assets/images/logo1.png";
 import SOPHIS from "../../assets/images/SophisMart.png";
@@ -12,7 +13,8 @@ import "../styles/Header.css";
 import { Link, useNavigate } from "react-router-dom";
 
 const Header = () => {
-  const { success} = useSelector((state) => state.user);
+  const { cartTotalQuanty } = useSelector((state) => state.cart);
+  const { success } = useSelector((state) => state.user);
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const [showMain, setShowMain] = useState(false);
@@ -143,6 +145,7 @@ const Header = () => {
                       }}
                     >
                       <FaShoppingCart className="cart" />
+                      <span className="cartCount">{cartTotalQuanty}</span>
                       <p>Cart</p>
                     </Link>
                   </div>
