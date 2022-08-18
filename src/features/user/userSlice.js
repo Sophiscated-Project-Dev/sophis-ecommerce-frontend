@@ -26,6 +26,12 @@ const userSlice = createSlice({
 
       return state;
     },
+    logOut: (state) => {
+      localStorage.removeItem("token");
+      state.loading = false;
+      state.error = null;
+      state.success = false;
+    },
   },
   extraReducers: {
     // user registration
@@ -53,13 +59,13 @@ const userSlice = createSlice({
       state.success = true;
       state.token = payload.token;
     },
-    [userLogin.rejected]: (state, { payload }) => {
+    [userLogin.rejected]: (state) => {
       state.loading = false;
       state.error = true;
     },
   },
 });
 
-export const { clearState } = userSlice.actions;
+export const { clearState, logOut} = userSlice.actions;
 
 export default userSlice.reducer;

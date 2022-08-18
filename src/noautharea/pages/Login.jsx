@@ -1,11 +1,9 @@
 import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { Form } from "react-bootstrap";
 import { toast } from "react-toastify";
 import { useDispatch, useSelector } from "react-redux";
 import { userLogin } from "../../features/user/userActions";
-// i julius added this to clear the state
-import { clearState } from "../../features/user/userSlice";
 
 import "../styles/Login.css";
 import { FaFacebook } from "react-icons/fa";
@@ -31,7 +29,7 @@ const Login = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    //validate email and password
+    //validate email and password input fields
     const EMAIL_REGEX = /^\[A-z\][A-z0-9-_]{3,23}$/;
 
     if (EMAIL_REGEX.test(data.email) || data.email.trim().length < 4)
@@ -48,16 +46,15 @@ const Login = () => {
       if (error) return toast.error("email/password incorrect");
 
       if (success) {
-        dispatch(clearState());
-        navigate("/");
         toast.success("logged in successfully");
+        navigate("/");
       }
 
       if (loading) toast.info("logging in", { autoClose: 1000 });
     };
 
     userLogin();
-  }, [navigate, loading, error, success]);
+  }, [navigate, loading, error, success, dispatch]);
 
   return (
     <div className="login d-flex justify-content-center align-items-center py-2">
@@ -100,7 +97,9 @@ const Login = () => {
           <span className="login-forgot-password">Forgot Password</span>
         </Form.Group>
         <button className="login-btn mb-2">Submit</button>
-        <p className="hr-rule">or</p>
+        <p className="registerAlternative">
+          <span>or</span>
+        </p>
         <Form.Group className="">
           <button className="login-btn-primary mb-3">
             <FaFacebook />
@@ -112,13 +111,39 @@ const Login = () => {
           </button>
         </Form.Group>
 
-        <p className="login-terms-p my-3">
-          By creating an Account, you agree to{" "}
-          <a href="#">Our Terms &#38; Conditions, Our Private Policy</a> and{" "}
-          <a href="#">Money-Back Policy</a>
+        <p className="registerPolicy mt-3">
+          By creating an Account, you agree to Our{" "}
+          <span>
+            <Link to="/" className="text-decoration-none">
+              Terms & Conditions
+            </Link>
+            ,
+          </span>{" "}
+          Our{" "}
+          <span>
+            <Link to="/" className="text-decoration-none">
+              Privacy Policy
+            </Link>
+            ,
+          </span>{" "}
+          and{" "}
+          <span>
+            <Link to="/" className="text-decoration-none">
+              Money-Back Policy
+            </Link>
+          </span>
         </p>
 
         <hr></hr>
+
+        <p className="registerLogin">
+          Don't have an Account?{" "}
+          <span>
+            <Link to="/login" className="text-decoration-none">
+              Register
+            </Link>
+          </span>
+        </p>
       </Form>
     </div>
   );
