@@ -36,9 +36,6 @@
   font-size: 1rem;
 }
 
-.filter-laptop-dropdown {
-}
-
 .filter-laptop-dropdown.show > .filer-laptop-toggle:focus,
 .filter-laptop-dropdown.show > .filer-laptop-toggle:active {
   color: #000;
@@ -124,10 +121,6 @@
   align-items: center;
 }
 
-.laptop-card-item {
-}
-
-/*  */
 
 .laptop-card-img {
   /* height: 80%; */

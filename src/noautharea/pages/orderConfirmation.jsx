@@ -1,13 +1,13 @@
-import { useSelector, useDispatch } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
+// import { useSelector, useDispatch } from 'react-redux';
+// import { useNavigate } from 'react-router-dom';
 import '../styles/orderConfirmation.css';
 import { Link } from 'react-router-dom';
 
 const Confirm = () => {
-  const navigate = useNavigate();
-  const { checkoutInfo} = useSelector(
-    (state) => state.checkout
-  );
+  // const navigate = useNavigate();
+  // const { checkoutInfo} = useSelector(
+  //   (state) => state.checkout
+  // );
 
   //console.log(checkoutInfo);
   return (

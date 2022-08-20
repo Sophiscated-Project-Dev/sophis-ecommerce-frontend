@@ -16,7 +16,6 @@ const PRODUCT_ID = 'https://sophdev.herokuapp.com/api/v1/products';
 const SingleProduct = () => {
   const { productId } = useParams();
   const { newArrivals } = useSelector((state) => state.product);
-  // console.log(newArrivals);
   const [productDetail, setProductDetail] = useState([]);
 
   const scroll = () => window.scrollTo(0, 0);
@@ -45,7 +44,6 @@ const SingleProduct = () => {
   }, [productId]);
 
   const { product } = productDetail;
-  //console.log(product)
 
   return (
     <section className=" singleProduct d-flex flex-column justify-content-center align-items-center px-sm-5 pt-5 mb-5">

@@ -21,9 +21,6 @@
   position: relative;
 }
 
-.hght {
-}
-
 .hero-text {
   position: relative;
   display: flex;
@@ -574,7 +571,6 @@
     height: 1.8vh !important;
   }
 }
-=======
  .hero {
      padding: 2vh 18vh;
      width: 100%;

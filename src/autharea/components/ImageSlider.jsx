@@ -1,7 +1,6 @@
 import "../styles/ImageSlider.css";
 
 const ImageSlider = ({ data }) => {
-  // console.log(data);
 
   return (
     <div id="slider" className="bg-white py-4">
@@ -14,7 +13,6 @@ const ImageSlider = ({ data }) => {
               <img
                 className="img-fluid mx-auto d-block"
                 src={product?.images[0]}
-                // src={require(`../../assets/recom_images/${product.image}.png`)}
                 alt={product?.name}
               />
               <div className="imageTag position-absolute top-0 justify-content-center d-flex align-items-center text-white">
@@ -22,7 +20,6 @@ const ImageSlider = ({ data }) => {
               </div>
               <p>{product?.name}</p>
               <p className="d-inline-block">
-                {/* <del> ${grossPrice * product?.price + product?.price}</del> */}
               </p>
               {<p className="d-inline-block ms-3">${product?.price}</p>}
             </div>

@@ -1,10 +1,10 @@
 import { useRef } from 'react';
-import { useSelector } from 'react-redux';
+//import { useSelector } from 'react-redux';
 
 const PaymentMethod = ({ Icon, id, setPaymentMethod }) => {
     const radioRef = useRef();
     //radioRef.current.checked = null
-  const { checkoutInfo } = useSelector((state) => state.checkout);
+  //const { checkoutInfo } = useSelector((state) => state.checkout);
 
   //if (radioRef.current?.checked) return radioRef.current.checked
     

@@ -1,9 +1,3 @@
-import { useSelector, useDispatch } from 'react-redux';
-import {
-  addBuyerInfo,
-  addPayment,
-} from '../../features/checkout/checkoutSlice';
-
 import { BsPencil } from 'react-icons/bs';
 import { useRef } from 'react';
 

@@ -75,17 +75,8 @@
 /* MEDIA QUERY */
 
 @media screen and (max-width: 1199px) {
-  .brand-sec_body {
-  }
-
   .brand-sec_item {
     flex-basis: 20%;
-  }
-
-  .brand-sec_background {
-  }
-
-  .brand-sec_background h3 {
   }
 }
 

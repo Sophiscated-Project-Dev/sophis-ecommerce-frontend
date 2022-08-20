@@ -4,7 +4,7 @@ const TopRankedElement = ({ prodData }) => {
 
   // const { images, name, price, discount} =
 
-  const { images, name, price, discount, _id, averageRating, numberOfReviews } =
+  const { images, name, price, discount, _id} =
     prodData;
 
   const discountPerc = discount * 100;

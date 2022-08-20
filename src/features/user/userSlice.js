@@ -11,8 +11,6 @@ const initialState = {
   token,
   error: null,
   success: false, // for monitoring the login process.
-  // Addition to the register
-  // errorMessage: "",
 };
 
 const userSlice = createSlice({

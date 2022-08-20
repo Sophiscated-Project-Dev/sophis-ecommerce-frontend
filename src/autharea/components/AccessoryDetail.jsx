@@ -255,9 +255,9 @@ const AccessoryDetail = ({ product }) => {
         <div className="accessorySizes d-flex justify-content-between">
           <span>Size:</span>
 
-          {product?.size.map((item) => {
+          {product?.size.map((item, index) => {
             return (
-              <div>
+              <div key={index}>
                 <input
                   className="form-check-input rounded-0 mt-0 me-2"
                   type="checkbox"

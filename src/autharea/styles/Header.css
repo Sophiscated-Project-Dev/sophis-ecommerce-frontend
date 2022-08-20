@@ -137,9 +137,6 @@
 
 /* navBar-account-icons */
 
-.navBar-account-icons {
-}
-
 .top-bar {
   display: flex;
   flex-direction: row;
@@ -328,9 +325,6 @@
 
   .navBar-search-content {
     width: 85%;
-  }
-
-  .navBar-search-btn {
   }
 
   .search-btn {
