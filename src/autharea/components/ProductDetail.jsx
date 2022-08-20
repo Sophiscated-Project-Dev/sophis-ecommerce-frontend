@@ -1,10 +1,7 @@
 import "../styles/ProductDetail.css";
 
 const ProductDetail = ({ product }) => {
-  // const { numberOfReviews, description, specification } = product;
-
-  // const { description, reviews, specification } = product;
-
+   
   return (
     <div className="pDetail bg-white mt-5">
       <ul className="nav nav-pills mb-3" id="pills-tab" role="tablist">
@@ -74,36 +71,21 @@ const ProductDetail = ({ product }) => {
           id="pills-details"
           role="tabpanel"
           aria-labelledby="pills-details-tab"
-          // <<<<<<< HEAD
-          //         >{description}</div>
-          // =======
-        >
-          {product?.description}
-        </div>
+        >{product?.description}</div>
 
         <div
           className="tab-pane fade"
           id="pills-specifications"
           role="tabpanel"
           aria-labelledby="pills-specifications-tab"
-          // <<<<<<< HEAD
-          //         >{specification}</div>
-          // =======
-        >
-          {product?.specification}
-        </div>
+        >{product?.specification}</div>
 
         <div
           className="tab-pane fade"
           id="pills-reviews"
           role="tabpanel"
           aria-labelledby="pills-reviews-tab"
-          // <<<<<<< HEAD
-          //         >{numberOfReviews}</div>
-          // =======
-        >
-          {product?.reviews[0]}
-        </div>
+        >{product?.numberOfReviews}</div>
 
         <div
           className="tab-pane fade"
@@ -111,8 +93,7 @@ const ProductDetail = ({ product }) => {
           role="tabpanel"
           aria-labelledby="pills-report-tab"
         >
-          A form or something should be here
-        </div>
+          A form or something should be here</div>
       </div>
     </div>
   );

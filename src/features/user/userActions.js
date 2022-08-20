@@ -60,8 +60,6 @@ export const userRegister = createAsyncThunk(
       const data = await response.json();
       console.log(data);
       // store user's token in local storage
-      // localStorage.setItem("token", data?.token);
-      // return data;
 
       if (response.status === 200) {
         localStorage.setItem("token", data.token);

@@ -1,32 +1,28 @@
-import { useEffect } from "react";
-import { useSelector, useDispatch } from "react-redux";
-import { fetchVendors } from "../../features/topVendors/vendorActions";
+import { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { fetchVendors } from '../../features/topVendors/vendorActions';
 
-import { AiFillStar } from "react-icons/ai";
-import { BsCheckLg, BsShieldCheck } from "react-icons/bs";
-import "../styles/SellerCard.css";
-import Spinner from "../../utils/spinner/Spinner";
+import { AiFillStar } from 'react-icons/ai';
+import { BsCheckLg, BsShieldCheck } from 'react-icons/bs';
+import '../styles/SellerCard.css';
+import Spinner from '../../utils/spinner/Spinner';
 
 const SellerCard = ({ product }) => {
-  const { vendor: vendorId } = product;
-
   const dispatch = useDispatch();
-  const { vendors, loading, error } = useSelector((state) => state.vendors);
+  const { vendors, loading, error } = useSelector(
+    (state) => state.vendors
+  );
 
+  //fetch all vendors
   useEffect(() => {
     dispatch(fetchVendors());
   }, [dispatch]);
 
-  //get all sellers
-  const sellers = vendors?.map((vendor) => vendor);
+  //get single vendor
+  const seller = vendors?.filter(
+    (vendor) => vendor?.vendor?.email === product?.vendor?.email
+  );
 
-  //get single seller
-  const vendor = sellers?.filter((seller) => seller.vendor.id === vendorId);
-  //const {firstName, email, averageRating} = vendor[0]?.vendor
-
-  // =======
-  //   // const { vendor } = product;
-  // >>>>>>> a17650bd2a91ca0c29910d6a89cb145e340d1a9b
   return (
     <div id="seller" className="bg-white mx-auto mb-5">
       <div className="mb-4">Seller Information & Performance</div>
@@ -36,15 +32,16 @@ const SellerCard = ({ product }) => {
         <h5>{error}</h5>
       ) : (
         <div className="sellerBody row ">
-          <h2 className="col-6 pt-1 mt-0">{vendor[0]?.vendor.firstName}</h2>
+          <h2 className="col-6 pt-1 mt-0">
+            {product?.vendor.firstName}
+          </h2>
 
-          {/* <<<<<<< HEAD
           <button
             type="submit"
             className="registerFacebook col btn rounded-0 border-0"
           >
             <a
-              href={`mailto: ${vendor[0]?.vendor.email} `}
+              href={`mailto: ${product?.vendor.email} `}
               className="text-white text-decoration-none "
               target="_blank"
               rel="noreferrer"
@@ -52,59 +49,40 @@ const SellerCard = ({ product }) => {
               Contact
             </a>
           </button>
-======= */}
-          <div className="sellerBody row ">
-            <h2 className="col-6 pt-1 mt-0">{product?.vendor?.firstName}</h2>
 
-            <button
-              type="submit"
-              className="registerFacebook col btn rounded-0 border-0"
-            >
-              <a
-                href="http://localhost:3000"
-                className="text-white text-decoration-none d-flex justify-content-center"
-                target="_blank"
-                rel="noreferrer"
-              >
-                {product?.vendor?.phoneNumber}
-              </a>
-            </button>
-
-            <div className="sellerRatings col-12 d-flex flex-md-column flex-lg-row justify-content-between mt-3">
-              <div className="d-flex">
-                <span className="rounded-circle d-flex justify-content-center align-items-center">
-                  <AiFillStar />
-                </span>
-                <p className="ps-1 pt-2 ">Order performance</p>
-              </div>
-
-              <p className="pt-2 ">(4.6)</p>
+          <div className="sellerRatings col-12 d-flex flex-md-column flex-lg-row justify-content-between mt-3">
+            <div className="d-flex">
+              <span className="rounded-circle d-flex justify-content-center align-items-center">
+                <AiFillStar />
+              </span>
+              <p className="ps-1 pt-2 ">Order performance</p>
             </div>
 
-            <div className="sellerRatings col-12 d-flex flex-md-column flex-lg-row justify-content-between mt-2">
-              <div className="d-flex">
-                <span className="rounded-circle d-flex justify-content-center align-items-center">
-                  <BsCheckLg />
-                </span>
-                <p className="ps-1 pt-2 ">Quality Score</p>
-              </div>
+            <p className="pt-2 ">(4.6)</p>
+          </div>
 
-              <p className="pt-2 ">(5.0)</p>
+          <div className="sellerRatings col-12 d-flex flex-md-column flex-lg-row justify-content-between mt-2">
+            <div className="d-flex">
+              <span className="rounded-circle d-flex justify-content-center align-items-center">
+                <BsCheckLg />
+              </span>
+              <p className="ps-1 pt-2 ">Quality Score</p>
             </div>
 
-            <div className="sellerRatings col-12 d-flex flex-md-column flex-lg-row justify-content-between mt-2">
-              <div className="d-flex">
-                <span className="rounded-circle d-flex justify-content-center align-items-center">
-                  <small className="text-white rounded-circle text-center">
-                    P
-                  </small>
-                </span>
-                <p className="ps-1 pt-2 ">Total Product</p>
-              </div>
-              <p className="pt-2 ">({product?.vendor?.averageRating})</p>
+            <p className="pt-2 ">(5.0)</p>
+          </div>
+
+          <div className="sellerRatings col-12 d-flex flex-md-column flex-lg-row justify-content-between mt-2">
+            <div className="d-flex">
+              <span className="rounded-circle d-flex justify-content-center align-items-center">
+                <small className="text-white rounded-circle text-center">
+                  P
+                </small>
+              </span>
+              <p className="ps-1 pt-2 ">Total Product</p>
             </div>
 
-            <p className="pt-2 ">{vendor[0]?.productCount}</p>
+            <p className="pt-2 "> {seller[0]?.productCount} </p>
           </div>
 
           <div className="sellerRatings col-12 d-flex flex-md-column flex-lg-row justify-content-between mt-2">
@@ -115,7 +93,9 @@ const SellerCard = ({ product }) => {
               <p className="ps-1 pt-2 ">Customer Review</p>
             </div>
 
-            <p className="pt-2 ">{vendor[0]?.vendor?.averageRating}</p>
+            <p className="pt-2 ">
+              {(seller[0]?.vendor?.averageRating) } 
+            </p>
           </div>
         </div>
       )}

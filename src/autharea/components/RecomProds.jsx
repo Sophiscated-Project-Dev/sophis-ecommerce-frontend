@@ -14,7 +14,7 @@ const RecomProds = () => {
 
   useEffect(() => {
     dispatch(getRecommendedProd());
-  }, []);
+  }, [dispatch]);
 
   // console.log(recommendedProd);
 

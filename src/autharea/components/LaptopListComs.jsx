@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
+// import React, { useState, useEffect } from "react";
 import { Dropdown } from "react-bootstrap";
 import { LaptopComs } from "./LaptopComs";
-import ReactPaginate from "react-paginate";
+// import ReactPaginate from "react-paginate";
 import "../styles/LaptopComs.css";
 
 import { FaSortAmountDown, FaFilter } from "react-icons/fa";
@@ -109,22 +109,22 @@ const laptopLists = [
 
 export const LaptopListComs = () => {
   // PAGINATION
-  const [currentItems, setCurrentItems] = useState(null);
-  const [pageCount, setPageCount] = useState(0);
-  const [itemOffset, setItemOffset] = useState(0);
-  const itemsPerPage = 20;
+  // const [currentItems,setCurrentItems] = useState(null);
+  // const [pageCount, setPageCount] = useState(0);
+  // const [itemOffset, setItemOffset] = useState(0);
+  // const itemsPerPage = 20;
 
   // PAGINATION
-  useEffect(() => {
-    const endOffset = itemOffset + itemsPerPage;
-    setCurrentItems(laptopLists.slice(itemOffset, endOffset));
-    setPageCount(Math.ceil(laptopLists.length / itemsPerPage));
-  }, [itemOffset, itemsPerPage, laptopLists]);
+  // useEffect(() => {
+  //   const endOffset = itemOffset + itemsPerPage;
+  //   setCurrentItems(laptopLists.slice(itemOffset, endOffset));
+  //   setPageCount(Math.ceil(laptopLists.length / itemsPerPage));
+  // }, [itemOffset, itemsPerPage, setCurrentItems]);
 
-  const handlePageClick = (event) => {
-    const newOffset = (event.selected * itemsPerPage) % laptopLists.length;
-    setItemOffset(newOffset);
-  };
+  // const handlePageClick = (event) => {
+  //   const newOffset = (event.selected * itemsPerPage) % laptopLists.length;
+  //   setItemOffset(newOffset);
+  // };
 
   return (
     <div className="Laptop-comps p-5">
@@ -175,7 +175,7 @@ export const LaptopListComs = () => {
         </div>
       </div>
       <div className="m-3">
-        <ReactPaginate
+        {/* <ReactPaginate
           breakLabel="..."
           nextLabel="next >"
           onPageChange={handlePageClick}
@@ -189,7 +189,7 @@ export const LaptopListComs = () => {
           previousLinkClassName="page-num"
           nextLinkClassName="page-num"
           activeLinkClassName="active"
-        />
+        /> */}
       </div>
     </div>
   );

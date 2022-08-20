@@ -11,6 +11,27 @@ import Whatsapp from "../../assets/images/colouredIcons/whatsapp.png";
 import AddToCart from "./AddToCart";
 
 const AccessoryDetail = ({ product }) => {
+
+  // const {
+  //  name,
+  //   averageRating,
+  //   discount,
+  //   description,
+  //   colors,
+  //   brand,
+  //   category,
+  //   inventory,
+  //   price,
+  //   reviews,
+  //   size,
+  //   images,
+  //   tax,
+  //   numberOfReviews,
+  //   vendor,
+  //   specification,
+  // } = product;
+
+
   return (
     <section className="accessory row bg-white pb-4">
       <div className="accessoryLeft col-12 col-md-6 position-relative">
@@ -51,9 +72,7 @@ const AccessoryDetail = ({ product }) => {
             </div>
 
             <h4 className="text-dark">Closer view</h4>
-
             {/* Button trigger modal  */}
-
             <button
               type="button"
               className="btn modalButton  position-relative"
@@ -125,6 +144,7 @@ const AccessoryDetail = ({ product }) => {
                 </div>
               </div>
 
+
               {/* Carousel control buttons */}
               <button
                 className="carousel-control-prev ccp"
@@ -186,7 +206,6 @@ const AccessoryDetail = ({ product }) => {
             />
             <p>Green</p>
           </button>
-
           <button className="border-0 ">
             <img
               className="h-75"
@@ -220,6 +239,7 @@ const AccessoryDetail = ({ product }) => {
         <p className="accessoryBrand">
           Brand: <span className="fw-bold">{product?.brand}</span> |{" "}
           <Link to="/" className="text-decoration-none">
+
             {/* Other products from {brand} */}
           </Link>
         </p>
@@ -235,9 +255,9 @@ const AccessoryDetail = ({ product }) => {
         <div className="accessorySizes d-flex justify-content-between">
           <span>Size:</span>
 
-          {product?.size.map((item) => {
+          {product?.size.map((item, index) => {
             return (
-              <div>
+              <div key={index}>
                 <input
                   className="form-check-input rounded-0 mt-0 me-2"
                   type="checkbox"
@@ -257,7 +277,6 @@ const AccessoryDetail = ({ product }) => {
             />
             <label htmlFor="M"> M</label>
           </div>
-
           <div>
             <input
               className="form-check-input rounded-0 mt-0 me-2"
@@ -267,7 +286,6 @@ const AccessoryDetail = ({ product }) => {
             />
             <label htmlFor="L"> L</label>
           </div>
-
           <div>
             <input
               className="form-check-input rounded-0 mt-0 me-2"
