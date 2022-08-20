@@ -1,44 +1,45 @@
-import data from "../components/RecomProdsData";
-import "../styles/SingleProduct.css";
-import { useParams, useNavigate } from "react-router-dom";
-import { useSelector } from "react-redux";
+import '../styles/SingleProduct.css';
+import { useParams } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
-import ProductDetail from "../components/ProductDetail";
-import SellerCard from "../components/SellerCard";
-import DeliveryCard from "../components/DeliveryCard";
-import AccessoryDetail from "../components/AccessoryDetail";
-import SectionHeader from "../components/SectionHeader";
-import ImageSlider from "../components/ImageSlider";
-import axios from "axios";
-import { useEffect, useState } from "react";
+import ProductDetail from '../components/ProductDetail';
+import SellerCard from '../components/SellerCard';
+import DeliveryCard from '../components/DeliveryCard';
+import AccessoryDetail from '../components/AccessoryDetail';
+import SectionHeader from '../components/SectionHeader';
+import ImageSlider from '../components/ImageSlider';
+import axios from 'axios';
+import { useEffect, useState } from 'react';
 
-const PRODUCT_ID = "https://sophdev.herokuapp.com/api/v1/products";
+const PRODUCT_ID = 'https://sophdev.herokuapp.com/api/v1/products';
 
 const SingleProduct = () => {
   const { productId } = useParams();
-  const { newArrivals, recommendedProd } = useSelector(
-    (state) => state.product
-  );
+  const { newArrivals } = useSelector((state) => state.product);
   // console.log(newArrivals);
   const [productDetail, setProductDetail] = useState([]);
-  const fetchProductById = async () => {
-    try {
-      const response = await axios.get(`${PRODUCT_ID}/${productId}`, {
-        headers: {
-          "Content-Type": "application/json",
-          // Authorization: `Bearer ${JSON.parse(localStorage.getItem("data"))}`,
-        },
-      });
-      // console.log(response.data);
-      const { data } = response;
-      setProductDetail(data);
-    } catch (err) {
-      console.log(err.response);
-    }
-  };
 
   const scroll = () => window.scrollTo(0, 0);
   useEffect(() => {
+    const fetchProductById = async () => {
+      try {
+        const response = await axios.get(
+          `${PRODUCT_ID}/${productId}`,
+          {
+            headers: {
+              'Content-Type': 'application/json',
+              // Authorization: `Bearer ${JSON.parse(localStorage.getItem("data"))}`,
+            },
+          }
+        );
+        // console.log(response.data);
+        const { data } = response;
+        setProductDetail(data);
+      } catch (err) {
+        console.log(err.response);
+      }
+    };
+
     fetchProductById();
     scroll();
   }, [productId]);
@@ -66,13 +67,13 @@ const SingleProduct = () => {
 
       {/* Likes */}
       <div className="productLikes container row mx-auto mt-5 position-relative">
-        <SectionHeader title={"You may also like"} />
+        <SectionHeader title={'You may also like'} />
         <ImageSlider data={newArrivals} />
       </div>
 
       {/* Frequently Bought Together */}
       <div className="productLikes container row mx-auto mt-5 position-relative">
-        <SectionHeader title={"Frequently bought together"} />
+        <SectionHeader title={'Frequently bought together'} />
         <ImageSlider data={newArrivals} />
       </div>
     </section>
@@ -80,4 +81,3 @@ const SingleProduct = () => {
 };
 
 export default SingleProduct;
-
