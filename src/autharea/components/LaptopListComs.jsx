@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Dropdown } from "react-bootstrap";
 import { LaptopComs } from "./LaptopComs";
 import ReactPaginate from "react-paginate";
@@ -117,12 +117,12 @@ export const LaptopListComs = () => {
   // PAGINATION
   useEffect(() => {
     const endOffset = itemOffset + itemsPerPage;
-    setCurrentItems(topReferrals.slice(itemOffset, endOffset));
-    setPageCount(Math.ceil(topReferrals.length / itemsPerPage));
-  }, [itemOffset, itemsPerPage, topReferrals]);
+    setCurrentItems(laptopLists.slice(itemOffset, endOffset));
+    setPageCount(Math.ceil(laptopLists.length / itemsPerPage));
+  }, [itemOffset, itemsPerPage, laptopLists]);
 
   const handlePageClick = (event) => {
-    const newOffset = (event.selected * itemsPerPage) % topReferrals.length;
+    const newOffset = (event.selected * itemsPerPage) % laptopLists.length;
     setItemOffset(newOffset);
   };
 
@@ -173,6 +173,8 @@ export const LaptopListComs = () => {
             return <LaptopComs {...item} key={index} />;
           })}
         </div>
+      </div>
+      <div className="m-3">
         <ReactPaginate
           breakLabel="..."
           nextLabel="next >"

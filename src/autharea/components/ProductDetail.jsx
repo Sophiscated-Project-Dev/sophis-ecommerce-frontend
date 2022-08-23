@@ -1,6 +1,10 @@
 import "../styles/ProductDetail.css";
 
-const ProductDetail = () => {
+const ProductDetail = ({ product }) => {
+  // const { numberOfReviews, description, specification } = product;
+
+  // const { description, reviews, specification } = product;
+
   return (
     <div className="pDetail bg-white mt-5">
       <ul className="nav nav-pills mb-3" id="pills-tab" role="tablist">
@@ -70,15 +74,11 @@ const ProductDetail = () => {
           id="pills-details"
           role="tabpanel"
           aria-labelledby="pills-details-tab"
+          // <<<<<<< HEAD
+          //         >{description}</div>
+          // =======
         >
-          1Eu odio venenatis, nam pharetra, praesent elit id diam diam. Enim
-          ornare nisl, in ut bibendum. Sit donec odio vestibulum feugiat potenti
-          hendrerit. Tincidunt vivamus pharetra, risus ligula. Adipiscing neque
-          dictum tellus, turpis eu placerat. Turpis integer massa duis at proin
-          quis sagittis. Sed aliquet netus sollicitudin facilisi netus nullam
-          malesuada. Pharetra, habitant iaculis elit donec nulla lorem cras.
-          Cras amet faucibus fringilla aliquam quis scelerisque massa aliquet
-          volutpat. Id mauris, ac, amet, ut diam erat.
+          {product?.description}
         </div>
 
         <div
@@ -86,15 +86,11 @@ const ProductDetail = () => {
           id="pills-specifications"
           role="tabpanel"
           aria-labelledby="pills-specifications-tab"
+          // <<<<<<< HEAD
+          //         >{specification}</div>
+          // =======
         >
-          2Eu odio venenatis, nam pharetra, praesent elit id diam diam. Enim
-          ornare nisl, in ut bibendum. Sit donec odio vestibulum feugiat potenti
-          hendrerit. Tincidunt vivamus pharetra, risus ligula. Adipiscing neque
-          dictum tellus, turpis eu placerat. Turpis integer massa duis at proin
-          quis sagittis. Sed aliquet netus sollicitudin facilisi netus nullam
-          malesuada. Pharetra, habitant iaculis elit donec nulla lorem cras.
-          Cras amet faucibus fringilla aliquam quis scelerisque massa aliquet
-          volutpat. Id mauris, ac, amet, ut diam erat.
+          {product?.specification}
         </div>
 
         <div
@@ -102,15 +98,11 @@ const ProductDetail = () => {
           id="pills-reviews"
           role="tabpanel"
           aria-labelledby="pills-reviews-tab"
+          // <<<<<<< HEAD
+          //         >{numberOfReviews}</div>
+          // =======
         >
-          3Eu odio venenatis, nam pharetra, praesent elit id diam diam. Enim
-          ornare nisl, in ut bibendum. Sit donec odio vestibulum feugiat potenti
-          hendrerit. Tincidunt vivamus pharetra, risus ligula. Adipiscing neque
-          dictum tellus, turpis eu placerat. Turpis integer massa duis at proin
-          quis sagittis. Sed aliquet netus sollicitudin facilisi netus nullam
-          malesuada. Pharetra, habitant iaculis elit donec nulla lorem cras.
-          Cras amet faucibus fringilla aliquam quis scelerisque massa aliquet
-          volutpat. Id mauris, ac, amet, ut diam erat.
+          {product?.reviews[0]}
         </div>
 
         <div
@@ -119,14 +111,7 @@ const ProductDetail = () => {
           role="tabpanel"
           aria-labelledby="pills-report-tab"
         >
-          4Eu odio venenatis, nam pharetra, praesent elit id diam diam. Enim
-          ornare nisl, in ut bibendum. Sit donec odio vestibulum feugiat potenti
-          hendrerit. Tincidunt vivamus pharetra, risus ligula. Adipiscing neque
-          dictum tellus, turpis eu placerat. Turpis integer massa duis at proin
-          quis sagittis. Sed aliquet netus sollicitudin facilisi netus nullam
-          malesuada. Pharetra, habitant iaculis elit donec nulla lorem cras.
-          Cras amet faucibus fringilla aliquam quis scelerisque massa aliquet
-          volutpat. Id mauris, ac, amet, ut diam erat.
+          A form or something should be here
         </div>
       </div>
     </div>

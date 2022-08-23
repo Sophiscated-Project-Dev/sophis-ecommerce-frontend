@@ -4,8 +4,6 @@ import { toast } from "react-toastify";
 import { useDispatch, useSelector } from "react-redux";
 import { userRegister } from "../../features/user/userActions";
 import { clearState } from "../../features/user/userSlice";
-// import { useHistory } from "react-router-dom";
-
 import { BsFacebook } from "react-icons/bs";
 import { AiFillGoogleCircle } from "react-icons/ai";
 import "../styles/Register.css";
@@ -71,7 +69,7 @@ const Register = () => {
     if (error) return toast.error("All Fields Are Required/Error");
 
     if (loading) toast.info("Loading ...", { autoClose: 1000 });
-  }, [success, error, loading, errorMessage, navigate]);
+  }, [success, error, loading, errorMessage, navigate, dispatch]);
 
   return (
     <div className="register d-flex justify-content-center align-items-sm-center py-5">

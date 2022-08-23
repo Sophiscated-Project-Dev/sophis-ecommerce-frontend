@@ -5,16 +5,12 @@ import "../styles/AccessoryDetail.css";
 import { AiFillStar } from "react-icons/ai";
 import { HiHeart } from "react-icons/hi";
 import Facebook from "../../assets/images/colouredIcons/facebook.png";
-
-import Headset from "../../assets/images/dummyImages/headset.png";
-import GreenHeadset from "../../assets/images/dummyImages/greenHeadset.png";
-import VividHeadset from "../../assets/images/dummyImages/vividHeadset.png";
 import Twitter from "../../assets/images/colouredIcons/twitter.png";
 import Whatsapp from "../../assets/images/colouredIcons/whatsapp.png";
 
 import AddToCart from "./AddToCart";
 
-const AccessoryDetail = () => {
+const AccessoryDetail = ({ product }) => {
   return (
     <section className="accessory row bg-white pb-4">
       <div className="accessoryLeft col-12 col-md-6 position-relative">
@@ -26,29 +22,47 @@ const AccessoryDetail = () => {
           >
             <div className="carousel-inner">
               <div className="carousel-item active">
-                <img src={Headset} className="d-block w-100" alt="" />
+                {product?.images[0] && (
+                  <img
+                    src={product?.images[0]}
+                    className="d-block w-100"
+                    alt=""
+                  />
+                )}
               </div>
               <div className="carousel-item">
-                <img
-                  src={GreenHeadset}
-                  className="d-block w-100 img-fluid"
-                  alt=""
-                />
+                {product?.images[1] && (
+                  <img
+                    src={product?.images[1]}
+                    className="d-block w-100"
+                    alt=""
+                  />
+                )}
               </div>
               <div className="carousel-item">
-                <img src={VividHeadset} className="d-block w-100" alt="" />
+                {product?.images[2] && (
+                  <img
+                    src={product?.images[2]}
+                    className="d-block w-100"
+                    alt=""
+                  />
+                )}
               </div>
             </div>
 
             <h4 className="text-dark">Closer view</h4>
+
             {/* Button trigger modal  */}
+
             <button
               type="button"
               className="btn modalButton  position-relative"
               data-bs-toggle="modal"
               data-bs-target="#exampleModal"
             >
-              <img src={Headset} alt="item" />
+              {product?.images[0] && (
+                <img src={product?.images[0]} alt="item" />
+              )}
             </button>
 
             <button
@@ -57,7 +71,9 @@ const AccessoryDetail = () => {
               data-bs-toggle="modal"
               data-bs-target="#exampleModal"
             >
-              <img src={Headset} alt="item" />
+              {product?.images[1] && (
+                <img src={product?.images[1]} alt="item" />
+              )}
             </button>
 
             <button
@@ -66,7 +82,9 @@ const AccessoryDetail = () => {
               data-bs-toggle="modal"
               data-bs-target="#exampleModal"
             >
-              <img src={Headset} alt="item" />
+              {product?.images[2] && (
+                <img src={product?.images[2]} alt="item" />
+              )}
             </button>
 
             <button
@@ -75,7 +93,9 @@ const AccessoryDetail = () => {
               data-bs-toggle="modal"
               data-bs-target="#exampleModal"
             >
-              <img src={Headset} alt="item" />
+              {product?.images[3] && (
+                <img src={product?.images[3]} alt="item" />
+              )}
             </button>
 
             <div
@@ -96,52 +116,65 @@ const AccessoryDetail = () => {
                     ></button>
                   </div>
                   <div className="modal-body">
-                    <img className="img-fluid" src={Headset} alt="item" />
+                    <img
+                      className="img-fluid"
+                      src={product?.images[0]}
+                      alt="item"
+                    />
                   </div>
                 </div>
               </div>
+
+              {/* Carousel control buttons */}
+              <button
+                className="carousel-control-prev ccp"
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev"
+              >
+                <span
+                  className="fw-bolder position-absolute"
+                  aria-hidden="true"
+                >
+                  &#9001;
+                </span>
+              </button>
+              <button
+                className="carousel-control-next ccn"
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next"
+              >
+                <span
+                  className="fw-bolder position-absolute"
+                  aria-hidden="true"
+                >
+                  &#9002;
+                </span>
+              </button>
             </div>
-
-            <button
-              className="carousel-control-prev ccp"
-              type="button"
-              data-bs-target="#carouselExampleIndicators"
-              data-bs-slide="prev"
-            >
-              <span className="fw-bolder position-absolute" aria-hidden="true">
-                &#9001;
-              </span>
-            </button>
-
-            <button
-              className="carousel-control-next ccn"
-              type="button"
-              data-bs-target="#carouselExampleIndicators"
-              data-bs-slide="next"
-            >
-              <span className="fw-bolder position-absolute" aria-hidden="true">
-                &#9002;
-              </span>
-            </button>
           </div>
-        </div>
 
-        <h4 className="text-dark ms-4">Color:</h4>
-        <div className="carousel-indicators position-absolute d-flex mx-auto justify-content-between">
-          <button className="border-0 ">
-            <img
-              className=""
-              type="button"
-              data-bs-target="#carouselExampleIndicators"
-              data-bs-slide-to="0"
-              aria-label="Slide 1"
-              src={Headset}
-              alt="item"
-            />
-            <p>Gold</p>
-          </button>
+          <h4 className="text-dark ms-4">Color:</h4>
+          <div className="carousel-indicators position-absolute d-flex mx-auto justify-content-between">
+            {product?.colors.map((index, color) => {
+              return (
+                <button key={index} className="border-0 ">
+                  <img
+                    className=""
+                    type="button"
+                    data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide-to="0"
+                    aria-label="Slide 1"
+                    src={product?.images[0]}
+                    alt="item"
+                  />
+                  <p>{color}</p>
+                </button>
+              );
+            })}
 
-          <button className="border-0 ">
+            {/* <button className="border-0 ">
             <img
               className="h-75"
               type="button"
@@ -165,15 +198,14 @@ const AccessoryDetail = () => {
               alt="item"
             />
             <p>Blue</p>
-          </button>
+          </button> */}
+          </div>
         </div>
       </div>
 
       <div className="accessoryRight col-12 col-md-6 pt-4">
         <div className="accessoryRightHeader d-flex justify-content-between">
-          <h3>
-            P9 Wireless Headphones Hifi Stereo With Mic For iOs And Android
-          </h3>
+          <h3>{product?.name}</h3>
 
           <span>
             <HiHeart />
@@ -181,17 +213,20 @@ const AccessoryDetail = () => {
         </div>
 
         <p className="accessoryRating">
-          <AiFillStar /> <span>5.0</span> | 16 Reviews
+          <AiFillStar /> <span>{product?.averageRating}</span> |{" "}
+          {product?.numberOfReviews} Reviews
         </p>
 
         <p className="accessoryBrand">
-          Brand: <span className="fw-bold">Oraimo</span> |{" "}
+          Brand: <span className="fw-bold">{product?.brand}</span> |{" "}
           <Link to="/" className="text-decoration-none">
-            Oher products from Oraimo
+            {/* Other products from {brand} */}
           </Link>
         </p>
 
-        <p className="accessoryDiscount d-inline-block me-3">$1,620.00</p>
+        <p className="accessoryDiscount d-inline-block me-3">
+          ${product?.price}
+        </p>
 
         <sup className="accessoryPrice ">
           <del>$1,800.00</del>
@@ -200,17 +235,20 @@ const AccessoryDetail = () => {
         <div className="accessorySizes d-flex justify-content-between">
           <span>Size:</span>
 
-          <div>
-            <input
-              className="form-check-input rounded-0 mt-0 me-2"
-              type="checkbox"
-              id="S"
-              value="S"
-            />
-            <label htmlFor="S"> S</label>
-          </div>
-
-          <div>
+          {product?.size.map((item) => {
+            return (
+              <div>
+                <input
+                  className="form-check-input rounded-0 mt-0 me-2"
+                  type="checkbox"
+                  id="S"
+                  value="S"
+                />
+                <label htmlFor="S"> {item}</label>
+              </div>
+            );
+          })}
+          {/* <div>
             <input
               className="form-check-input rounded-0 mt-0 me-2"
               type="checkbox"
@@ -238,18 +276,18 @@ const AccessoryDetail = () => {
               value="XL"
             />
             <label htmlFor="XL"> XL</label>
-          </div>
+          </div> */}
         </div>
 
-        <div className="accessoryQuantity">
+        {/* <div className="accessoryQuantity">
           <p className="mt-3">Quantity:</p>
 
           <button className="btn me-4">-</button>
           <span>2</span>
           <button className="btn ms-4">+</button>
-        </div>
+        </div> */}
 
-        <AddToCart />
+        <AddToCart product={product} />
 
         <div className="accessoryShare">
           <p className="mt-3">Share:</p>

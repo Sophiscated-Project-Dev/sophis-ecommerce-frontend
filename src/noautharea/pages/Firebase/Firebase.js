@@ -27,6 +27,9 @@ export const logInWithGoogle = () => {
       //   const name = result.user.displayName;
       //   const email = result.user.email;
       console.log("logged in successfully");
+      //const name = result.user.displayName;
+      //const email = result.user.email;
+      console.log(result);
     })
     .catch((error) => {
       console.log(error);

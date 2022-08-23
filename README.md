@@ -1,6 +1,6 @@
 # Ecommerce Frontend
 
-This is project built by a group of reactjs beginners who gathered themselves as a community to build a project and learn more about reactjs
+This is project built by a group of reactjs developers who gathered themselves as a community to build a project and learn more about the reactjs library
 
 ## Features
 
@@ -22,3 +22,4 @@ This is project built by a group of reactjs beginners who gathered themselves as
 <!-- https://sophdev.herokuapp.com/api/v1/products/top-ranks -->
 <!-- https://sophdev.herokuapp.com/api/v1/products/top-brands -->
 <!-- https://sophdev.herokuapp.com/api/v1/products/recommended -->
+<!-- https://sophdev.herokuapp.com/api/v1/products/id -->

@@ -1,13 +1,13 @@
 import { useEffect } from "react";
 import "../styles/Recom.css";
+
 import { useDispatch, useSelector } from "react-redux";
 import { getRecommendedProd } from "../../features/products/productActions";
 import RecomProd from "./RecomProd";
-import data from "./RecomProdsData";
 import SectionHeader from "./SectionHeader";
 
 const RecomProds = () => {
-  const { loading, error, recommendedProd } = useSelector(
+  const {recommendedProd } = useSelector(
     (state) => state.product
   );
   const dispatch = useDispatch();
@@ -16,7 +16,7 @@ const RecomProds = () => {
     dispatch(getRecommendedProd());
   }, []);
 
-  console.log(recommendedProd);
+  // console.log(recommendedProd);
 
   const recomProdsElements = recommendedProd.recommended
     ?.slice(0, 6)
