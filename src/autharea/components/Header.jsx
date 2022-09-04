@@ -94,10 +94,10 @@ const Header = () => {
             </Col>
             <Col xs={10} sm={11} md={5}>
               <Nav className="me-auto pb-3 top-bar">
-                <div className="navBar-user-icon">
+                <Link to={"/userProfile"} className="navBar-user-icon">
                   <FaUser className="user-icon" />
                   <p>Account</p>
-                </div>
+                </Link>
                 <div className="nav-link">
                   <div className="navBar-signIn">
                     {!success ? (

@@ -1,7 +1,7 @@
 import "../styles/AddToCart.css";
 import { HiShoppingCart } from "react-icons/hi";
 import { addToCart } from "../../features/Cart/cartSlice";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
 const AddToCart = ({ product }) => {

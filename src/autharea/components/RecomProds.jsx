@@ -7,14 +7,12 @@ import RecomProd from "./RecomProd";
 import SectionHeader from "./SectionHeader";
 
 const RecomProds = () => {
-  const {recommendedProd } = useSelector(
-    (state) => state.product
-  );
+  const { recommendedProd } = useSelector((state) => state.product);
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(getRecommendedProd());
-  }, []);
+  }, [dispatch]);
 
   // console.log(recommendedProd);
 

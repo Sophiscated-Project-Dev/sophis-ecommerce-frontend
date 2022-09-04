@@ -25,15 +25,15 @@ const cartSlice = createSlice({
       //   check it with the if statement, locate the index position of that already available item in the cart arr and increase the quantity
       if (itemIndex >= 0) {
         state.cartItems[itemIndex].cartQuantity += 1;
-        toast.info(
-          `Increased ${state.cartItems[itemIndex].name.slice(
-            0,
-            20
-          )} quantity in cart`,
-          {
-            position: "top-right",
-          }
-        );
+        // toast.info(
+        //   `Increased ${state.cartItems[itemIndex].name.slice(
+        //     0,
+        //     20
+        //   )} quantity in cart`,
+        //   {
+        //     position: "top-right",
+        //   }
+        // );
       } else {
         const tempProduct = { ...action.payload, cartQuantity: 1 }; // adding product and setup it quantity immediately
         state.cartItems.push(tempProduct);
@@ -64,21 +64,21 @@ const cartSlice = createSlice({
       if (state.cartItems[itemIndex].cartQuantity > 1) {
         //   check to see that the quantity of that particular item is > 1, if yes u can reduce it by one
         state.cartItems[itemIndex].cartQuantity -= 1;
-        toast.info(
-          `Decreased ${action.payload.name.slice(0, 20)} cart quantity`,
-          {
-            position: "top-right",
-          }
-        );
+        // toast.info(
+        //   `Decreased ${action.payload.name.slice(0, 20)} cart quantity`,
+        //   {
+        //     position: "top-right",
+        //   }
+        // );
       } else if (state.cartItems[itemIndex].cartQuantity === 1) {
         const newItemsFiltered = state.cartItems.filter(
           (item) => item?._id !== action.payload?._id
         );
         state.cartItems = newItemsFiltered;
         //
-        toast.error(`${action.payload.name.slice(0, 20)} removed from cart`, {
-          position: "top-right",
-        });
+        // toast.error(`${action.payload.name.slice(0, 20)} removed from cart`, {
+        //   position: "top-right",
+        // });
       }
       // the local storage will persist/ reset to the new items once one click on the decreaseCart action btn
       localStorage.setItem("cartItems", JSON.stringify(state.cartItems));
