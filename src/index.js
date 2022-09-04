@@ -24,6 +24,7 @@ import OrderSuccess from "./noautharea/pages/orderSuccess";
 import Confirm from "./noautharea/pages/orderConfirmation";
 import ProductListPage from "./autharea/pages/ProductListPage";
 import { getCartTotal } from "./features/Cart/cartSlice";
+import UserProfile from "./autharea/pages/UserProfile";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -46,6 +47,7 @@ root.render(
             <Route path="cart" element={<CartComps />} />
             <Route path="/confirm-order" element={<Confirm />} />
             <Route path="/add-to-cart" element={<ToCart />} />
+            <Route path="/userProfile" element={<UserProfile />} />
           </Routes>
         </Layout>
       </Router>

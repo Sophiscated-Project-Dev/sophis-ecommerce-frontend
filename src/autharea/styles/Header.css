@@ -151,6 +151,7 @@
   width: 32px;
   height: 32px;
   margin: 0 1rem;
+  cursor: pointer;
 }
 
 .navBar-user-icon .user-icon {
@@ -371,3 +372,29 @@
   .top-bar {
   }
 } */
+
+@media only screen and (max-width: 600px) {
+  .navBar-search-content {
+    width: 65%;
+    height: 2.5rem;
+    margin-left: 1rem;
+  }
+
+  .search-icon {
+    width: 100%;
+    margin-left: 0.3rem;
+  }
+
+  .navBar-search-input {
+    margin-left: 0.4rem;
+  }
+
+  .search-input::placeholder {
+    font-size: 1rem;
+  }
+
+  .navBar-search-btn {
+    font-size: 0.8rem;
+    height: 97%;
+  }
+}
