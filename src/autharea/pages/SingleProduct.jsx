@@ -1,10 +1,10 @@
-import data from "../components/RecomProdsData";
+// import data from "../components/RecomProdsData";
 import "../styles/SingleProduct.css";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
 
 import ProductDetail from "../components/ProductDetail";
-import SellerCard from "../components/SellerCard";
+// import SellerCard from "../components/SellerCard";
 import DeliveryCard from "../components/DeliveryCard";
 import AccessoryDetail from "../components/AccessoryDetail";
 import SectionHeader from "../components/SectionHeader";
@@ -16,9 +16,7 @@ const PRODUCT_ID = "https://sophdev.herokuapp.com/api/v1/products";
 
 const SingleProduct = () => {
   const { productId } = useParams();
-  const { newArrivals, recommendedProd } = useSelector(
-    (state) => state.product
-  );
+  const { newArrivals } = useSelector((state) => state.product);
   // console.log(newArrivals);
   const [productDetail, setProductDetail] = useState([]);
   const fetchProductById = async () => {

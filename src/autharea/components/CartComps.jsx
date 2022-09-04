@@ -1,55 +1,23 @@
 import React, { useEffect } from "react";
-import { Card, Button } from "react-bootstrap";
+import { Card } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 
 import "../styles/CartComps.css";
 import { CartItems } from "./CartItems";
-import CartLaptop from "../../assets/cart-img/cartlaptop.png";
-import CartBag from "../../assets/cart-img/cartbag.png";
-import CartShoe from "../../assets/cart-img/cartshoe.png";
+// import CartLaptop from "../../assets/cart-img/cartlaptop.png";
+// import CartBag from "../../assets/cart-img/cartbag.png";
+// import CartShoe from "../../assets/cart-img/cartshoe.png";
 import { Link } from "react-router-dom";
 import { clearCart, getCartTotal } from "../../features/Cart/cartSlice";
 
-// const data = [
-//   {
-//     id: 1,
-//     productName: "Name Of Laptop",
-//     vendor: "tokio",
-//     img: CartLaptop,
-//     newPrice: 450,
-//     oldPrice: 500,
-//     discount: 5,
-//   },
-//   {
-//     id: 2,
-//     productName: "Name Of Laptop",
-//     vendor: "tokio",
-//     img: CartBag,
-//     newPrice: 450,
-//     oldPrice: 500,
-//     discount: 5,
-//   },
-//   {
-//     id: 3,
-//     productName: "Name Of Laptop",
-//     vendor: "tokio",
-//     img: CartShoe,
-//     newPrice: 450,
-//     oldPrice: 500,
-//     discount: 5,
-//   },
-// ];
-
 const CartComps = () => {
-  const { cartItems, cartTotalQuanty, cartTotalAmount } = useSelector(
-    (state) => state.cart
-  );
+  const { cartItems, cartTotalAmount } = useSelector((state) => state.cart);
   const dispatch = useDispatch();
   console.log(cartTotalAmount);
 
   useEffect(() => {
     dispatch(getCartTotal());
-  }, [cartItems]);
+  }, [cartItems, dispatch]);
 
   const handleclearCart = () => dispatch(clearCart());
   return (
