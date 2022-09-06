@@ -1,6 +1,6 @@
 import React from "react";
-import "bootstrap";
-import "bootstrap/dist/css/bootstrap.min.css";
+// import "bootstrap";
+// import "bootstrap/dist/css/bootstrap.min.css";
 import "../styles/Carousel.css";
 import HeroImg1 from "../../assets/Carousel/hero-image-1.png";
 import HeroImg2 from "../../assets/Carousel/hero-image-2.png";
@@ -70,7 +70,7 @@ const Hero = () => {
             {" "}
             <img className="d-block  gg" src={HeroImg1} alt="First slide" />
             <div className="carousel-caption  hero-text">
-              <h3>Best Gadgets Deal</h3>
+              <h3>Best Gadgets Deal </h3>
               <p className="hero-p1">Up to 70% Off! </p>
               <button className="hero-btn">Shop Now </button>
             </div>

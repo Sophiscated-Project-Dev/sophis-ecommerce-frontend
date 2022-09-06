@@ -176,7 +176,7 @@ const Register = () => {
             </a>
           </button>
 
-          <button
+          {/* <button
             type="submit"
             className="registerGoogle col-12 col-sm btn btn-primary rounded-0 border-0"
           >
@@ -188,6 +188,10 @@ const Register = () => {
             >
               <AiFillGoogleCircle /> Register with Google
             </a>
+          </button> */}
+          <button className="login-btn-google col-sm">
+            <AiFillGoogleCircle />
+            Register with Google
           </button>
         </div>
 

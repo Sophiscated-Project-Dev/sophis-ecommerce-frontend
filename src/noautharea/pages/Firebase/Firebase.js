@@ -18,13 +18,15 @@ const app = initializeApp(firebaseConfig);
 // auth = user currently authenticated in firebase
 export const auth = getAuth(app);
 
-//
-const googleProv = new GoogleAuthProvider();
+export const googleProv = new GoogleAuthProvider();
 
 // Sign in for google
 export const logInWithGoogle = () => {
   signInWithPopup(auth, googleProv)
     .then((result) => {
+      //   const name = result.user.displayName;
+      //   const email = result.user.email;
+      console.log("logged in successfully");
       //const name = result.user.displayName;
       //const email = result.user.email;
       console.log(result);
