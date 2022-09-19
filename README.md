@@ -5,6 +5,7 @@
 * Project Image
 * How To Set It Up On Your Local Machine
 * Libraries And Frameworks Used For The Project
+* Tools
 
 # Ecommerce Frontend
 
@@ -15,19 +16,23 @@ This is project built by a group of reactjs developers who gathered themselves a
 Coming Soon!!!
 
 # Project Image
-Image 2022-08-07 at 2 31 09 PM](https://user-images.githubusercontent.com/33966004/183293315-42c40e2a-9ab8-45b2-ad73-28fa3cf491ef.jpeg)
+!Image 2022-08-07 at 2 31 09 PM](https://user-images.githubusercontent.com/33966004/183293315-42c40e2a-9ab8-45b2-ad73-28fa3cf491ef.jpeg)
 
 # How To Set It Up On Your Local Machine
 * Fork this repository on your github by clicking the fork button on the top right part of this page.
 * Clone this git repo: 
-* Get in the directory of the project
-* open in an editing tool(Vscode recommended)
+* Get in the directory of the project.
+* open in an editing tool(Vscode recommended).
 * use the following command in your CLI to run your code:
 
 * npm install
+* Create a new branch so you can use it to push code. Do not push directly to the main.
 * npm run dev
 * After that there will be a link in display after it starts running which is http://localhost:3000/ (This link will work if the project is properly setup in your computer and run at the default react port)
-
+* Do not change any packages already installed.
+* When done, make a pull request to the main branch for inspection. 
+ 
+ 
 # Libraries And Frameworks To Be Used For This Project
 * React for frontend
 * Bootstrap and Css
