@@ -16,7 +16,7 @@ This is project built by a group of reactjs developers who gathered themselves a
 Coming Soon!!!
 
 # Project Image
-!Image 2022-08-07 at 2 31 09 PM](https://user-images.githubusercontent.com/33966004/183293315-42c40e2a-9ab8-45b2-ad73-28fa3cf491ef.jpeg)
+![chrome_uRfFVDzpPC](https://user-images.githubusercontent.com/33966004/191090923-340d7fdb-27f3-4369-96d0-08d328cfdb35.png)
 
 # How To Set It Up On Your Local Machine
 * Fork this repository on your github by clicking the fork button on the top right part of this page.
